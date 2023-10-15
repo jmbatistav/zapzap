@@ -1,7 +1,15 @@
+"""
+    Building Single-file: Generates a unique file for installation and distribution
+"""
+
 import os
-# Constroi o Flatpak
+
+# Build flatpak
 os.system('flatpak-builder build _packaging/flatpak/com.rtosta.zapzap.yaml --force-clean --ccache')
-# Exporta o resultado para a pasta export
+
+# Export the result to the 'export' folder
 os.system('flatpak build-export export build')
-# Cria o arquivo único
+
+
+# Create single file
 os.system('flatpak build-bundle export export/zapzap.flatpak com.rtosta.zapzap')
