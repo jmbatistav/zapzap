@@ -45,10 +45,9 @@ class Browser(QWebEngineView):
 
         # Cria a WebPage personalizada
         self.whats = WhatsApp(self.profile, self)
-        self.setPage(self.whats)
 
-        # carrega a página do whatsapp web
-        self.load(QUrl(zapzap.__whatsapp_url__))
+        #Set Whatsapp page
+        self.setWhatsappPage()
 
         # Ativando tudo o que tiver de direito
         self.settings().setAttribute(QWebEngineSettings.WebAttribute.JavascriptEnabled, True)
@@ -78,6 +77,14 @@ class Browser(QWebEngineView):
             'Save image': _('Save image'),
             'Copy image': _('Copy image'),
         }
+
+    def setWhatsappPage(self):
+        self.stop()
+        self.setPage(self.whats)
+        self.load(QUrl(zapzap.__whatsapp_url__))
+
+        # Reload the current page, but do not use any local cache.
+        self.triggerPageAction(QWebEnginePage.WebAction.ReloadAndBypassCache)
 
     def contextMenuEvent(self, event):
         menu = self.createStandardContextMenu()
@@ -144,8 +151,9 @@ class Browser(QWebEngineView):
         Reload the page.
         Prevent Chrome update message from appearing
         """
-        self.load(QUrl(zapzap.__whatsapp_url__))
-        self.triggerPageAction(QWebEnginePage.WebAction.ReloadAndBypassCache)
+        print('[log] Reload the page.')
+        #self.triggerPageAction(QWebEnginePage.WebAction.ReloadAndBypassCache)
+        self.setWhatsappPage()
 
     def title_changed(self, title):
         """
