@@ -1,5 +1,5 @@
 from gettext import gettext as _
-# Form implementation generated from reading ui file './zapzap/view/card_user.ui'
+# Form implementation generated from reading ui file './zapzap/view/ui/card_user.ui'
 #
 # Created by: PyQt6 UI code generator 6.5.2
 #

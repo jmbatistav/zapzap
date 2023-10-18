@@ -55,6 +55,11 @@
   </screenshots>
 
   <releases>
+    <release date="2023-10-18" version="4.5.3">
+      <description>
+        <p>Some fix</p>
+      </description>
+    </release>
     <release date="2023-10-02" version="4.5.2">
       <description>
         <p>Fix: Improve the menu decoration when running in Wayland</p>

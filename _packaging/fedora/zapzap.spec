@@ -1,7 +1,7 @@
 # Arquivo .spec para Fedora
 
 %global srcname zapzap
-%global srcversion  4.5.2
+%global srcversion  4.5.3
 
 %global __python /usr/bin/python3
 %global _rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.rpm
@@ -9,11 +9,11 @@
 Name:           %{srcname}
 Version:        %{srcversion}
 Release:        1%{?dist}
-Summary:        My Python App Test
+Summary:        Zapzap - Whatsapp Desktop for Linux
 
 License:        GNU General Public License v3.0
-URL:            https://github.com/rafatosta/%{srcname}
-Source0:        https://github.com/rafatosta/zapzap/archive/refs/tags/v%{srcversion}.tar.gz
+URL:            https://github.com/zapzap-linux/%{srcname}
+Source0:        https://github.com/zapzap-linux/zapzap/archive/refs/tags/v%{srcversion}.tar.gz
 
 
 # Requisitos de construção
@@ -83,3 +83,7 @@ cp -R share/icons/com.rtosta.zapzap.svg $RPM_BUILD_ROOT/usr/share/icons/hicolor/
 * Mon oct 02 2023 Rafael Tosta <rafa.ecomp@gmail.com> 
 - Fix: Improve the menu decoration when running in Wayland 
 - Fix: Message number doesnt show on the tray icon
+
+%changelog
+* Wed oct 18 2023 Rafael Tosta <rafa.ecomp@gmail.com> 
+- Some fix
