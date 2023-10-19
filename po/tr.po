@@ -67,7 +67,7 @@ msgstr "Menü çubuğunu gizle"
 
 #: zapzap/view/main_window.py:308
 msgid "Learn More"
-msgstr "Daha Çoğunu Öğren"
+msgstr "Daha Fazlasını Öğren"
 
 #: zapzap/view/main_window.py:309 zapzap/view/settings.py:956
 msgid "Changelog"
@@ -87,11 +87,11 @@ msgstr "Kapatınca gizle"
 
 #: zapzap/view/main_window.py:313
 msgid "Keep in background when closing window"
-msgstr "Pencereyi kapatırken arka planda tut"
+msgstr "Pencereyi kapatınca arka planda tut"
 
 #: zapzap/view/main_window.py:314
 msgid "Zoom in"
-msgstr "Yankınlaştır"
+msgstr "Yakınlaştır"
 
 #: zapzap/view/main_window.py:315
 msgid "Zoom out"
@@ -104,7 +104,7 @@ msgstr "Bağışlar"
 
 #: zapzap/view/main_window.py:317 zapzap/view/settings.py:913
 msgid "Home page"
-msgstr "Ev sayfası"
+msgstr "Ana sayfa"
 
 #: zapzap/view/main_window.py:318
 msgid "Open new chat"
@@ -137,16 +137,16 @@ msgstr "Hakkında"
 
 #: zapzap/view/settings.py:922
 msgid "Start ZapZap with the system"
-msgstr "ZapZap'i sistemle başlat"
+msgstr "ZapZap'i sistem açılışında başlat"
 
 #: zapzap/view/settings.py:924
 msgid "Wayland window system"
-msgstr ""
+msgstr "Wayland pencere sistemi"
 
 #: zapzap/view/settings.py:925
 #, fuzzy
 msgid "SpellChecker"
-msgstr "Yazım Denetimi Dilleri"
+msgstr "Yazım Denetimi"
 
 #: zapzap/view/settings.py:926
 msgid "Apply"
@@ -158,7 +158,7 @@ msgstr "Menü çubuğu"
 
 #: zapzap/view/settings.py:929
 msgid "ZapZap window (Restart required)"
-msgstr "ZapZap penceresi (Yeniden başlatma gereir)"
+msgstr "ZapZap penceresi (Yeniden başlatma gerekir)"
 
 #: zapzap/view/settings.py:930
 msgid "Title bar buttons"
@@ -186,23 +186,23 @@ msgstr "Genel görünüm"
 
 #: zapzap/view/settings.py:936
 msgid "System style"
-msgstr "Sistem biçemi"
+msgstr "Sistem teması"
 
 #: zapzap/view/settings.py:937
 msgid "Light style"
-msgstr "Açık biçem"
+msgstr "Açık tema"
 
 #: zapzap/view/settings.py:938
 msgid "Dark style"
-msgstr "Koyu biçem"
+msgstr "Koyu tema"
 
 #: zapzap/view/settings.py:939
 msgid "Tray icon"
-msgstr "Sistem çıktısı simgesi"
+msgstr "Sistem tepsisi simgesi"
 
 #: zapzap/view/settings.py:940
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: zapzap/view/settings.py:941
 msgid "Symbolic light"
@@ -230,7 +230,7 @@ msgstr "Mesaj önizlemesini göster"
 
 #: zapzap/view/settings.py:948
 msgid "Reproduce sounds when receiving messages"
-msgstr ""
+msgstr "Mesaj alınca sesle bildir"
 
 #: zapzap/view/settings.py:952
 #, python-brace-format
@@ -247,7 +247,7 @@ msgstr "GNU General Public License v3.0"
 
 #: zapzap/view/settings.py:955
 msgid "Learn more"
-msgstr "Daha çoğunu öğren"
+msgstr "Daha fazlasını öğren"
 
 #: zapzap/view/settings.py:959
 msgid "New User"
@@ -268,7 +268,7 @@ msgstr "Devre dışı bırak"
 #: zapzap/view/card_user.py:90
 #, fuzzy
 msgid "Show notifications"
-msgstr "Bildirimler"
+msgstr "Bildirimleri göster"
 
 #: zapzap/view/card_user.py:91
 msgid "Delete"
@@ -288,7 +288,7 @@ msgstr "Farklı kaydet"
 
 #: zapzap/view/openChatPopup.py:81
 msgid "Open chat by phone number"
-msgstr "Telefon numarasına göre sohbeti aç"
+msgstr "Telefon numarasıyla sohbeti aç"
 
 #: zapzap/view/openChatPopup.py:82
 msgid "Enter phone number:"
