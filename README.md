@@ -2,8 +2,10 @@
 
 ![Zapzap for whatsapp](share/screenshot/default.png)
 
+# About
+Zapzap is an application that addresses WhatsApp Web. It is your goal to use the WhatsApp web closer to a native application as there is no API for the construction of third party applications.
 
-# Download Zapzap
+# Download
 <p align="center">
     <a href="https://flathub.org/apps/details/com.rtosta.zapzap">
         <img  alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png" width="150">
