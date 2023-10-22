@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-18 19:15-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
+"Last-Translator: Efraín Palacios <soft.pal.ef@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language:es \n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "Ver"
 
 #: zapzap/view/main_window.py:296 zapzap/view/main_window.py:301
 msgid "Chat"
-msgstr "Charla"
+msgstr "Chat"
 
 #: zapzap/view/main_window.py:297 zapzap/view/main_window.py:300
 msgid "Help"
@@ -41,12 +41,12 @@ msgstr "Ayuda"
 #: zapzap/view/main_window.py:302 zapzap/view/settings.py:912
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
-msgstr "Configuraciones"
+msgstr "Configuración"
 
 #: zapzap/view/main_window.py:303 zapzap/view/settings.py:920
 #: zapzap/controllers/main_window_components/tray_icon.py:25
 msgid "Quit"
-msgstr "Renunciar"
+msgstr "Salir"
 
 #: zapzap/view/main_window.py:304
 msgid "Reload"
@@ -54,7 +54,7 @@ msgstr "Recargar"
 
 #: zapzap/view/main_window.py:305
 msgid "Default size page"
-msgstr "Página de tamaño predeterminado"
+msgstr "Tamaño de página predeterminado"
 
 #: zapzap/view/main_window.py:306
 msgid "Full Screen"
@@ -74,7 +74,7 @@ msgstr "Registro de cambios"
 
 #: zapzap/view/main_window.py:310 zapzap/view/settings.py:957
 msgid "Report issue..."
-msgstr "Informar problema..."
+msgstr "Reportar problema..."
 
 #: zapzap/view/main_window.py:311
 msgid "About Zapzap"
@@ -103,16 +103,16 @@ msgstr "Donaciones"
 
 #: zapzap/view/main_window.py:317 zapzap/view/settings.py:913
 msgid "Home page"
-msgstr "página de inicio"
+msgstr "Página de inicio"
 
 #: zapzap/view/main_window.py:318
 msgid "Open new chat"
-msgstr "abrir nuevo chat"
+msgstr "Abrir nuevo chat"
 
 #: zapzap/view/settings.py:911 zapzap/view/card_user.py:87
 #: zapzap/view/openChatPopup.py:80
 msgid "Form"
-msgstr "Forma"
+msgstr "Formulario"
 
 #: zapzap/view/settings.py:914 zapzap/view/settings.py:958
 msgid "User Management"
@@ -156,7 +156,7 @@ msgstr "Barra de menú"
 
 #: zapzap/view/settings.py:929
 msgid "ZapZap window (Restart required)"
-msgstr "Ventana ZapZap (es necesario reiniciar)"
+msgstr "Ventana ZapZap (Requiere reinicio)"
 
 #: zapzap/view/settings.py:930
 msgid "Title bar buttons"
@@ -184,19 +184,19 @@ msgstr "Apariencia general"
 
 #: zapzap/view/settings.py:936
 msgid "System style"
-msgstr "Estilo del sistema"
+msgstr "Tema del sistema"
 
 #: zapzap/view/settings.py:937
 msgid "Light style"
-msgstr "Estilo ligero"
+msgstr "Tema claro"
 
 #: zapzap/view/settings.py:938
 msgid "Dark style"
-msgstr "Estilo oscuro"
+msgstr "Tema oscuro"
 
 #: zapzap/view/settings.py:939
 msgid "Tray icon"
-msgstr "Icono de bandeja"
+msgstr "Bandeja de iconos"
 
 #: zapzap/view/settings.py:940
 msgid "Default"
@@ -204,11 +204,11 @@ msgstr "Predeterminado"
 
 #: zapzap/view/settings.py:941
 msgid "Symbolic light"
-msgstr "Luz simbólica"
+msgstr "Claro simbólico"
 
 #: zapzap/view/settings.py:942
 msgid "Symbolic dark"
-msgstr "Oscuridad simbólica"
+msgstr "Oscuro simbólico"
 
 #: zapzap/view/settings.py:944
 msgid "Notifications on the desktop"
@@ -277,7 +277,7 @@ msgstr "¿Qué quieres hacer con el archivo?"
 
 #: zapzap/view/downloadPopup.py:70 zapzap/view/openChatPopup.py:86
 msgid "Open"
-msgstr "Abierto"
+msgstr "Abrir"
 
 #: zapzap/view/downloadPopup.py:71
 msgid "Save as"
@@ -297,7 +297,7 @@ msgstr "Consulta aquí el código de tu país"
 
 #: zapzap/view/openChatPopup.py:84
 msgid "(COUNTY CODE + AREA CODE + PHONE NUMER)"
-msgstr "(CÓDIGO DE CONDADO CÓDIGO DE ÁREA NÚMERO DE TELÉFONO)"
+msgstr "(CÓDIGO DE CONDADO + CÓDIGO DE ÁREA + NÚMERO DE TELÉFONO)"
 
 #: zapzap/view/openChatPopup.py:85
 msgid "Cancel"
@@ -353,11 +353,11 @@ msgstr "Afrikáans - Sudáfrica"
 
 #: zapzap/services/spellCheckLanguages.py:8
 msgid "Aragonese"
-msgstr "aragonés"
+msgstr "Aragonés"
 
 #: zapzap/services/spellCheckLanguages.py:9
 msgid "Aragonese - Spain"
-msgstr "aragonés - España"
+msgstr "Aragonés - España"
 
 #: zapzap/services/spellCheckLanguages.py:10
 msgid "Arabic - United Arab Emirates"
@@ -789,11 +789,11 @@ msgstr "Portugués - Portugal"
 
 #: zapzap/services/spellCheckLanguages.py:117
 msgid "Romanian - Romania"
-msgstr "rumano - Rumania"
+msgstr "Rumano - Rumania"
 
 #: zapzap/services/spellCheckLanguages.py:118
 msgid "Russian - Russia"
-msgstr "ruso - Rusia"
+msgstr "Ruso - Rusia"
 
 #: zapzap/services/spellCheckLanguages.py:119
 msgid "Sinhala - Sri Lanka"
@@ -825,15 +825,15 @@ msgstr "Latín serbio - Serbia"
 
 #: zapzap/services/spellCheckLanguages.py:126
 msgid "Serbian - Serbia"
-msgstr "serbio - Serbia"
+msgstr "Serbio - Serbia"
 
 #: zapzap/services/spellCheckLanguages.py:127
 msgid "Swedish - Finland"
-msgstr "sueco - Finlandia"
+msgstr "Sueco - Finlandia"
 
 #: zapzap/services/spellCheckLanguages.py:128
 msgid "Swedish - Sweden"
-msgstr "sueco - Suecia"
+msgstr "Sueco - Suecia"
 
 #: zapzap/services/spellCheckLanguages.py:129
 msgid "Swahili - Tanzania"
@@ -841,15 +841,15 @@ msgstr "Suajili - Tanzania"
 
 #: zapzap/services/spellCheckLanguages.py:130
 msgid "Telugu"
-msgstr "telugu"
+msgstr "Telugu"
 
 #: zapzap/services/spellCheckLanguages.py:131
 msgid "Telugu - India"
-msgstr ""
+msgstr "Telugu - India"
 
 #: zapzap/services/spellCheckLanguages.py:132
 msgid "Turkish"
-msgstr "turco"
+msgstr "Turco"
 
 #: zapzap/services/spellCheckLanguages.py:133
 msgid "Turkish - Turkey"
@@ -861,4 +861,4 @@ msgstr "Ucraniano - Ucrania"
 
 #: zapzap/services/spellCheckLanguages.py:135
 msgid "Vietnamese - Vietnam"
-msgstr "vietnamita - Vietnam"
+msgstr "Vietnamita - Vietnam"
