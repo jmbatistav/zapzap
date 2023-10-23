@@ -68,3 +68,5 @@ path_storage = os.path.join(
     QStandardPaths.writableLocation(
         QStandardPaths.StandardLocation.AppLocalDataLocation), __appname__, "QtWebEngine"
 )
+
+COUNT_DONATE_MAX = 15

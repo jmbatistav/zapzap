@@ -30,7 +30,7 @@ def runLocal():
     qset = QSettings(zapzap.__appname__, zapzap.__appname__)
 
     ZAP_SESSION_TYPE = 'wayland'
-    if not qset.value("system/wayland", True, bool): #if False, X11
+    if not qset.value("system/wayland", True, bool):  # if False, X11
         ZAP_SESSION_TYPE = 'xcb'
 
     # Session Type
@@ -96,8 +96,10 @@ def main():
     if isStart_system or '--hideStart' in sys.argv:
         window.hide()
         excBackgroundNotification()
+        window.showToaster('excBackgroundNotification')
     else:
         window.show()
+        window.showToaster()
 
     # Start app
     sys.exit(app.exec())
