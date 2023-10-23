@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 19:15-0300\n"
+"POT-Creation-Date: 2023-10-23 10:48-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -302,6 +302,14 @@ msgstr "(COD DO PAÍS + COD. ÁREA + NÚMERO DO TELEFONE)"
 #: zapzap/view/openChatPopup.py:85
 msgid "Cancel"
 msgstr "Cancelar"
+
+#: zapzap/controllers/main_window.py:305
+msgid ""
+"Do you like ZapZap?\n"
+"Click and make a donation!"
+msgstr ""
+"Sabia que o desenvolvedor do ZapZap é brasileiro?\n"
+"Faz um PIX e contribua com cafezinho do dev..."
 
 #: zapzap/controllers/card_user.py:49
 msgid "Enable"
@@ -862,6 +870,3 @@ msgstr ""
 #: zapzap/services/spellCheckLanguages.py:135
 msgid "Vietnamese - Vietnam"
 msgstr ""
-
-#~ msgid "Start minimized"
-#~ msgstr "Iniciar minimizado"

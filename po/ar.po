@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 19:15-0300\n"
+"POT-Creation-Date: 2023-10-23 10:48-0300\n"
 "PO-Revision-Date: 2022-07-22 15:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -308,6 +308,12 @@ msgstr ""
 
 #: zapzap/view/openChatPopup.py:85
 msgid "Cancel"
+msgstr ""
+
+#: zapzap/controllers/main_window.py:305
+msgid ""
+"Do you like ZapZap?\n"
+"Click and make a donation!"
 msgstr ""
 
 #: zapzap/controllers/card_user.py:49

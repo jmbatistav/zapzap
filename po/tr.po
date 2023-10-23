@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zapzap main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 19:15-0300\n"
+"POT-Creation-Date: 2023-10-23 10:48-0300\n"
 "PO-Revision-Date: 2022-09-06 22:04+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
@@ -305,6 +305,14 @@ msgstr "(ÜLKE KODU + ALAN KODU + TELEFON NUMARASI)"
 #: zapzap/view/openChatPopup.py:85
 msgid "Cancel"
 msgstr "İptal"
+
+#: zapzap/controllers/main_window.py:305
+msgid ""
+"Do you like ZapZap?\n"
+"Click and make a donation!"
+msgstr ""
+"ZapZap'ı sever misiniz?\n"
+"Tıklayın ve bağış yapın!"
 
 #: zapzap/controllers/card_user.py:49
 msgid "Enable"
