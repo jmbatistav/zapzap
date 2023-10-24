@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-23 10:48-0300\n"
+"POT-Creation-Date: 2023-10-24 15:41-0300\n"
 "PO-Revision-Date: 2022-09-06 16:30+0200\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -353,6 +353,10 @@ msgstr "Enregistrer l’image"
 #: zapzap/engine/browser.py:78
 msgid "Copy image"
 msgstr "Copier l’image"
+
+#: zapzap/engine/browser.py:79
+msgid "Copy link address"
+msgstr ""
 
 #: zapzap/services/spellCheckLanguages.py:6
 msgid "Afrikaans - Namibia"

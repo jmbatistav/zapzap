@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-23 10:48-0300\n"
+"POT-Creation-Date: 2023-10-24 15:41-0300\n"
 "PO-Revision-Date: 2022-09-22 13:20+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
@@ -350,6 +350,10 @@ msgstr "Afbeelding opslaan"
 #: zapzap/engine/browser.py:78
 msgid "Copy image"
 msgstr "Afbeelding kopiëren"
+
+#: zapzap/engine/browser.py:79
+msgid "Copy link address"
+msgstr ""
 
 #: zapzap/services/spellCheckLanguages.py:6
 msgid "Afrikaans - Namibia"
