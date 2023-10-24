@@ -5,9 +5,11 @@ from PyQt6.QtWidgets import QApplication
 from zapzap import __whatsapp_url__, __appname__
 from zapzap.services.dbus_theme import getSystemTheme
 
+
 class WhatsApp(QWebEnginePage):
 
     link_url = ''
+    link_context = ''
     light_theme = "document.body.classList.remove('dark');"
     dark_theme = "document.body.classList.add('dark');"
 
@@ -27,8 +29,8 @@ class WhatsApp(QWebEnginePage):
 
         self.loadFinished.connect(self.load_finished)
 
-        #self.setAudioMuted(True)
-        #self.setAudioMuted(self.qset.value('notification/show_sound', False, bool))
+        # self.setAudioMuted(True)
+        # self.setAudioMuted(self.qset.value('notification/show_sound', False, bool))
 
     def load_finished(self, flag):
         # Ativa a tela cheia para telas de proporção grande no WhatsApp Web.
@@ -73,6 +75,10 @@ class WhatsApp(QWebEnginePage):
     def link_hovered(self, url):
         # url contém o URL de destino do link. Ao mover o mouse para fora da url o seu valor é definido como uma string vazia
         self.link_url = url
+
+        # Keep the last link visited to be used by the context menu
+        if self.link_url != "":
+            self.link_context = url
 
     def permission(self, frame, feature):
         self.setFeaturePermission(

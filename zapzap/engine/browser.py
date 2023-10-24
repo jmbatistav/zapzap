@@ -46,7 +46,7 @@ class Browser(QWebEngineView):
         # Cria a WebPage personalizada
         self.whats = WhatsApp(self.profile, self)
 
-        #Set Whatsapp page
+        # Set Whatsapp page
         self.setWhatsappPage()
 
         # Ativando tudo o que tiver de direito
@@ -66,7 +66,7 @@ class Browser(QWebEngineView):
 
         self.list_ignore = ['Back', 'View page source', 'Save page',
                             'Forward', 'Open link in new tab', 'Save link',
-                            'Copy link address', 'Open link in new window', 'Paste and match style', 'Reload', 'Copy image address']
+                            'Open link in new window', 'Paste and match style', 'Reload', 'Copy image address']
         self.items_menu = {
             'Undo': _('Undo'),
             'Redo': _('Redo'),
@@ -76,6 +76,7 @@ class Browser(QWebEngineView):
             'Select all': _('Select all'),
             'Save image': _('Save image'),
             'Copy image': _('Copy image'),
+            'Copy link address': _('Copy link address')
         }
 
     def setWhatsappPage(self):
@@ -95,6 +96,13 @@ class Browser(QWebEngineView):
                 a.setVisible(False)
             elif name in self.items_menu:
                 a.setText(self.items_menu[name])
+
+                if name == 'Copy link address':
+                    def setClipboard():
+                        cb = QApplication.clipboard()
+                        cb.clear(mode=cb.Mode.Clipboard)
+                        cb.setText(self.whats.link_context, mode=cb.Mode.Clipboard) 
+                    a.triggered.connect(setClipboard)
 
         menu.exec(event.globalPos())
 
@@ -152,7 +160,7 @@ class Browser(QWebEngineView):
         Prevent Chrome update message from appearing
         """
         print('[log] Reload the page.')
-        #self.triggerPageAction(QWebEnginePage.WebAction.ReloadAndBypassCache)
+        # self.triggerPageAction(QWebEnginePage.WebAction.ReloadAndBypassCache)
         self.setWhatsappPage()
 
     def title_changed(self, title):
@@ -162,7 +170,7 @@ class Browser(QWebEngineView):
         qtd = 0
         if self.qset.value(f'{str(self.storageName)}/notification', True, bool):
             num = ''.join(filter(str.isdigit, title))
-        
+
             try:
                 qtd = int(num)
             except:
@@ -175,7 +183,7 @@ class Browser(QWebEngineView):
         Create a notification through the DBus.Notification for the system.
         When you click on it, the window will open.
         """
-        
+
         if self.qset.value('notification/app', True, bool) and self.qset.value(f'{str(self.storageName)}/notification', True, bool):
             try:
                 title = notification.title() if self.qset.value(
