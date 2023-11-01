@@ -1,6 +1,6 @@
 import os
 from PyQt6.QtWebEngineWidgets import QWebEngineView
-from PyQt6.QtWebEngineCore import QWebEnginePage, QWebEngineDownloadRequest, QWebEngineProfile, QWebEngineSettings
+from PyQt6.QtWebEngineCore import QWebEnginePage, QWebEngineDownloadRequest, QWebEngineProfile, QWebEngineSettings, QWebEngineNotification
 from PyQt6.QtCore import Qt, QUrl, QStandardPaths, QSettings, QLocale, QSize, QUrl
 from PyQt6.QtGui import QPainter, QPainter, QImage, QBrush, QPen, QDesktopServices
 from PyQt6.QtWidgets import QFileDialog, QApplication
@@ -101,7 +101,8 @@ class Browser(QWebEngineView):
                     def setClipboard():
                         cb = QApplication.clipboard()
                         cb.clear(mode=cb.Mode.Clipboard)
-                        cb.setText(self.whats.link_context, mode=cb.Mode.Clipboard) 
+                        cb.setText(self.whats.link_context,
+                                   mode=cb.Mode.Clipboard)
                     a.triggered.connect(setClipboard)
 
         menu.exec(event.globalPos())
@@ -178,14 +179,14 @@ class Browser(QWebEngineView):
 
         self.parent.showIconNotification(qtd)
 
-    def show_notification(self, notification):
+    def show_notification(self, notification: QWebEngineNotification):
         """
         Create a notification through the DBus.Notification for the system.
         When you click on it, the window will open.
         """
 
         if self.qset.value('notification/app', True, bool) and self.qset.value(f'{str(self.storageName)}/notification', True, bool):
-            try:
+            try:                
                 title = notification.title() if self.qset.value(
                     'notification/show_name', True, bool) else __appname__
                 message = notification.message() if self.qset.value(
@@ -213,6 +214,10 @@ class Browser(QWebEngineView):
                     # abre a conversa
                     notification.click()
                 n.addAction('default', '', callback)
+
+                # This signal is emitted when the web page calls close steps for the notification, and it no longer needs to be shown.
+                notification.closed.connect(lambda: n.close())
+
                 n.show()
             except Exception as e:
                 print(e)
