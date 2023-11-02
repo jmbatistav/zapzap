@@ -1,7 +1,7 @@
 # Arquivo .spec para Fedora
 
 %global srcname zapzap
-%global srcversion  4.5.4
+%global srcversion  4.5.5
 
 %global __python /usr/bin/python3
 %global _rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.rpm
@@ -91,3 +91,9 @@ cp -R share/icons/com.rtosta.zapzap.svg $RPM_BUILD_ROOT/usr/share/icons/hicolor/
 %changelog
 * Mon oct 23 2023 Rafael Tosta <rafa.ecomp@gmail.com> 
 - Update translations
+
+%changelog
+* Thu nov 02 2023 Rafael Tosta <rafa.ecomp@gmail.com> 
+- Copy URLs with the right-click of the mouse
+- Fix: Notifications do not disappear after viewing on another device
+- Display the last message on system notifications
