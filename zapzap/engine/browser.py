@@ -196,7 +196,8 @@ class Browser(QWebEngineView):
 
                 n = dbus.Notification(title,
                                       message,
-                                      timeout=3000
+                                      timeout=3000,
+                                      tag=notification.tag()
                                       )
                 n.setUrgency(dbus.Urgency.NORMAL)
                 n.setCategory("im.received")
@@ -217,7 +218,6 @@ class Browser(QWebEngineView):
 
                 # This signal is emitted when the web page calls close steps for the notification, and it no longer needs to be shown.
                 notification.closed.connect(lambda: n.close())
-
                 n.show()
             except Exception as e:
                 print(e)

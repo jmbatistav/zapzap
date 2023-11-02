@@ -84,7 +84,7 @@ class Notification(object):
     timeout = -1
     _onNotificationClosed = lambda *args: None
 
-    def __init__(self, title, body='', icon='', timeout=-1):
+    def __init__(self, title, body='', icon='', timeout=-1,tag=''):
         """Initializes a new notification object.
 
         Args:
@@ -101,6 +101,7 @@ class Notification(object):
         self.hints = {}                 # dict of various display hints
         self.actions = OrderedDict()    # actions names and their callbacks
         self.data = {}                  # arbitrary user data
+        self.tag = tag                  # this property holds the tag of the notification message.
 
     def show(self):
         if DBUS_IFACE is None:
@@ -119,7 +120,11 @@ class Notification(object):
 
         self.id = int(nid)
 
-        NOTIFICATIONS[self.id] = self
+        # The previous notification reaches, if existing
+        if self.tag in NOTIFICATIONS:
+            NOTIFICATIONS[self.tag].close()
+
+        NOTIFICATIONS[self.tag] = self
         return True
 
     def close(self):
