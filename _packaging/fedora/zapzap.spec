@@ -8,7 +8,7 @@
 
 Name:           %{srcname}
 Version:        %{srcversion}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Zapzap - Whatsapp Desktop for Linux
 
 License:        GNU General Public License v3.0
@@ -50,7 +50,8 @@ cp -R share/icons/com.rtosta.zapzap.svg $RPM_BUILD_ROOT/usr/share/icons/hicolor/
 %files
 %license LICENSE
 %doc README.md
-/usr/lib/python3.11/site-packages/*
+%{python3_sitelib}/*
+
 %{_bindir}/%{srcname}
 /usr/share/applications/com.rtosta.zapzap.desktop
 /usr/share/icons/hicolor/scalable/apps/com.rtosta.zapzap.svg
