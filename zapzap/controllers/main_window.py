@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QMainWindow, QSystemTrayIcon
 from PyQt6.QtCore import QSettings, QByteArray, QTimer, Qt
+from PyQt6.QtGui import QIcon
 from zapzap.controllers.open_chat_popup import OpenChatPopup
 from zapzap.theme.zap_themes import getThemeDark, getThemeLight
 from zapzap.controllers.main_window_components.menu_bar import MenuBar
@@ -26,6 +27,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.app = parent
         self.settings = QSettings(zapzap.__appname__, zapzap.__appname__)
         self.scd = None
+
+        self.setWindowIcon( QIcon(zapzap.abs_path+'/assets/icons/tray/default_normal.svg'))
 
         # Object responsible for managing the main window menu bar
         MenuBar(self)
