@@ -55,6 +55,11 @@
   </screenshots>
 
   <releases>
+    <release date="2023-11-13" version="4.5.5.2">
+      <description>
+        <p>Small improvements...</p>
+      </description>
+    </release>
     <release date="2023-11-02" version="4.5.5">
       <description>
         <p>Copy URLs with the right-click of the mouse</p>
