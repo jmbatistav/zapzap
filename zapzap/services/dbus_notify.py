@@ -165,7 +165,7 @@ class Notification(object):
 
     def setIconPath(self, icon_path):
         """Set the URI of the icon to display in the notification"""
-        self.hints['image-path'] = 'file://' + icon_path
+        self.hints['image-path'] = icon_path
 
     def setQIcon(self, q_icon):
         # FixMe this would be convenient, but may not be possible
