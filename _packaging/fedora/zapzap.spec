@@ -1,14 +1,14 @@
 # Arquivo .spec para Fedora
 
 %global srcname zapzap
-%global srcversion  4.5.5.2
+%global srcversion  4.5.5.3
 
 %global __python /usr/bin/python3
 %global _rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.rpm
 
 Name:           %{srcname}
 Version:        %{srcversion}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        Zapzap - Whatsapp Desktop for Linux
 
 License:        GNU General Public License v3.0
