@@ -101,11 +101,6 @@ def main():
         window.show()
         window.showToaster()
 
-    # Use [ctrl+w] keyboard shortcut to hide the window
-    def action_hideFromKeyboard():
-	    window.hide()# w.close() # hide the main widget
-    QShortcut(QKeySequence("Ctrl+w"), window).activated.connect(action_hideFromKeyboard)
-
     # Start app
     sys.exit(app.exec())
 

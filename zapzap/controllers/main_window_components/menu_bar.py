@@ -22,6 +22,8 @@ class MenuBar():
                 mainWindow.actionHide_on_close.isChecked())
 
         mainWindow.actionHide_on_close.triggered.connect(setKeep_background)
+        # Use [ctrl+w] keyboard shortcut to hide the window
+        mainWindow.actionHide.triggered.connect(lambda: mainWindow.hide())
 
         # View
         mainWindow.actionReload_Service.triggered.connect(

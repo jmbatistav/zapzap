@@ -509,7 +509,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>28</height>
+     <height>23</height>
     </rect>
    </property>
    <property name="maximumSize">
@@ -533,6 +533,7 @@
     <addaction name="actionDonations"/>
     <addaction name="separator"/>
     <addaction name="actionHide_on_close"/>
+    <addaction name="actionHide"/>
     <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuView">
@@ -709,6 +710,14 @@
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionHide">
+   <property name="text">
+    <string>Hide</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
    </property>
   </action>
  </widget>
