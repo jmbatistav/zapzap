@@ -2,7 +2,7 @@ import sys
 import zapzap
 from zapzap.controllers.SingleApplication import SingleApplication
 from zapzap.controllers.main_window import MainWindow
-from PyQt6.QtGui import QFont, QFontDatabase, QKeySequence, QAction, QShortcut
+from PyQt6.QtGui import QFont, QFontDatabase
 from PyQt6.QtCore import QSettings
 import gettext
 from zapzap.model.db import createDB
