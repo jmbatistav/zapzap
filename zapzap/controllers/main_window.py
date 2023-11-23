@@ -228,13 +228,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             Override the window close event.
             Save window dimensions and check if it should be hidden or closed
         """
+        self.saveSettings()
         isBack = self.settings.value("system/keep_background", True, bool)
         if isBack and event:  # Hide app on close window
             self.actionEsc(closeAll=True)
             self.hide()
             event.ignore()
         else:  # Quit app on close window
-            self.saveSettings()
             self.hide()
             self.app.quit()
 
@@ -252,8 +252,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Opening the system tray web app.
         """
         if self.app.activeWindow() != None:  # Se a janela estiver em foco será escondida
+            self.saveSettings()
             self.hide()
         else:  # Caso não esteja, será mostrada
+            self.loadSettings()
             self.show()
             self.raise_()
             self.app.activateWindow()
