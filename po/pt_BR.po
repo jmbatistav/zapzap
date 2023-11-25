@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-25 16:05-0300\n"
+"POT-Creation-Date: 2023-11-25 16:07-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -112,7 +112,7 @@ msgstr "Abrir nova conversa"
 
 #: zapzap/view/main_window.py:322
 msgid "Hide"
-msgstr ""
+msgstr "Esconder"
 
 #: zapzap/view/main_window.py:323
 msgid "Ctrl+W"
@@ -314,11 +314,11 @@ msgstr "Cancelar"
 
 #: zapzap/view/qtoaster_donation.py:123
 msgid "Welcome to"
-msgstr ""
+msgstr "Bem-vindo ao"
 
 #: zapzap/view/qtoaster_donation.py:125
 msgid "Make a donation"
-msgstr ""
+msgstr "Faça uma doação"
 
 #: zapzap/view/qtoaster_donation.py:126
 msgid "..."
