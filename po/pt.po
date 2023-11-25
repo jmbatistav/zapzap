@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-24 15:41-0300\n"
+"POT-Creation-Date: 2023-11-25 16:05-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,100 +17,109 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: zapzap/view/main_window.py:293 zapzap/view/settings.py:951
+#: zapzap/view/main_window.py:296 zapzap/view/settings.py:951
+#: zapzap/view/qtoaster_donation.py:124
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
 msgstr "ZapZap"
 
-#: zapzap/view/main_window.py:294 zapzap/view/main_window.py:298
+#: zapzap/view/main_window.py:297 zapzap/view/main_window.py:301
 msgid "File"
 msgstr "Arquivo"
 
-#: zapzap/view/main_window.py:295 zapzap/view/main_window.py:299
+#: zapzap/view/main_window.py:298 zapzap/view/main_window.py:302
 msgid "View"
 msgstr "Visualizar"
 
-#: zapzap/view/main_window.py:296 zapzap/view/main_window.py:301
+#: zapzap/view/main_window.py:299 zapzap/view/main_window.py:304
 msgid "Chat"
 msgstr "Conversa"
 
-#: zapzap/view/main_window.py:297 zapzap/view/main_window.py:300
+#: zapzap/view/main_window.py:300 zapzap/view/main_window.py:303
 msgid "Help"
 msgstr "Ajuda"
 
-#: zapzap/view/main_window.py:302 zapzap/view/settings.py:912
+#: zapzap/view/main_window.py:305 zapzap/view/settings.py:912
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
 msgstr "Configurações"
 
-#: zapzap/view/main_window.py:303 zapzap/view/settings.py:920
+#: zapzap/view/main_window.py:306 zapzap/view/settings.py:920
 #: zapzap/controllers/main_window_components/tray_icon.py:25
 msgid "Quit"
 msgstr "Sair"
 
-#: zapzap/view/main_window.py:304
+#: zapzap/view/main_window.py:307
 msgid "Reload"
 msgstr "Recarregar página"
 
-#: zapzap/view/main_window.py:305
+#: zapzap/view/main_window.py:308
 msgid "Default size page"
 msgstr "Tamanho real"
 
-#: zapzap/view/main_window.py:306
+#: zapzap/view/main_window.py:309
 msgid "Full Screen"
 msgstr "Tela cheia"
 
-#: zapzap/view/main_window.py:307 zapzap/view/settings.py:928
+#: zapzap/view/main_window.py:310 zapzap/view/settings.py:928
 msgid "Hide menu bar"
 msgstr "Esconder barra de menu"
 
-#: zapzap/view/main_window.py:308
+#: zapzap/view/main_window.py:311
 msgid "Learn More"
 msgstr "Leia mais"
 
-#: zapzap/view/main_window.py:309 zapzap/view/settings.py:956
+#: zapzap/view/main_window.py:312 zapzap/view/settings.py:956
 msgid "Changelog"
 msgstr "Lista de mudanças"
 
-#: zapzap/view/main_window.py:310 zapzap/view/settings.py:957
+#: zapzap/view/main_window.py:313 zapzap/view/settings.py:957
 msgid "Report issue..."
 msgstr "Reporte um problema..."
 
-#: zapzap/view/main_window.py:311
+#: zapzap/view/main_window.py:314
 msgid "About Zapzap"
 msgstr "Sobre ZapZap"
 
-#: zapzap/view/main_window.py:312 zapzap/view/settings.py:923
+#: zapzap/view/main_window.py:315 zapzap/view/settings.py:923
 msgid "Hide on close"
 msgstr "Esconder ao fechar"
 
-#: zapzap/view/main_window.py:313
+#: zapzap/view/main_window.py:316
 msgid "Keep in background when closing window"
 msgstr "Execução em segundo plano"
 
-#: zapzap/view/main_window.py:314
+#: zapzap/view/main_window.py:317
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: zapzap/view/main_window.py:315
+#: zapzap/view/main_window.py:318
 msgid "Zoom out"
 msgstr "Reduzir"
 
-#: zapzap/view/main_window.py:316 zapzap/view/settings.py:918
+#: zapzap/view/main_window.py:319 zapzap/view/settings.py:918
 #: zapzap/view/settings.py:949
 msgid "Donations"
 msgstr "Doações"
 
-#: zapzap/view/main_window.py:317 zapzap/view/settings.py:913
+#: zapzap/view/main_window.py:320 zapzap/view/settings.py:913
 msgid "Home page"
 msgstr "Página inicial"
 
-#: zapzap/view/main_window.py:318
+#: zapzap/view/main_window.py:321
 msgid "Open new chat"
 msgstr "Abrir nova conversa"
 
+#: zapzap/view/main_window.py:322
+msgid "Hide"
+msgstr ""
+
+#: zapzap/view/main_window.py:323
+msgid "Ctrl+W"
+msgstr ""
+
 #: zapzap/view/settings.py:911 zapzap/view/card_user.py:87
-#: zapzap/view/openChatPopup.py:80
+#: zapzap/view/openChatPopup.py:80 zapzap/view/qtoaster_donation.py:122
 msgid "Form"
 msgstr ""
 
@@ -303,13 +312,17 @@ msgstr "(COD DO PAÍS + COD. ÁREA + NÚMERO DO TELEFONE)"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: zapzap/controllers/main_window.py:305
-msgid ""
-"Do you like ZapZap?\n"
-"Click and make a donation!"
+#: zapzap/view/qtoaster_donation.py:123
+msgid "Welcome to"
 msgstr ""
-"Você gosta do ZapZap?\n"
-"Clique e faça uma doação!"
+
+#: zapzap/view/qtoaster_donation.py:125
+msgid "Make a donation"
+msgstr ""
+
+#: zapzap/view/qtoaster_donation.py:126
+msgid "..."
+msgstr ""
 
 #: zapzap/controllers/card_user.py:49
 msgid "Enable"
@@ -874,3 +887,10 @@ msgstr ""
 #: zapzap/services/spellCheckLanguages.py:135
 msgid "Vietnamese - Vietnam"
 msgstr ""
+
+#~ msgid ""
+#~ "Do you like ZapZap?\n"
+#~ "Click and make a donation!"
+#~ msgstr ""
+#~ "Você gosta do ZapZap?\n"
+#~ "Clique e faça uma doação!"
