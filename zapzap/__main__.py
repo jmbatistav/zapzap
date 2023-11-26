@@ -96,10 +96,8 @@ def main():
     if isStart_system or '--hideStart' in sys.argv:
         window.hide()
         excBackgroundNotification()
-        window.showToaster('excBackgroundNotification')
     else:
         window.show()
-        window.showToaster()
 
     # Start app
     sys.exit(app.exec())

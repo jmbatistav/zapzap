@@ -8,6 +8,7 @@ from zapzap.controllers.main_window_components.tray_icon import TrayIcon
 from zapzap.controllers.main_window_decoration.ui_decoration import UIDecoration
 from zapzap.controllers.settings import Settings
 from zapzap.controllers.home import Home
+from zapzap.controllers.qtoaster_donation import QtoasterDonation
 from zapzap.services.dbus_theme import getSystemTheme
 import zapzap
 from gettext import gettext as _
@@ -28,7 +29,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.settings = QSettings(zapzap.__appname__, zapzap.__appname__)
         self.scd = None
 
-        self.setWindowIcon( QIcon(zapzap.abs_path+'/assets/icons/tray/default_normal.svg'))
+        self.setWindowIcon(
+            QIcon(zapzap.abs_path+'/assets/icons/tray/default_normal.svg'))
 
         # Object responsible for managing the main window menu bar
         MenuBar(self)
@@ -71,6 +73,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.current_theme = -1
 
         self.setZapDecoration()
+        self.setQtoasterDonation()
 
     def emitDisableSpellChecker(self, flag):
         self.zapHome.disableSpellChecker(flag)
@@ -119,6 +122,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def updateSCD(self):
         if self.scd != None:
             self.scd.headDefinitions()
+
+    def setQtoasterDonation(self):
+        QtoasterDonation.showMessage(parent=self)
 
     def setZapDecoration(self):
         """Activate the personalized window"""
@@ -306,7 +312,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.isHideMenuBar = not self.isHideMenuBar
 
     def showToaster(self, typeExec='normal'):
-        """Show toaster donation"""
+
         msg = _("Do you like ZapZap?\nClick and make a donation!")
 
         timeout = 60000  # 60s
@@ -314,20 +320,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             timeout = 9000000
 
         # Show the message after the reached limit
-        if self.settings.value("system/count_donate", 0, int) > zapzap.COUNT_DONATE_MAX:
-            cornerList = ['TopLeft', 'TopRight', 'BottomRight', 'BottomLeft']
-            cornerCurrent = getattr(
-                Qt.Corner, '{}Corner'.format(cornerList[3]))
-            corner = Qt.Corner(cornerCurrent)
-            QToaster.showMessage(
-                parent=self,
-                message=msg,
-                corner=corner,
-                desktop=False,
-                timeout=timeout,
-                closable=True,
-                action=self.openDonations)
-            self.settings.setValue("system/count_donate", 0)
+        # if self.settings.value("system/count_donate", 0, int) > zapzap.COUNT_DONATE_MAX:
+        cornerList = ['TopLeft', 'TopRight', 'BottomRight', 'BottomLeft']
+        cornerCurrent = getattr(
+            Qt.Corner, '{}Corner'.format(cornerList[3]))
+        corner = Qt.Corner(cornerCurrent)
+        QToaster.showMessage(
+            parent=self,
+            message=msg,
+            corner=corner,
+            desktop=False,
+            timeout=timeout,
+            closable=True,
+            action=self.openDonations)
+        self.settings.setValue("system/count_donate", 0)
 
     def updateContDonate(self):
         """ Update notification counter """
