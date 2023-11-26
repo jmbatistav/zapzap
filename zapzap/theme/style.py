@@ -693,6 +693,19 @@ def buildTheme(p) -> str:
             background-image: url({path}/about.svg);
         }
 
+        /* Btn home setting */
+        #menuUsers .QPushButton {	
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #btnHomeSetting{
+            background-image: url({path}/manage_accounts.svg);
+        }
+        #btnHomeSetting:hover {	
+            background-color: rgb(222, 221, 218); 
+            border-radius: 2px;
+        }
 
         #btn_paypal,
         #btn_pix,
