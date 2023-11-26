@@ -1,5 +1,5 @@
 
-from PyQt6.QtWidgets import QWidget
+from PyQt6.QtWidgets import QWidget, QApplication
 from PyQt6 import QtCore, QtWidgets, QtGui
 from zapzap.view.qtoaster_donation import Ui_QtoasterDonation
 from gettext import gettext as _
@@ -11,6 +11,9 @@ class QtoasterDonation(QWidget, Ui_QtoasterDonation):
         super(QtoasterDonation, self).__init__()
         self.setupUi(self)
         self.setParent(parent)
+
+        self.setFocus()
+        self.setFocusPolicy(QtCore.Qt.FocusPolicy.ClickFocus)
 
         self.setSizePolicy(QtWidgets.QSizePolicy.Policy.Maximum,
                            QtWidgets.QSizePolicy.Policy.Maximum)
@@ -55,3 +58,6 @@ class QtoasterDonation(QWidget, Ui_QtoasterDonation):
     def showMessage(parent):
         qtoaster = QtoasterDonation(parent)
         qtoaster.show()
+    
+    def focusOutEvent(self, e):
+        self.close()
