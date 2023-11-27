@@ -1,7 +1,7 @@
 import os
 import shutil
 from PyQt6.QtWidgets import QWidget
-from PyQt6.QtCore import QSettings
+from PyQt6.QtCore import QSettings, pyqtSignal
 from zapzap.controllers.user_container import UserContainer
 from zapzap.model.user import UserDAO
 from zapzap.view.home import Ui_Home
@@ -14,6 +14,14 @@ class Home(QWidget, Ui_Home):
     The sidebar consists of custom qpushbutton and pages within a QSTackedwidget, 
     both with the same position.
     """
+
+    emitOpenSetting = pyqtSignal(bool)
+    isSettinsOpen = True
+
+    emitOpenPerfil = pyqtSignal()
+    emitNewChat = pyqtSignal()
+    emitNewAccount = pyqtSignal()
+
     list = None
 
     def __init__(self):
@@ -22,6 +30,23 @@ class Home(QWidget, Ui_Home):
         self.loadUsers()
         self.activeMenu()
         self.updateShortcuts()
+        self.loadActions()
+
+    def loadActions(self):
+        # Open Perfil
+        self.btnHomePerfil.clicked.connect(lambda: self.emitOpenPerfil.emit())
+
+        # Open Settings
+        def openSettings():
+            self.isSettinsOpen = not self.isSettinsOpen
+            self.emitOpenSetting.emit(self.isSettinsOpen)
+        self.btnHomeSetting.clicked.connect(openSettings)
+
+        # New chat
+        self.btnHomeNewChat.clicked.connect(lambda: self.emitNewChat.emit())
+
+        # New Account
+        self.btnHomeNewAccount.clicked.connect(lambda: self.emitNewAccount.emit())
 
     def loadUsers(self):
         """Carries all users from the database"""
@@ -47,16 +72,19 @@ class Home(QWidget, Ui_Home):
         self.menu.addWidget(button)
         self.userStacked.addWidget(button.getBrowser())
 
-        self.activeMenu()
+        # self.activeMenu()
         self.updateShortcuts()
 
     def activeMenu(self):
-        """Activate the menu only for more than one user"""
-        if len(self.list) > 1:
+        """Activate the user menu """
+        self.menuUsers.show()
+        self.menu.itemAt(0).widget().selected()
+
+        """ if len(self.list) > 1:
             self.menuUsers.show()
             self.menu.itemAt(0).widget().selected()
         else:
-            self.menuUsers.hide()
+            self.menuUsers.hide() """
 
     def resetStyle(self):
         """Restart the style of the user icons"""
@@ -114,7 +142,7 @@ class Home(QWidget, Ui_Home):
         for i in range(self.menu.count()):
             btn = self.menu.itemAt(i).widget()
             btn.setSpellChecker(lang)
-    
+
     def disableSpellChecker(self, flag):
         for i in range(self.menu.count()):
             btn = self.menu.itemAt(i).widget()
@@ -194,7 +222,7 @@ class Home(QWidget, Ui_Home):
 
             # Delete User Data
             path = os.path.join(zapzap.path_storage, str(user.id))
-            shutil.rmtree(path, ignore_errors=True) 
+            shutil.rmtree(path, ignore_errors=True)
         except OSError as error:
             print(error)
             print("File path can not be removed")

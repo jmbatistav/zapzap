@@ -54,7 +54,7 @@
        <number>5</number>
       </property>
       <property name="topMargin">
-       <number>0</number>
+       <number>6</number>
       </property>
       <property name="rightMargin">
        <number>5</number>
@@ -76,6 +76,20 @@
        </layout>
       </item>
       <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnHomeNewAccount">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
        <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -89,7 +103,28 @@
        </spacer>
       </item>
       <item>
+       <widget class="QPushButton" name="btnHomeNewChat">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btnHomeSetting">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnHomePerfil">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -106,11 +141,17 @@
          <string/>
         </property>
         <property name="flat">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
        </widget>
       </item>
      </layout>
+     <zorder>btnHomeSetting</zorder>
+     <zorder>btnHomePerfil</zorder>
+     <zorder>line</zorder>
+     <zorder>btnHomeNewChat</zorder>
+     <zorder>line_2</zorder>
+     <zorder>btnHomeNewAccount</zorder>
     </widget>
    </item>
    <item>
