@@ -281,15 +281,14 @@
             </size>
            </property>
            <property name="text">
-            <string>Desconectar</string>
+            <string>Configurações do WhatsappWeb</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_5">
            <property name="text">
-            <string>Ao clicar em Desconectar, seu histórico de
- conversas será limpo para todas as contas.</string>
+            <string>Abre o painel de configurações do WhatsappWeb.</string>
            </property>
            <property name="textFormat">
             <enum>Qt::AutoText</enum>

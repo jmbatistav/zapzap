@@ -174,9 +174,8 @@ class Ui_General(object):
         self.checkBox_3.setText(_("Desativado"))
         self.label_4.setText(_("Corretor ortográfico"))
         self.checkBox_4.setText(_("Ativado"))
-        self.pushButton.setText(_("Desconectar"))
-        self.label_5.setText(_("Ao clicar em Desconectar, seu histórico de\n"
-" conversas será limpo para todas as contas."))
+        self.pushButton.setText(_("Configurações do WhatsappWeb"))
+        self.label_5.setText(_("Abre o painel de configurações do WhatsappWeb."))
 
 
 if __name__ == "__main__":
