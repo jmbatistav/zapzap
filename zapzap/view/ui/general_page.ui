@@ -99,7 +99,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
-          <number>5</number>
+          <number>2</number>
          </property>
          <item>
           <widget class="QLabel" name="label_2">
@@ -133,12 +133,12 @@
             </font>
            </property>
            <property name="text">
-            <string>Abrir o ZapZap ao iniciar o Sistema</string>
+            <string>Start ZapZap with the system</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox">
+          <widget class="QCheckBox" name="start_system">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
              <horstretch>0</horstretch>
@@ -151,7 +151,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Desativado</string>
+            <string>Off</string>
            </property>
           </widget>
          </item>
@@ -172,17 +172,17 @@
          <item row="0" column="0">
           <widget class="QLabel" name="label_6">
            <property name="text">
-            <string>Esconder janela ao fechar</string>
+            <string>Hide on close</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QCheckBox" name="checkBox_2">
+          <widget class="QCheckBox" name="keepBackground">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
            </property>
            <property name="text">
-            <string>Ativado</string>
+            <string>On</string>
            </property>
            <property name="checked">
             <bool>true</bool>
@@ -192,17 +192,17 @@
          <item row="1" column="0">
           <widget class="QLabel" name="label_7">
            <property name="text">
-            <string>Executar em Wayland</string>
+            <string>Wayland window system</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QCheckBox" name="checkBox_3">
+          <widget class="QCheckBox" name="wayland">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
            </property>
            <property name="text">
-            <string>Desativado</string>
+            <string>Off</string>
            </property>
           </widget>
          </item>
@@ -230,17 +230,17 @@
               </font>
              </property>
              <property name="text">
-              <string>Corretor ortográfico</string>
+              <string>SpellChecker</string>
              </property>
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QCheckBox" name="checkBox_4">
+            <widget class="QCheckBox" name="checkSpellChecker">
              <property name="layoutDirection">
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="text">
-              <string>Ativado</string>
+              <string>On</string>
              </property>
              <property name="checked">
               <bool>true</bool>
@@ -250,7 +250,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox"/>
+          <widget class="QComboBox" name="comboSpellChecker"/>
          </item>
         </layout>
        </item>
@@ -267,7 +267,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="btnOpenSWhatsapp">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>55</horstretch>
@@ -281,14 +281,14 @@
             </size>
            </property>
            <property name="text">
-            <string>Configurações do WhatsappWeb</string>
+            <string>Whatsapp Web Settings</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_5">
            <property name="text">
-            <string>Abre o painel de configurações do WhatsappWeb.</string>
+            <string>Open the WhatsApp Web settings panel.</string>
            </property>
            <property name="textFormat">
             <enum>Qt::AutoText</enum>
