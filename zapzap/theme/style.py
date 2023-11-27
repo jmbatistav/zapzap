@@ -497,14 +497,14 @@ def buildTheme(p) -> str:
     """
 
     QSCROLLAREA = """
-        #system_scrollArea,
+        #general_scrollArea,
         #appearance_scrollArea,
         #notification_scrollArea,
         #donations_scrollArea,
         #about_scrollArea,
         #usersScrollArea  {
-            background-color: {window};
-            background: {window};
+            background-color: {frame_background};
+            background: {frame_background};
         }
 
         QScrollBar:horizontal
@@ -653,14 +653,13 @@ def buildTheme(p) -> str:
         #leftMenu,
         #leftBar_2
         {	
-            background-color: {window};
+            background-color: {frame_background};
         }
         #menu .QPushButton {	
             background-position: left center;
             background-repeat: no-repeat;
-            border: 8px solid {window};
-            border-radius: 5px;
             text-align: left;
+            border: 8px solid {frame_background};
             padding-left: 44px;
             font: 12pt;
             height: 30px;
@@ -668,19 +667,18 @@ def buildTheme(p) -> str:
 
         #menu .QPushButton:hover,
         #menu .QPushButton:pressed  {
-            font: 13pt;
+            border: 8px solid {window};
+            border-radius: 5px;
+            background-color: {window};
         }
         
-        #btn_home{
-            background-image: url({path}/home.svg);
-        }
-        #btn_users{
-            background-image: url({path}/manage_accounts.svg);
-        }
-        #btn_system{
+        #btn_general{
             background-image: url({path}/system.svg);
         }
-        #btn_appearance{
+        #btn_account{
+            background-image: url({path}/manage_accounts.svg);
+        }
+        #btn_personalization{
             background-image: url({path}/appearance.svg);
         }
         #btn_notifications{
@@ -697,15 +695,33 @@ def buildTheme(p) -> str:
         #menuUsers .QPushButton {	
             background-position: center;
             background-repeat: no-repeat;
-            
+            height: 30px;
+            qproperty-flat: true;
+            qproperty-iconSize: 20px; 
         }
-        #btnHomeSetting{
-            background-image: url({path}/manage_accounts.svg);
-        }
-        #btnHomeSetting:hover {	
+        
+        #menuUsers .QPushButton:hover {	
             background-color: rgb(222, 221, 218); 
             border-radius: 2px;
         }
+        #menuUsers .QPushButton:pressed {	
+            background-color: {window}; 
+            border-radius: 2px;
+        }
+
+        #btnHomeSetting{
+            qproperty-icon: url({path}/gear-six.svg);
+        }
+        #btnHomePerfil{
+             qproperty-icon: url({path}/user.svg);
+        }
+        #btnHomeNewChat{
+             qproperty-icon: url({path}/chat.svg);
+        }
+        #btnHomeNewAccount{
+            qproperty-icon: url({path}/user-plus.svg);
+        }
+
 
         #btn_paypal,
         #btn_pix,
@@ -724,6 +740,18 @@ def buildTheme(p) -> str:
             border: 3px solid {link};
             background-color: #FFFFFF;
         }
+
+        #setting_frame {
+            background-color: {frame_background};
+            border: 8px solid {frame_background};
+            border-radius: 12px;
+             
+        }
+
+        #settingMargin{   
+          border-image: url({path}/border.png);
+        }
+        
         """
 
     FrameSettingBorder = """
@@ -837,7 +865,8 @@ def buildTheme(p) -> str:
         {SettingsMenu}
         {FrameSettingBorder}
         {ZapDecoration}
-        {QMENU_BAR_Wayland if settings.value("system/wayland", True, bool) else ""}
+        {QMENU_BAR_Wayland if settings.value(
+        "system/wayland", True, bool) else ""}
         """
 
     for chave, valor in p.getPallete().items():

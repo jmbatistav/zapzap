@@ -40,31 +40,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Home page
         self.zapHome = Home()
+        self.zapHome.emitOpenSetting.connect(self.openSettings)
+        self.zapHome.emitOpenPerfil.connect(self.openPerfilUser)
+        self.zapHome.emitNewChat.connect(self.openNewChat)
+        self.zapHome.emitNewAccount.connect(self.newAccount)
 
-        # Settings page
-        self.zapSettings = Settings()
-        self.zapSettings.emitDisableUser.connect(self.emitDisableUser)
-        self.zapSettings.emitDeleteUser.connect(self.emitDeleteUser)
-        self.zapSettings.emitEditUser.connect(self.emitEditUser)
-        self.zapSettings.emitNewtUser.connect(self.emitNewUser)
-        self.zapSettings.emitSetSpellChecker.connect(self.emitSetSpellChecker)
-        self.zapSettings.emitDisableSpellChecker.connect(
-            self.emitDisableSpellChecker)
-        self.zapSettings.emitNotifications.connect(self.emitNotifications)
-        self.zapSettings.emitQuit.connect(lambda x=None: self.closeEvent(x))
-        self.zapSettings.emitGoHome.connect(
-            lambda: self.main_stacked.setCurrentIndex(0))
-        self.zapSettings.emitKeepBackground.connect(
-            self.actionHide_on_close.setChecked)
-        self.zapSettings.emitDisableTrayIcon.connect(self.tray.setVisible)
-        self.zapSettings.emitSetHideMenuBar.connect(self.setHideMenuBar)
-        self.zapSettings.emitUpdateUIDecoration.connect(self.updateSCD)
-        self.zapSettings.emitUpdateTheme.connect(self.setThemeApp)
-        self.zapSettings.updateUsersShortcuts()
+        # Settings Dialog
+        self.zapSettings = Settings(parent=self)
 
         # Insert pages in main window
         self.main_stacked.insertWidget(0, self.zapHome)
-        self.main_stacked.insertWidget(1, self.zapSettings)
 
         # timer for system theme change check (check in 1s)
         self.timer = QTimer()
@@ -73,7 +58,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.current_theme = -1
 
         self.setZapDecoration()
-        self.setQtoasterDonation()
+        # self.setQtoasterDonation()
 
     def emitDisableSpellChecker(self, flag):
         self.zapHome.disableSpellChecker(flag)
@@ -84,17 +69,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def emitNewUser(self, user):
         """Function called by the setting panel when ADDING new user."""
         self.zapHome.addNewUser(user)
-        self.zapSettings.updateUsersShortcuts()
+        # self.zapSettings.updateUsersShortcuts()
 
     def emitDeleteUser(self, user):
         """Function called by the setting panel when DELETE user."""
         self.zapHome.delUserPage(user)
-        self.zapSettings.updateUsersShortcuts()
+        # self.zapSettings.updateUsersShortcuts()
 
     def emitDisableUser(self, user):
         """Function called by the setting panel when DISABLE/ENABLE user. """
         self.zapHome.disableUserPage(user)
-        self.zapSettings.updateUsersShortcuts()
+        # self.zapSettings.updateUsersShortcuts()
 
     def emitEditUser(self, user):
         """Function called by the setting panel when EDIT user. """
@@ -183,23 +168,33 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.main_stacked.setCurrentIndex(1)
 
-    def openSettings(self):
+    def newAccount(self):
+        print('newAccount')
+
+    def openNewChat(self):
+        print('New Chat')
+
+    def openPerfilUser(self):
+        print('Open Perfil')
+
+    def openSettings(self, isOpen):
         """Open settings"""
-        if self.main_stacked.currentIndex() == 1:
-            self.main_stacked.setCurrentIndex(0)
+        print('Open settings', isOpen)
+        if isOpen:
+            self.zapSettings.close()
         else:
-            self.main_stacked.setCurrentIndex(1)
-            self.zapSettings.goPageHome()
+            self.zapSettings.show()
+        # self.zapSettings.goPageHome()
 
     def openDonations(self):
         """Open settings"""
         self.main_stacked.setCurrentIndex(1)
-        self.zapSettings.goPageDonations()
+        # self.zapSettings.goPageDonations()
 
     def openAbout_Zapzap(self):
         """Open About"""
         self.main_stacked.setCurrentIndex(1)
-        self.zapSettings.goPageHelp()
+        # self.zapSettings.goPageHelp()
 
     def loadSettings(self):
         """
@@ -308,7 +303,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.menubar.setMaximumHeight(16777215)
 
         self.settings.setValue("main/hideMenuBar", self.isHideMenuBar)
-        self.zapSettings.menubar.setChecked(self.isHideMenuBar)
+        # self.zapSettings.menubar.setChecked(self.isHideMenuBar)
         self.isHideMenuBar = not self.isHideMenuBar
 
     def showToaster(self, typeExec='normal'):
