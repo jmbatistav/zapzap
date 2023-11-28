@@ -31,6 +31,9 @@
    </property>
    <item>
     <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
@@ -39,8 +42,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>422</width>
-        <height>404</height>
+        <width>424</width>
+        <height>406</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -80,28 +83,28 @@
          <item>
           <widget class="QPushButton" name="btn_paypal">
            <property name="text">
-            <string>Paypal</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="btn_kofi">
            <property name="text">
-            <string>Kofi</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="btn_pix">
            <property name="text">
-            <string>pix</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="btn_gitSponor">
            <property name="text">
-            <string>GitSponor</string>
+            <string/>
            </property>
           </widget>
          </item>
