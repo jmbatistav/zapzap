@@ -47,6 +47,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Settings Dialog
         self.zapSettings = Settings(parent=self)
+        self.zapSettings.emitDisableUser.connect(self.emitDisableUser)
+        self.zapSettings.emitDeleteUser.connect(self.emitDeleteUser)
+        self.zapSettings.emitEditUser.connect(self.emitEditUser)
+        self.zapSettings.emitNewtUser.connect(self.emitNewUser)
 
         # Insert pages in main window
         self.main_stacked.insertWidget(0, self.zapHome)
@@ -69,17 +73,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def emitNewUser(self, user):
         """Function called by the setting panel when ADDING new user."""
         self.zapHome.addNewUser(user)
-        # self.zapSettings.updateUsersShortcuts()
+        self.zapSettings.accountPage.updateUsersShortcuts()
 
     def emitDeleteUser(self, user):
         """Function called by the setting panel when DELETE user."""
         self.zapHome.delUserPage(user)
-        # self.zapSettings.updateUsersShortcuts()
+        self.zapSettings.accountPage.updateUsersShortcuts()
 
     def emitDisableUser(self, user):
         """Function called by the setting panel when DISABLE/ENABLE user. """
         self.zapHome.disableUserPage(user)
-        # self.zapSettings.updateUsersShortcuts()
+        self.zapSettings.accountPage.updateUsersShortcuts()
 
     def emitEditUser(self, user):
         """Function called by the setting panel when EDIT user. """

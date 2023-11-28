@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QApplication, QPushButton
-from PyQt6 import QtCore, QtWidgets, QtGui
+from PyQt6 import QtCore, QtWidgets
+from PyQt6.QtCore import pyqtSignal
 from zapzap.view.settings import Ui_Settings
 from zapzap.controllers.settings_pages.general import General
 from zapzap.controllers.settings_pages.account import Account
@@ -7,6 +8,7 @@ from zapzap.controllers.settings_pages.notifications import Notifications
 from zapzap.controllers.settings_pages.personalization import Personalization
 from zapzap.controllers.settings_pages.donations import Donations
 from zapzap.controllers.settings_pages.about import About
+from zapzap.model.user import User
 from gettext import gettext as _
 import zapzap
 
@@ -14,6 +16,11 @@ import zapzap
 class Settings(QWidget, Ui_Settings):
 
     pages_id = {}
+
+    emitDisableUser = pyqtSignal(User)
+    emitDeleteUser = pyqtSignal(User)
+    emitEditUser = pyqtSignal(User)
+    emitNewtUser = pyqtSignal(User)
 
     def __init__(self, parent=None):
         super(Settings, self).__init__()
@@ -41,11 +48,26 @@ class Settings(QWidget, Ui_Settings):
         self.close()
 
     def setPages(self):
-        self.pages_id['btn_general'] = self.settings_stacked.addWidget(General())
-        self.pages_id['btn_account'] = self.settings_stacked.addWidget(Account())
-        self.pages_id['btn_notifications'] = self.settings_stacked.addWidget(Notifications())
-        self.pages_id['btn_personalization'] = self.settings_stacked.addWidget(Personalization())
-        self.pages_id['btn_donations'] = self.settings_stacked.addWidget(Donations())
+        # General
+        self.pages_id['btn_general'] = self.settings_stacked.addWidget(
+            General())
+
+        # Account
+        self.accountPage = Account()
+        self.accountPage.emitDisableUser = self.emitDisableUser
+        self.accountPage.emitDeleteUser = self.emitDeleteUser
+        self.accountPage.emitEditUser = self.emitEditUser
+        self.accountPage.emitNewtUser = self.emitNewtUser
+        self.pages_id['btn_account'] = self.settings_stacked.addWidget(
+            self.accountPage)
+
+        # Notifications
+        self.pages_id['btn_notifications'] = self.settings_stacked.addWidget(
+            Notifications())
+        self.pages_id['btn_personalization'] = self.settings_stacked.addWidget(
+            Personalization())
+        self.pages_id['btn_donations'] = self.settings_stacked.addWidget(
+            Donations())
         self.pages_id['btn_about'] = self.settings_stacked.addWidget(About())
 
         print(self.pages_id)
@@ -72,11 +94,6 @@ class Settings(QWidget, Ui_Settings):
         geo.moveBottomLeft(
             parentRect.bottomLeft() + QtCore.QPoint(self.margin+40, -self.margin))
         self.setGeometry(geo)
-
-    @staticmethod
-    def showDialog(parent):
-        qtoaster = Settings(parent)
-        qtoaster.show()
 
 
 """ finalizei o painel principal das configurações

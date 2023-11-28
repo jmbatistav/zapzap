@@ -87,7 +87,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="btnNewUser">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -95,14 +95,14 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Nova conta</string>
+            <string>New</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>Cria uma novo painel para acesso ao Whatsapp</string>
+            <string>Creates a new panel for access to WhatsApp.</string>
            </property>
           </widget>
          </item>

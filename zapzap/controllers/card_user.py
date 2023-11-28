@@ -4,6 +4,7 @@ from zapzap.model.user import User
 from zapzap.theme.builder_icon import getImageQPixmap
 from zapzap.theme.icons import IMAGE_DISABLE
 from zapzap.view.card_user import Ui_CardUser
+from .settings_pages.tools import updateTextCheckBox
 from gettext import gettext as _
 import zapzap
 
@@ -52,6 +53,7 @@ class CardUser(QWidget, Ui_CardUser):
 
         self.showNotifications.setChecked(self.settings.value(
             f'{str(self.user.getId())}/notification', True, bool))
+        updateTextCheckBox(self.showNotifications)
 
     def buttonClick(self):
         btn = self.sender()
@@ -67,3 +69,4 @@ class CardUser(QWidget, Ui_CardUser):
     def checkBoxClick(self):
         self.settings.setValue(f'{str(self.user.getId())}/notification',
                                self.showNotifications.isChecked())
+        updateTextCheckBox(self.showNotifications)
