@@ -3,6 +3,7 @@ from PyQt6.QtCore import QSettings, pyqtSignal, QLocale
 from zapzap.view.general_page import Ui_General
 from ...services.spellCheckLanguages import SpellCheckLanguages
 from zapzap.services.portal_desktop import createDesktopFile
+from .tools import updateTextCheckBox
 from gettext import gettext as _
 import zapzap
 
@@ -54,13 +55,7 @@ class General(QWidget, Ui_General):
     def setActionCheckBox(self):
         for children in self.general_scrollArea.findChildren(QCheckBox):
             children.clicked.connect(self.checkClick)
-            self.updateTextCheckBox(children)
-
-    def updateTextCheckBox(self, checkBox):
-        if checkBox.isChecked():
-            checkBox.setText(_("On"))
-        else:
-            checkBox.setText(_("Off"))
+            updateTextCheckBox(children)
 
     def checkClick(self):
         children = self.sender()
@@ -77,7 +72,7 @@ class General(QWidget, Ui_General):
             self.emitDisableSpellChecker.emit(
                 self.checkSpellChecker.isChecked())
 
-        self.updateTextCheckBox(children)
+        updateTextCheckBox(children)
         self.save()
 
     def save(self):
