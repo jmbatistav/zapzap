@@ -15,39 +15,16 @@ class Home(QWidget, Ui_Home):
     both with the same position.
     """
 
-    emitOpenSetting = pyqtSignal(bool)
-    isSettinsOpen = True
-
-    emitOpenPerfil = pyqtSignal()
-    emitNewChat = pyqtSignal()
-    emitNewAccount = pyqtSignal()
-
     list = None
 
     def __init__(self):
         super(Home, self).__init__()
         self.setupUi(self)
         self.loadUsers()
-        self.activeMenu()
+        self.loadActionsMenuBar()
         self.updateShortcuts()
-        self.loadActions()
 
-    def loadActions(self):
-        # Open Perfil
-        self.btnHomePerfil.clicked.connect(lambda: self.emitOpenPerfil.emit())
-
-        # Open Settings
-        def openSettings():
-            self.isSettinsOpen = not self.isSettinsOpen
-            self.emitOpenSetting.emit(self.isSettinsOpen)
-        self.btnHomeSetting.clicked.connect(openSettings)
-
-        # New chat
-        self.btnHomeNewChat.clicked.connect(lambda: self.emitNewChat.emit())
-
-        # New Account
-        self.btnHomeNewAccount.clicked.connect(lambda: self.emitNewAccount.emit())
-
+    #### Accounts ####
     def loadUsers(self):
         """Carries all users from the database"""
         self.list = UserDAO.select()
@@ -55,6 +32,9 @@ class Home(QWidget, Ui_Home):
             button = UserContainer(self, user)
             self.menu.addWidget(button)
             self.userStacked.addWidget(button.getBrowser())
+
+        # Select default account
+        self.menu.itemAt(0).widget().selected()
 
     def updateShortcuts(self):
         """Updates access shortcuts to users"""
@@ -65,33 +45,34 @@ class Home(QWidget, Ui_Home):
                 btn.setShortcut(f'Ctrl+{cont}')
                 cont += 1
 
-    def addNewUser(self, user):
-        """Add new user to the list, in the container (menu button) and the page at Stacked"""
-        self.list.append(user)
-        button = UserContainer(self, user)
-        self.menu.addWidget(button)
-        self.userStacked.addWidget(button.getBrowser())
+    #### MenuBar ####
+    def loadActionsMenuBar(self):
+        # Open Perfil
+        self.btnHomePerfil.clicked.connect(lambda: print('Open Perfil'))
 
-        # self.activeMenu()
-        self.updateShortcuts()
+        # Open Settings
+        self.btnHomeSetting.clicked.connect(lambda: print('Open Settings'))
 
-    def activeMenu(self):
-        """Activate the user menu """
-        self.menuUsers.show()
-        self.menu.itemAt(0).widget().selected()
+        # New chat
+        self.btnHomeNewChat.clicked.connect(lambda: print('New chat'))
 
-        """ if len(self.list) > 1:
-            self.menuUsers.show()
-            self.menu.itemAt(0).widget().selected()
-        else:
-            self.menuUsers.hide() """
+        # New Account
+        def newAccount():
+            from zapzap.model.user import UserDAO
+            from zapzap.controllers.card_user import User
+            from zapzap.theme.builder_icon import getNewIconSVG
+            LIMITE_USERS = 9
 
-    def resetStyle(self):
-        """Restart the style of the user icons"""
-        for i in reversed(range(self.menu.count())):
-            ub = self.menu.itemAt(i).widget()
-            ub.unselected()
+            if self.menu.count() < LIMITE_USERS:
+                # Cria o usuário
+                user = User(
+                    name='', icon=getNewIconSVG())
+                # insere no banco de dados e recebe o user com o ID
+                user = UserDAO.add(user)
+                self.addNewUser(user)
+        self.btnHomeNewAccount.clicked.connect(newAccount)
 
+    #### Containers Whatsapp ####
     def setPage(self, browser):
         """Defines the page to be shown"""
         self.userStacked.setCurrentWidget(browser)
@@ -104,49 +85,38 @@ class Home(QWidget, Ui_Home):
                 return btn, i
         return None
 
-    def getSizeNotifications(self) -> int:
-        """Sum the notifications of all users"""
-        qtd = 0
-        for i in range(self.menu.count()):
-            btn = self.menu.itemAt(i).widget()
-            qtd += btn.qtd
-        return qtd
-
-    def setThemePages(self, theme):
-        """Define or theme for all pages page"""
-        for i in range(self.menu.count()):
-            btn = self.menu.itemAt(i).widget()
-            btn.setThemePage(theme)
-
-    def setZoomFactor(self, factor=None):
-        """Current page zoom
-            - Factor=None -> default (1.0).
-            - factor:int -> Increases to the current value"""
-        i = self.userStacked.currentIndex()
-        btn = self.menu.itemAt(i).widget()
-        btn.setZoomFactorPage(factor)
-
-    def saveSettings(self):
-        """Save settings all users"""
-        for i in range(self.menu.count()):
-            btn = self.menu.itemAt(i).widget()
-            btn.saveSettings()
-
     def reloadPage(self):
         """Current page recharge"""
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()
         btn.doReloadPage()
 
-    def setSpellChecker(self, lang):
-        for i in range(self.menu.count()):
+    def closeConversation(self, closeAll=False):
+        if closeAll:
+            for i in range(self.menu.count()):
+                btn = self.menu.itemAt(i).widget()
+                btn.closeConversation()
+        else:
+            i = self.userStacked.currentIndex()
             btn = self.menu.itemAt(i).widget()
-            btn.setSpellChecker(lang)
+            btn.closeConversation()
 
-    def disableSpellChecker(self, flag):
-        for i in range(self.menu.count()):
-            btn = self.menu.itemAt(i).widget()
-            btn.disableSpellChecker(flag)
+    def openChat(self, url):
+        i = self.userStacked.currentIndex()
+        btn = self.menu.itemAt(i).widget()
+        btn.openChat(url)
+
+    #### CRUD Account ####
+
+    def addNewUser(self, user):
+        """Add new user to the list, in the container (menu button) and the page at Stacked"""
+        self.list.append(user)
+        button = UserContainer(self, user)
+        self.menu.addWidget(button)
+        self.userStacked.addWidget(button.getBrowser())
+
+        # self.activeMenu()
+        self.updateShortcuts()
 
     def editUserPage(self, user):
         return_btn = self.getUserContainer(user.id)
@@ -232,17 +202,56 @@ class Home(QWidget, Ui_Home):
             self.activeMenu()
             self.updateShortcuts()
 
-    def closeConversation(self, closeAll=False):
-        if closeAll:
-            for i in range(self.menu.count()):
-                btn = self.menu.itemAt(i).widget()
-                btn.closeConversation()
-        else:
-            i = self.userStacked.currentIndex()
-            btn = self.menu.itemAt(i).widget()
-            btn.closeConversation()
+    #### ZoomFactor ####
 
-    def openChat(self, url):
+    def setZoomFactor(self, factor=None):
+        """Current page zoom
+            - Factor=None -> default (1.0).
+            - factor:int -> Increases to the current value"""
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()
-        btn.openChat(url)
+        btn.setZoomFactorPage(factor)
+
+    #### SpellChecker ####
+
+    def setSpellChecker(self, lang):
+        for i in range(self.menu.count()):
+            btn = self.menu.itemAt(i).widget()
+            btn.setSpellChecker(lang)
+
+    def disableSpellChecker(self, flag):
+        for i in range(self.menu.count()):
+            btn = self.menu.itemAt(i).widget()
+            btn.disableSpellChecker(flag)
+
+    #### Notifications ####
+
+    def getSizeNotifications(self) -> int:
+        """Sum the notifications of all users"""
+        qtd = 0
+        for i in range(self.menu.count()):
+            btn = self.menu.itemAt(i).widget()
+            qtd += btn.qtd
+        return qtd
+
+    #### Themes ####
+
+    def resetStyle(self):
+        """Restart the style of the user icons"""
+        for i in reversed(range(self.menu.count())):
+            ub = self.menu.itemAt(i).widget()
+            ub.unselected()
+
+    def setThemePages(self, theme):
+        """Define or theme for all pages page"""
+        for i in range(self.menu.count()):
+            btn = self.menu.itemAt(i).widget()
+            btn.setThemePage(theme)
+
+    #### Save settings ####
+
+    def saveSettings(self):
+        """Save settings all users"""
+        for i in range(self.menu.count()):
+            btn = self.menu.itemAt(i).widget()
+            btn.saveSettings()
