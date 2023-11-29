@@ -100,6 +100,24 @@ class WhatsApp(QWebEnginePage):
         script = """document.dispatchEvent(new KeyboardEvent("keydown",{'key': 'Escape'}));"""
         self.runJavaScript(script)
 
+    def newConversation(self):
+        script = """function triggerCtrlAltN() {
+                        var event = new KeyboardEvent('keydown', {
+                            key: 'n',
+                            code: 'KeyN',
+                            ctrlKey: true,
+                            altKey: true,
+                            shiftKey: false,
+                            metaKey: false,
+                            bubbles: true,
+                            cancelable: true
+                        });
+                    document.dispatchEvent(event);
+                    }
+                triggerCtrlAltN();
+                """
+        self.runJavaScript(script)
+
     def openChat(self, url):
         script = """(function(){var a = document.createElement("a");a.href=\"""" + \
             url + \

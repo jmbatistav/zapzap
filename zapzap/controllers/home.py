@@ -54,7 +54,7 @@ class Home(QWidget, Ui_Home):
         self.btnHomeSetting.clicked.connect(lambda: print('Open Settings'))
 
         # New chat
-        self.btnHomeNewChat.clicked.connect(lambda: print('New chat'))
+        self.btnHomeNewChat.clicked.connect(self.newConversation)
 
         # New Account
         def newAccount():
@@ -100,6 +100,11 @@ class Home(QWidget, Ui_Home):
             i = self.userStacked.currentIndex()
             btn = self.menu.itemAt(i).widget()
             btn.closeConversation()
+
+    def newConversation(self):
+        i = self.userStacked.currentIndex()
+        btn = self.menu.itemAt(i).widget()
+        btn.newConversation()
 
     def openChat(self, url):
         i = self.userStacked.currentIndex()

@@ -126,6 +126,9 @@ class UserContainer(QPushButton):
     def closeConversation(self):
         self.browser.page().closeConversation()
 
+    def newConversation(self):
+        self.browser.page().newConversation()
+
     def openChat(self, number):
         self.browser.page().openChat(number)
 
