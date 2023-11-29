@@ -118,6 +118,24 @@ class WhatsApp(QWebEnginePage):
                 """
         self.runJavaScript(script)
 
+    def openPerfil(self):
+        script = """function triggerCtrlAltP() {
+                        var event = new KeyboardEvent('keydown', {
+                            key: 'p',
+                            code: 'KeyN',
+                            ctrlKey: true,
+                            altKey: true,
+                            shiftKey: false,
+                            metaKey: false,
+                            bubbles: true,
+                            cancelable: true
+                        });
+                    document.dispatchEvent(event);
+                    }
+                triggerCtrlAltP();
+                """
+        self.runJavaScript(script)
+
     def openChat(self, url):
         script = """(function(){var a = document.createElement("a");a.href=\"""" + \
             url + \

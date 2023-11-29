@@ -48,7 +48,7 @@ class Home(QWidget, Ui_Home):
     #### MenuBar ####
     def loadActionsMenuBar(self):
         # Open Perfil
-        self.btnHomePerfil.clicked.connect(lambda: print('Open Perfil'))
+        self.btnHomePerfil.clicked.connect(self.openPerfil)
 
         # Open Settings
         self.btnHomeSetting.clicked.connect(lambda: print('Open Settings'))
@@ -100,6 +100,11 @@ class Home(QWidget, Ui_Home):
             i = self.userStacked.currentIndex()
             btn = self.menu.itemAt(i).widget()
             btn.closeConversation()
+
+    def openPerfil(self):
+        i = self.userStacked.currentIndex()
+        btn = self.menu.itemAt(i).widget()
+        btn.openPerfil()
 
     def newConversation(self):
         i = self.userStacked.currentIndex()
