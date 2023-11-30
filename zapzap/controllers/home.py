@@ -3,6 +3,7 @@ import shutil
 from PyQt6.QtWidgets import QWidget
 from PyQt6.QtCore import QSettings, pyqtSignal
 from zapzap.controllers.user_container import UserContainer
+from zapzap.controllers.settings import Settings
 from zapzap.model.user import UserDAO
 from zapzap.view.home import Ui_Home
 import zapzap
@@ -16,6 +17,7 @@ class Home(QWidget, Ui_Home):
     """
 
     list = None
+    isSettinsOpen = True
 
     def __init__(self):
         super(Home, self).__init__()
@@ -24,7 +26,10 @@ class Home(QWidget, Ui_Home):
         self.loadActionsMenuBar()
         self.updateShortcuts()
 
+        self.zapSettings = Settings(parent=self)
+
     #### Accounts ####
+
     def loadUsers(self):
         """Carries all users from the database"""
         self.list = UserDAO.select()
@@ -50,8 +55,7 @@ class Home(QWidget, Ui_Home):
         # Open Perfil
         self.btnHomePerfil.clicked.connect(self.openPerfil)
 
-        # Open Settings
-        self.btnHomeSetting.clicked.connect(lambda: print('Open Settings'))
+        self.btnHomeSetting.clicked.connect(self.openSettings)
 
         # New chat
         self.btnHomeNewChat.clicked.connect(self.newConversation)
@@ -71,6 +75,15 @@ class Home(QWidget, Ui_Home):
                 user = UserDAO.add(user)
                 self.addNewUser(user)
         self.btnHomeNewAccount.clicked.connect(newAccount)
+
+    #### Settings ####
+    def openSettings(self):
+        """Open settings"""
+        self.isSettinsOpen = not self.isSettinsOpen
+        if self.isSettinsOpen:
+            self.zapSettings.close()
+        else:
+            self.zapSettings.show()
 
     #### Containers Whatsapp ####
     def setPage(self, browser):
@@ -92,7 +105,9 @@ class Home(QWidget, Ui_Home):
         btn.doReloadPage()
 
     def closeConversation(self, closeAll=False):
-        if closeAll:
+        if not self.isSettinsOpen:
+            self.openSettings()
+        elif closeAll:
             for i in range(self.menu.count()):
                 btn = self.menu.itemAt(i).widget()
                 btn.closeConversation()
