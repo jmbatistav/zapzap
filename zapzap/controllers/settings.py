@@ -70,7 +70,6 @@ class Settings(QWidget, Ui_Settings):
             Donations())
         self.pages_id['btn_about'] = self.settings_stacked.addWidget(About())
 
-        print(self.pages_id)
 
     def setDefaultEventButtonInMenu(self):
         for item in self.menu.findChildren(QPushButton):
@@ -94,14 +93,6 @@ class Settings(QWidget, Ui_Settings):
         geo.moveBottomLeft(
             parentRect.bottomLeft() + QtCore.QPoint(self.margin+40, -self.margin))
         self.setGeometry(geo)
-
-
-""" finalizei o painel principal das configurações
-
-1 - desativar o painel antigo
-2 - submeter
-
-3 - barra lateral da home e o botão de configurações """
 
 
 # Settings page

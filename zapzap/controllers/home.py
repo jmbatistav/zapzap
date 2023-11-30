@@ -27,6 +27,12 @@ class Home(QWidget, Ui_Home):
         self.updateShortcuts()
 
         self.zapSettings = Settings(parent=self)
+        # Account
+        self.zapSettings.emitDisableUser.connect(self.disableUserPage)
+        self.zapSettings.emitDeleteUser.connect(self.delUserPage)
+        self.zapSettings.emitEditUser.connect(self.editUserPage)
+        self.zapSettings.emitNewtUser.connect(self.addNewUser)
+
 
     #### Accounts ####
 
@@ -140,7 +146,6 @@ class Home(QWidget, Ui_Home):
         self.menu.addWidget(button)
         self.userStacked.addWidget(button.getBrowser())
 
-        # self.activeMenu()
         self.updateShortcuts()
 
     def editUserPage(self, user):
@@ -150,6 +155,7 @@ class Home(QWidget, Ui_Home):
 
     def disableUserPage(self, user):
         """Disable user"""
+        print("""Disable user""")
         # If enabled, remove from stacked
         if user.enable:
             self.list.append(user)
@@ -157,7 +163,6 @@ class Home(QWidget, Ui_Home):
             self.menu.addWidget(button)
             self.userStacked.addWidget(button.getBrowser())
 
-            self.activeMenu()
             self.updateShortcuts()
         else:
             # Get UserContainer
@@ -182,7 +187,6 @@ class Home(QWidget, Ui_Home):
                 if u.id == user.id:
                     self.list.remove(u)
 
-            self.activeMenu()
             self.updateShortcuts()
 
     def delUserPage(self, user):
@@ -224,7 +228,6 @@ class Home(QWidget, Ui_Home):
         else:
             print("% s removed successfully" % path)
         finally:
-            self.activeMenu()
             self.updateShortcuts()
 
     #### ZoomFactor ####

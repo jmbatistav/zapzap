@@ -61,9 +61,3 @@ class Account(QWidget, Ui_Account):
                 count += 1
             else:
                 card.key.setText('')
-
-        """ if count == self.LIMITE_USERS:
-            self.label_limiteUser.show()
-        else:
-
-            self.label_limiteUser.hide() """
