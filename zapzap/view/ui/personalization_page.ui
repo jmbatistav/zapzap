@@ -100,14 +100,14 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox"/>
+          <widget class="QComboBox" name="appThemeCBox"/>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="1">
-          <widget class="QCheckBox" name="checkBox">
+          <widget class="QCheckBox" name="disableTrayIcon">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
            </property>
@@ -124,7 +124,7 @@
           </widget>
          </item>
          <item row="1" column="0" colspan="2">
-          <widget class="QComboBox" name="comboBox_2"/>
+          <widget class="QComboBox" name="trayIconCBox"/>
          </item>
         </layout>
        </item>

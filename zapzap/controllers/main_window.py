@@ -32,6 +32,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Home page
         self.zapHome = Home()
+        self.zapHome.emitUpdateTheme.connect(self.setThemeApp)
+        self.zapHome.emitDisableTrayIcon.connect(self.tray.setVisible)
+        self.zapHome.emitNotifications.connect(self.emitNotifications)
 
         # hide menu bar
         self.menubar.setMaximumHeight(0)
@@ -45,7 +48,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.timeout.connect(self.syncThemeSys)
         self.current_theme = -1
 
-        QtoasterDonation.showMessage(parent=self)
+        # QtoasterDonation.showMessage(parent=self)
 
     #### MenuBar actions ####
 
@@ -152,7 +155,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def emitNotifications(self):
         """The notifications of all users to the tray"""
-        print("""The notifications of all users to the tray""")
+        qtd = self.zapHome.getSizeNotifications()
+
+        if qtd > 0:
+            self.setWindowTitle(zapzap.__appname__+" ("+str(qtd)+")")
+        else:
+            self.setWindowTitle(zapzap.__appname__)
+
+        self.tray.showIconNotification(qtd)
 
     #### Tray icon ####
 
@@ -182,6 +192,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def setThemeApp(self, theme):
         """" Apply the theme in the APP """
+        print(theme)
         if theme == "auto":
             theme = getSystemTheme()
             self.timer.start()

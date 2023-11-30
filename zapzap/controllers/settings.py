@@ -17,10 +17,16 @@ class Settings(QWidget, Ui_Settings):
 
     pages_id = {}
 
+    # account
     emitDisableUser = pyqtSignal(User)
     emitDeleteUser = pyqtSignal(User)
     emitEditUser = pyqtSignal(User)
     emitNewtUser = pyqtSignal(User)
+
+    # personalization
+    emitUpdateTheme = pyqtSignal(str)
+    emitDisableTrayIcon = pyqtSignal(bool)
+    emitNotifications = pyqtSignal()
 
     def __init__(self, parent=None):
         super(Settings, self).__init__()
@@ -64,12 +70,19 @@ class Settings(QWidget, Ui_Settings):
         # Notifications
         self.pages_id['btn_notifications'] = self.settings_stacked.addWidget(
             Notifications())
+
+        # Personalization
+        self.persoPage = Personalization()
+        self.persoPage.emitUpdateTheme = self.emitUpdateTheme
+        self.persoPage.emitDisableTrayIcon = self.emitDisableTrayIcon
+        self.persoPage.emitNotifications = self.emitNotifications
         self.pages_id['btn_personalization'] = self.settings_stacked.addWidget(
-            Personalization())
+            self.persoPage)
+
+        # Donations
         self.pages_id['btn_donations'] = self.settings_stacked.addWidget(
             Donations())
         self.pages_id['btn_about'] = self.settings_stacked.addWidget(About())
-
 
     def setDefaultEventButtonInMenu(self):
         for item in self.menu.findChildren(QPushButton):
@@ -113,5 +126,7 @@ self.zapSettings.emitKeepBackground.connect(
 self.zapSettings.emitDisableTrayIcon.connect(self.tray.setVisible)
 self.zapSettings.emitSetHideMenuBar.connect(self.setHideMenuBar)
 self.zapSettings.emitUpdateUIDecoration.connect(self.updateSCD)
+
 self.zapSettings.emitUpdateTheme.connect(self.setThemeApp)
+
 self.zapSettings.updateUsersShortcuts() """
