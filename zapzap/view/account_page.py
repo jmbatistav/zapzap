@@ -38,7 +38,7 @@ class Ui_Account(object):
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
         self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setSpacing(5)
         self.verticalLayout.setObjectName("verticalLayout")
         self.btnNewUser = QtWidgets.QPushButton(parent=self.account_scrollArea)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -58,6 +58,7 @@ class Ui_Account(object):
         self.line.setObjectName("line")
         self.verticalLayout_2.addWidget(self.line)
         self.usersList = QtWidgets.QVBoxLayout()
+        self.usersList.setSpacing(3)
         self.usersList.setObjectName("usersList")
         self.verticalLayout_2.addLayout(self.usersList)
         spacerItem = QtWidgets.QSpacerItem(20, 329, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
@@ -72,7 +73,7 @@ class Ui_Account(object):
         
         Account.setWindowTitle(_("Form"))
         self.label.setText(_("Account"))
-        self.btnNewUser.setText(_("New"))
+        self.btnNewUser.setText(_("New account"))
         self.label_2.setText(_("Creates a new panel for access to WhatsApp."))
 
 

@@ -1,6 +1,7 @@
 from PyQt6.QtCore import QSettings
 from .style_components.qwidgets import QWIDGETS
 from .style_components.menu_home import MENU_HOME
+from .style_components.settings import SETTINGS
 import zapzap
 
 
@@ -11,6 +12,7 @@ def buildTheme(p) -> str:
     STYLE_SHEET = f"""
         {QWIDGETS}
         {MENU_HOME}
+        {SETTINGS}
         """
 
     for chave, valor in p.getPallete().items():

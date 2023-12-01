@@ -297,4 +297,9 @@ QWIDGETS = """
             subcontrol-origin: margin;
         }
 
+        QScrollArea .QWidget{
+            background-color: {window};
+            background: {window};
+        }
+
     """

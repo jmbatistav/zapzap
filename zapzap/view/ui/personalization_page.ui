@@ -78,7 +78,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
-          <number>0</number>
+          <number>5</number>
          </property>
          <item>
           <widget class="QLabel" name="label_2">
@@ -106,6 +106,9 @@
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
          <item row="0" column="1">
           <widget class="QCheckBox" name="disableTrayIcon">
            <property name="layoutDirection">

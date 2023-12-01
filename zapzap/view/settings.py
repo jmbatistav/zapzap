@@ -13,13 +13,13 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Settings(object):
     def setupUi(self, Settings):
         Settings.setObjectName("Settings")
-        Settings.resize(750, 550)
+        Settings.resize(800, 550)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Settings.sizePolicy().hasHeightForWidth())
         Settings.setSizePolicy(sizePolicy)
-        Settings.setMinimumSize(QtCore.QSize(750, 550))
+        Settings.setMinimumSize(QtCore.QSize(800, 550))
         self.horizontalLayout = QtWidgets.QHBoxLayout(Settings)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -145,6 +145,8 @@ class Ui_Settings(object):
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem2)
         self.btn_close = QtWidgets.QPushButton(parent=self.setting_frame)
+        self.btn_close.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_close.setText("")
         self.btn_close.setObjectName("btn_close")
         self.horizontalLayout_2.addWidget(self.btn_close)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -169,7 +171,6 @@ class Ui_Settings(object):
         self.btn_donations.setText(_("Donations"))
         self.btn_about.setText(_("About"))
         self.btn_quit.setText(_("Quit"))
-        self.btn_close.setText(_("x"))
 
 
 if __name__ == "__main__":

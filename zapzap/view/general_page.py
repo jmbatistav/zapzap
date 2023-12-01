@@ -45,7 +45,7 @@ class Ui_General(object):
         self.label.setObjectName("label")
         self.verticalLayout_4.addWidget(self.label)
         self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setSpacing(2)
+        self.verticalLayout.setSpacing(5)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_2 = QtWidgets.QLabel(parent=self.general_scrollArea)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Maximum)
@@ -137,7 +137,7 @@ class Ui_General(object):
         self.line.setObjectName("line")
         self.verticalLayout_4.addWidget(self.line)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setSpacing(5)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.btnOpenSWhatsapp = QtWidgets.QPushButton(parent=self.general_scrollArea)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -175,7 +175,7 @@ class Ui_General(object):
         self.label_4.setText(_("SpellChecker"))
         self.checkSpellChecker.setText(_("On"))
         self.btnOpenSWhatsapp.setText(_("Whatsapp Web Settings"))
-        self.label_5.setText(_("Open the WhatsApp Web settings panel."))
+        self.label_5.setText(_("Open the WhatsApp Web Settings panel on the selected account."))
 
 
 if __name__ == "__main__":

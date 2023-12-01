@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget
 from PyQt6.QtCore import pyqtSignal, QSettings
+from PyQt6.QtGui import QIcon
 from zapzap.model.user import User
 from zapzap.theme.builder_icon import getImageQPixmap
 from zapzap.theme.icons import IMAGE_DISABLE
@@ -44,10 +45,13 @@ class CardUser(QWidget, Ui_CardUser):
         svg = self.user.icon
         if self.user.enable:
             self.name.setEnabled(True)
-            self.btnDisable.setText(_("Disable"))
+            #self.btnDisable.setText(_("Disable"))
+            self.btnDisable.setIcon(QIcon(zapzap.abs_path+'/assets/icons/app/light/checkbox_checked.svg'))
+            
         else:
             self.name.setEnabled(False)
-            self.btnDisable.setText(_("Enable"))
+            #self.btnDisable.setText(_("Enable"))
+            self.btnDisable.setIcon(QIcon(zapzap.abs_path+'/assets/icons/app/light/checkbox_indeterminate.svg'))
             svg = svg.format(IMAGE_DISABLE)
         self.icon.setPixmap(getImageQPixmap(svg))
 

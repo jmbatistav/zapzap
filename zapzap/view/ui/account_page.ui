@@ -84,7 +84,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
-          <number>0</number>
+          <number>5</number>
          </property>
          <item>
           <widget class="QPushButton" name="btnNewUser">
@@ -95,7 +95,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>New</string>
+            <string>New account</string>
            </property>
           </widget>
          </item>
@@ -116,7 +116,11 @@
         </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="usersList"/>
+        <layout class="QVBoxLayout" name="usersList">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+        </layout>
        </item>
        <item>
         <spacer name="verticalSpacer">
