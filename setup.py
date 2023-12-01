@@ -17,6 +17,7 @@ try:
                   'zapzap.engine',
                   'zapzap.services',
                   'zapzap.theme',
+                  'zapzap.theme.style_components',
                   'zapzap.view',
                   'zapzap.model'],
         include_package_data=True,
