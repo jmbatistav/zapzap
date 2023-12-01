@@ -47,6 +47,8 @@ class Home(QWidget, Ui_Home):
         # Quit
         self.emitQuit = self.zapSettings.emitQuit
         self.zapSettings.emitCloseSettings.connect(self.openSettings)
+        # Open Whatsapp Settings
+        self.zapSettings.emitOpenSettingsWhatsapp.connect(self.openWhatsappSettings)
 
     #### Accounts ####
 
@@ -140,6 +142,12 @@ class Home(QWidget, Ui_Home):
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()
         btn.openPerfil()
+    
+    def openWhatsappSettings(self):
+        i = self.userStacked.currentIndex()
+        btn = self.menu.itemAt(i).widget()
+        btn.openWhatsappSettings()
+        self.openSettings()
 
     def newConversation(self):
         i = self.userStacked.currentIndex()

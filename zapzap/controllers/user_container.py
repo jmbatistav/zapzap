@@ -128,9 +128,12 @@ class UserContainer(QPushButton):
 
     def newConversation(self):
         self.browser.page().newConversation()
-    
+
     def openPerfil(self):
         self.browser.page().openPerfil()
+
+    def openWhatsappSettings(self):
+        self.browser.page().openWhatsappSettings()
 
     def openChat(self, number):
         self.browser.page().openChat(number)

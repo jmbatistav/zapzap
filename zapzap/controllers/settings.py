@@ -32,6 +32,9 @@ class Settings(QWidget, Ui_Settings):
     emitQuit = pyqtSignal()
     emitCloseSettings = pyqtSignal()
 
+    # Whatsapp Settings
+    emitOpenSettingsWhatsapp = pyqtSignal()
+
     def __init__(self, parent=None):
         super(Settings, self).__init__()
         self.setupUi(self)
@@ -61,8 +64,9 @@ class Settings(QWidget, Ui_Settings):
 
     def setPages(self):
         # General
-        self.pages_id['btn_general'] = self.settings_stacked.addWidget(
-            General())
+        self.generalPage = General()
+        self.generalPage.emitOpenSettingsWhatsapp = self.emitOpenSettingsWhatsapp
+        self.pages_id['btn_general'] = self.settings_stacked.addWidget(self.generalPage)
 
         # Account
         self.accountPage = Account()
