@@ -13,7 +13,7 @@ try:
         packages=['zapzap',
                   'zapzap.controllers',
                   'zapzap.controllers.main_window_components',
-                  'zapzap.controllers.main_window_decoration',
+                  'zapzap.controllers.settings_pages',
                   'zapzap.engine',
                   'zapzap.services',
                   'zapzap.theme',
