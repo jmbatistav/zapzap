@@ -28,6 +28,9 @@ class Settings(QWidget, Ui_Settings):
     emitDisableTrayIcon = pyqtSignal(bool)
     emitNotifications = pyqtSignal()
 
+    # Quit
+    emitQuit = pyqtSignal()
+
     def __init__(self, parent=None):
         super(Settings, self).__init__()
         self.setupUi(self)
@@ -93,7 +96,10 @@ class Settings(QWidget, Ui_Settings):
         btnName = btn.objectName()
         print(btnName)
 
-        self.settings_stacked.setCurrentIndex(self.pages_id[btnName])
+        try:
+            self.settings_stacked.setCurrentIndex(self.pages_id[btnName])
+        except:
+            self.emitQuit.emit()
 
     def eventFilter(self, source, event):
         if source == self.parent() and event.type() == QtCore.QEvent.Type.Resize:

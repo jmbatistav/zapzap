@@ -35,6 +35,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.zapHome.emitUpdateTheme.connect(self.setThemeApp)
         self.zapHome.emitDisableTrayIcon.connect(self.tray.setVisible)
         self.zapHome.emitNotifications.connect(self.emitNotifications)
+        self.zapHome.emitQuit.connect(lambda x=None: self.closeEvent(x))
 
         # hide menu bar
         self.menubar.setMaximumHeight(0)

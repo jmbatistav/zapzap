@@ -24,6 +24,9 @@ class Home(QWidget, Ui_Home):
     emitDisableTrayIcon = pyqtSignal(bool)
     emitNotifications = pyqtSignal()
 
+    # Quit
+    emitQuit = pyqtSignal()
+
     def __init__(self):
         super(Home, self).__init__()
         self.setupUi(self)
@@ -38,9 +41,11 @@ class Home(QWidget, Ui_Home):
         self.zapSettings.emitEditUser.connect(self.editUserPage)
         self.zapSettings.emitNewtUser.connect(self.addNewUser)
         # Personalization (Atribuição inversa, pois todos os componentes já existem)
-        self.emitUpdateTheme = self.zapSettings.emitUpdateTheme 
+        self.emitUpdateTheme = self.zapSettings.emitUpdateTheme
         self.emitDisableTrayIcon = self.zapSettings.emitDisableTrayIcon
         self.emitNotifications = self.zapSettings.emitNotifications
+        # Quit
+        self.emitQuit = self.zapSettings.emitQuit
 
     #### Accounts ####
 
