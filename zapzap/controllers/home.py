@@ -46,6 +46,7 @@ class Home(QWidget, Ui_Home):
         self.emitNotifications = self.zapSettings.emitNotifications
         # Quit
         self.emitQuit = self.zapSettings.emitQuit
+        self.zapSettings.emitCloseSettings.connect(self.openSettings)
 
     #### Accounts ####
 

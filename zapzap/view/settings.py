@@ -144,9 +144,9 @@ class Ui_Settings(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem2)
-        self.pushButton = QtWidgets.QPushButton(parent=self.setting_frame)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout_2.addWidget(self.pushButton)
+        self.btn_close = QtWidgets.QPushButton(parent=self.setting_frame)
+        self.btn_close.setObjectName("btn_close")
+        self.horizontalLayout_2.addWidget(self.btn_close)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.settings_stacked = QtWidgets.QStackedWidget(parent=self.setting_frame)
         self.settings_stacked.setObjectName("settings_stacked")
@@ -169,7 +169,7 @@ class Ui_Settings(object):
         self.btn_donations.setText(_("Donations"))
         self.btn_about.setText(_("About"))
         self.btn_quit.setText(_("Quit"))
-        self.pushButton.setText(_("x"))
+        self.btn_close.setText(_("x"))
 
 
 if __name__ == "__main__":

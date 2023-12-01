@@ -30,6 +30,7 @@ class Settings(QWidget, Ui_Settings):
 
     # Quit
     emitQuit = pyqtSignal()
+    emitCloseSettings = pyqtSignal()
 
     def __init__(self, parent=None):
         super(Settings, self).__init__()
@@ -53,6 +54,8 @@ class Settings(QWidget, Ui_Settings):
         self.setGeo()
         self.setDefaultEventButtonInMenu()
         self.setPages()
+
+        self.btn_close.clicked.connect(self.emitCloseSettings.emit)
 
         self.close()
 
