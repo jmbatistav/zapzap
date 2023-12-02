@@ -20,7 +20,6 @@ class Account(QWidget, Ui_Account):
         super(Account, self).__init__()
         self.setupUi(self)
         self.loadUsers()
-        self.updateUsersShortcuts()
 
         self.btnNewUser.clicked.connect(self.newUserbuttonClick)
 
@@ -33,11 +32,14 @@ class Account(QWidget, Ui_Account):
         for user in list:
             self.usersList.addWidget(self.getNewCardUser(user))
 
+    def updateListUser(self, user: User):
+        self.usersList.addWidget(self.getNewCardUser(user))
+
     def getNewCardUser(self, user) -> CardUser:
         card = CardUser(user)
-        card.emitDisableUser = self.emitDisableUser
-        card.emitDeleteUser = self.emitDeleteUser
-        card.emitEditUser = self.emitEditUser
+        card.emitDisableUser.connect(lambda: self.emitDisableUser.emit(user))
+        card.emitDeleteUser.connect(lambda: self.emitDeleteUser.emit(user))
+        card.emitEditUser.connect(lambda: self.emitEditUser.emit(user))
         return card
 
     def newUserbuttonClick(self):

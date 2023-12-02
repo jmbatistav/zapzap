@@ -64,8 +64,8 @@ class CardUser(QWidget, Ui_CardUser):
         btnName = btn.objectName()
         if btnName == 'btnDisable':
             self.user.enable = not self.user.enable
-            self.emitDisableUser.emit(self.user)
             self.loadCard()
+            self.emitDisableUser.emit(self.user)
         if btnName == 'btnDelete':
             self.setParent(None)
             self.emitDeleteUser.emit(self.user)

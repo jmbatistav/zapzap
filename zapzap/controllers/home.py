@@ -95,6 +95,7 @@ class Home(QWidget, Ui_Home):
                     name='', icon=getNewIconSVG())
                 # insere no banco de dados e recebe o user com o ID
                 user = UserDAO.add(user)
+                self.zapSettings.accountPage.updateListUser(user)
                 self.addNewUser(user)
         self.btnHomeNewAccount.clicked.connect(newAccount)
 
