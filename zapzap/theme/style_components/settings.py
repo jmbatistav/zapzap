@@ -40,6 +40,12 @@ SettingsMenu = """
             qproperty-icon: url({path}/about.svg);
         }
 
+        QToolTip {
+            color: #F0F2F5;
+            background-color: #202C33;
+        padding:2px;
+    }
+
     """
 
 SettingsWindows = """

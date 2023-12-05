@@ -84,6 +84,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="btnHomeNewAccount">
+        <property name="toolTip">
+         <string>New account</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -104,6 +107,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="btnHomeNewChat">
+        <property name="toolTip">
+         <string>New chat</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -118,6 +124,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="btnHomeSetting">
+        <property name="toolTip">
+         <string>Settings</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -136,6 +145,9 @@
           <width>0</width>
           <height>40</height>
          </size>
+        </property>
+        <property name="toolTip">
+         <string>Perfil</string>
         </property>
         <property name="text">
          <string/>

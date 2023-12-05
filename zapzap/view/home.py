@@ -83,7 +83,11 @@ class Ui_Home(object):
         QtCore.QMetaObject.connectSlotsByName(Home)
 
     def retranslateUi(self, Home):
-        pass
+        
+        self.btnHomeNewAccount.setToolTip(_("New account"))
+        self.btnHomeNewChat.setToolTip(_("New chat"))
+        self.btnHomeSetting.setToolTip(_("Settings"))
+        self.btnHomePerfil.setToolTip(_("Perfil"))
 
 
 if __name__ == "__main__":
