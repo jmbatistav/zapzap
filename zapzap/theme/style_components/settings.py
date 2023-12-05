@@ -71,7 +71,9 @@ CloseButton = """
 
 Buttons = """
         #btnOpenSWhatsapp,
-        #btnNewUser {
+        #btnNewUser,
+        #btnReportIssue,
+        #btnLeanMore  {
             color: #F0F2F5;
             background-color: #00A884;
             border: 1px solid #00A884;
@@ -81,7 +83,9 @@ Buttons = """
         }
 
         #btnOpenSWhatsapp:hover,
-        #btnNewUser:hover {
+        #btnNewUser:hover,
+        #btnReportIssue:hover,
+        #btnLeanMore:hover {
             background-color: #585A5D;
         }
 

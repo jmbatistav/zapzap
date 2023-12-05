@@ -78,7 +78,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
-          <number>2</number>
+          <number>5</number>
          </property>
          <item>
           <widget class="QLabel" name="name_app">
@@ -132,7 +132,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="spacing">
-          <number>2</number>
+          <number>5</number>
          </property>
          <item>
           <widget class="QLabel" name="label_2">
@@ -149,12 +149,18 @@
          <item>
           <widget class="QLabel" name="label_3">
            <property name="text">
-            <string>Veja mais sobre o ZapZap no nosso site.</string>
+            <string>See more about Zapzap on our website.</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="btnLeanMore">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="text">
             <string>Lean more</string>
            </property>
@@ -165,7 +171,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
-          <number>2</number>
+          <number>5</number>
          </property>
          <item>
           <widget class="QLabel" name="label_5">
@@ -182,12 +188,18 @@
          <item>
           <widget class="QLabel" name="label_6">
            <property name="text">
-            <string>Reporte um problema ou faça sua sugestão.</string>
+            <string>Report a problem or make your suggestion.</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="btnReportIssue">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="text">
             <string>Report issue</string>
            </property>

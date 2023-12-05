@@ -77,9 +77,9 @@ class Ui_Personalization(object):
     def retranslateUi(self, Personalization):
         
         Personalization.setWindowTitle(_("Form"))
-        self.label.setText(_("Personalização"))
-        self.label_2.setText(_("Tema"))
-        self.label_3.setText(_("Tema do aplicativo"))
+        self.label.setText(_("Personalization"))
+        self.label_2.setText(_("Theme"))
+        self.label_3.setText(_("Application theme"))
         self.disableTrayIcon.setText(_("Ativo"))
         self.label_4.setText(_("Tray icon"))
 
