@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:17-0300\n"
+"POT-Creation-Date: 2023-12-05 16:29-0300\n"
 "PO-Revision-Date: 2022-07-22 15:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,7 +37,7 @@ msgstr "عرض"
 msgid "Chat"
 msgstr ""
 
-#: zapzap/view/main_window.py:110
+#: zapzap/view/main_window.py:110 zapzap/view/home.py:89
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
 msgstr "الإعدادات"
@@ -230,7 +230,7 @@ msgstr ""
 msgid "GNU General Public License v3.0"
 msgstr "رخصة جنو العمومية v3.0"
 
-#: zapzap/view/account_page.py:76
+#: zapzap/view/account_page.py:76 zapzap/view/home.py:87
 msgid "New account"
 msgstr ""
 
@@ -297,6 +297,14 @@ msgstr ""
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "أيقونة صينية النظام"
+
+#: zapzap/view/home.py:88
+msgid "New chat"
+msgstr ""
+
+#: zapzap/view/home.py:90
+msgid "Perfil"
+msgstr ""
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"

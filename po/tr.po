@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zapzap main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:17-0300\n"
+"POT-Creation-Date: 2023-12-05 16:29-0300\n"
 "PO-Revision-Date: 2022-09-06 22:04+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
@@ -36,7 +36,7 @@ msgstr "Görünüm"
 msgid "Chat"
 msgstr "Sohbet"
 
-#: zapzap/view/main_window.py:110
+#: zapzap/view/main_window.py:110 zapzap/view/home.py:89
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
 msgstr "Ayarlar"
@@ -228,7 +228,7 @@ msgstr ""
 msgid "GNU General Public License v3.0"
 msgstr "GNU General Public License v3.0"
 
-#: zapzap/view/account_page.py:76
+#: zapzap/view/account_page.py:76 zapzap/view/home.py:87
 msgid "New account"
 msgstr ""
 
@@ -296,6 +296,15 @@ msgstr ""
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "Sistem tepsisi simgesi"
+
+#: zapzap/view/home.py:88
+#, fuzzy
+msgid "New chat"
+msgstr "Yeni sohbet aç"
+
+#: zapzap/view/home.py:90
+msgid "Perfil"
+msgstr ""
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"

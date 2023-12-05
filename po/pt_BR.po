@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:17-0300\n"
+"POT-Creation-Date: 2023-12-05 16:29-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -35,7 +35,7 @@ msgstr "Visualizar"
 msgid "Chat"
 msgstr "Conversa"
 
-#: zapzap/view/main_window.py:110
+#: zapzap/view/main_window.py:110 zapzap/view/home.py:89
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
 msgstr "Configurações"
@@ -222,7 +222,7 @@ msgstr "Relate um problema ou faça sua sugestão."
 msgid "GNU General Public License v3.0"
 msgstr "Licença Pública Geral GNU v3.0"
 
-#: zapzap/view/account_page.py:76
+#: zapzap/view/account_page.py:76 zapzap/view/home.py:87
 msgid "New account"
 msgstr "Nova conta"
 
@@ -290,6 +290,14 @@ msgstr "Tema do aplicativo"
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "Ícone de bandeja"
+
+#: zapzap/view/home.py:88
+msgid "New chat"
+msgstr "Nova conversa"
+
+#: zapzap/view/home.py:90
+msgid "Perfil"
+msgstr ""
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"

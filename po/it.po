@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:17-0300\n"
+"POT-Creation-Date: 2023-12-05 16:29-0300\n"
 "PO-Revision-Date: 2022-09-25 14:39+0200\n"
 "Last-Translator: musiclover382 <musiclover382@protonmail.com>\n"
 "Language-Team: \n"
@@ -36,7 +36,7 @@ msgstr "Visualizza"
 msgid "Chat"
 msgstr "Chat"
 
-#: zapzap/view/main_window.py:110
+#: zapzap/view/main_window.py:110 zapzap/view/home.py:89
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
 msgstr "Preferenze"
@@ -228,7 +228,7 @@ msgstr ""
 msgid "GNU General Public License v3.0"
 msgstr "GNU Pubblica Licensa Generica v3.0"
 
-#: zapzap/view/account_page.py:76
+#: zapzap/view/account_page.py:76 zapzap/view/home.py:87
 msgid "New account"
 msgstr ""
 
@@ -295,6 +295,15 @@ msgstr ""
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "Area di notifica"
+
+#: zapzap/view/home.py:88
+#, fuzzy
+msgid "New chat"
+msgstr "Apri nuova chat"
+
+#: zapzap/view/home.py:90
+msgid "Perfil"
+msgstr ""
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"
