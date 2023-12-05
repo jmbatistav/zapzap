@@ -80,7 +80,7 @@ class Ui_Personalization(object):
         self.label.setText(_("Personalization"))
         self.label_2.setText(_("Theme"))
         self.label_3.setText(_("Application theme"))
-        self.disableTrayIcon.setText(_("Ativo"))
+        self.disableTrayIcon.setText(_("On"))
         self.label_4.setText(_("Tray icon"))
 
 

@@ -101,15 +101,15 @@ class Ui_Notifications(object):
         
         self.label.setText(_("Notifications"))
         self.label_2.setText(_("Notifications on the desktop"))
-        self.notify_desktop.setText(_("Ativado"))
+        self.notify_desktop.setText(_("On"))
         self.label_3.setText(_("Show the photo of the sender"))
         self.label_4.setText(_("Show the sender\'s name"))
         self.label_5.setText(_("Show message preview"))
         self.label_show_sound.setText(_("Reproduce sounds when receiving messages"))
-        self.show_photo.setText(_("Ativado"))
-        self.show_name.setText(_("Ativado"))
-        self.show_msg.setText(_("Ativado"))
-        self.show_sound.setText(_("Ativado"))
+        self.show_photo.setText(_("On"))
+        self.show_name.setText(_("On"))
+        self.show_msg.setText(_("On"))
+        self.show_sound.setText(_("On"))
 
 
 if __name__ == "__main__":

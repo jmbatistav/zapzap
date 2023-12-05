@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 15:56-0300\n"
+"POT-Creation-Date: 2023-12-05 16:17-0300\n"
 "PO-Revision-Date: 2022-09-06 16:30+0200\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -142,7 +142,10 @@ msgid "Enter the user name"
 msgstr "Entrez le nom d’utilisateur"
 
 #: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176
+#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
+#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
+#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
+#: zapzap/view/personalization_page.py:83
 #, fuzzy
 msgid "On"
 msgstr "Ouvrir"
@@ -268,12 +271,6 @@ msgstr ""
 msgid "Notifications on the desktop"
 msgstr "Notifications sur le bureau"
 
-#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
-#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
-#: zapzap/view/notifications_page.py:112
-msgid "Ativado"
-msgstr ""
-
 #: zapzap/view/notifications_page.py:105
 msgid "Show the photo of the sender"
 msgstr "Afficher la photo de l’expéditeur"
@@ -298,13 +295,33 @@ msgstr ""
 msgid "Application theme"
 msgstr ""
 
-#: zapzap/view/personalization_page.py:83
-msgid "Ativo"
-msgstr ""
-
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "Icône de la barre des tâches"
+
+#: zapzap/controllers/settings_pages/personalization.py:23
+msgid "Automatic (System)"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/personalization.py:24
+msgid "Light style"
+msgstr "Style clair"
+
+#: zapzap/controllers/settings_pages/personalization.py:25
+msgid "Dark style"
+msgstr "Style sombre"
+
+#: zapzap/controllers/settings_pages/personalization.py:27
+msgid "Default"
+msgstr "Par défaut"
+
+#: zapzap/controllers/settings_pages/personalization.py:28
+msgid "Symbolic light"
+msgstr "Symbolique claire"
+
+#: zapzap/controllers/settings_pages/personalization.py:29
+msgid "Symbolic dark"
+msgstr "Symbolique foncée"
 
 #: zapzap/engine/browser.py:71
 msgid "Undo"
@@ -906,21 +923,6 @@ msgstr "Vietnamien - Vietnam"
 
 #~ msgid "System style"
 #~ msgstr "Style du système"
-
-#~ msgid "Light style"
-#~ msgstr "Style clair"
-
-#~ msgid "Dark style"
-#~ msgstr "Style sombre"
-
-#~ msgid "Default"
-#~ msgstr "Par défaut"
-
-#~ msgid "Symbolic light"
-#~ msgstr "Symbolique claire"
-
-#~ msgid "Symbolic dark"
-#~ msgstr "Symbolique foncée"
 
 #~ msgid "An unofficial WhatsApp desktop application"
 #~ msgstr "Un client WhatsApp non officiel pour le bureau"

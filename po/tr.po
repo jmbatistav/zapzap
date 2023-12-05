@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zapzap main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 15:56-0300\n"
+"POT-Creation-Date: 2023-12-05 16:17-0300\n"
 "PO-Revision-Date: 2022-09-06 22:04+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
@@ -140,7 +140,10 @@ msgid "Enter the user name"
 msgstr "Kullanıcı adı gir"
 
 #: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176
+#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
+#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
+#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
+#: zapzap/view/personalization_page.py:83
 #, fuzzy
 msgid "On"
 msgstr "Aç"
@@ -266,12 +269,6 @@ msgstr ""
 msgid "Notifications on the desktop"
 msgstr "Masaüstü bildirimleri"
 
-#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
-#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
-#: zapzap/view/notifications_page.py:112
-msgid "Ativado"
-msgstr ""
-
 #: zapzap/view/notifications_page.py:105
 msgid "Show the photo of the sender"
 msgstr "Gönderenin fotoğrafını göster"
@@ -296,13 +293,33 @@ msgstr ""
 msgid "Application theme"
 msgstr ""
 
-#: zapzap/view/personalization_page.py:83
-msgid "Ativo"
-msgstr ""
-
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "Sistem tepsisi simgesi"
+
+#: zapzap/controllers/settings_pages/personalization.py:23
+msgid "Automatic (System)"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/personalization.py:24
+msgid "Light style"
+msgstr "Açık tema"
+
+#: zapzap/controllers/settings_pages/personalization.py:25
+msgid "Dark style"
+msgstr "Koyu tema"
+
+#: zapzap/controllers/settings_pages/personalization.py:27
+msgid "Default"
+msgstr "Varsayılan"
+
+#: zapzap/controllers/settings_pages/personalization.py:28
+msgid "Symbolic light"
+msgstr "Sembolik açık"
+
+#: zapzap/controllers/settings_pages/personalization.py:29
+msgid "Symbolic dark"
+msgstr "Sembolik koyu"
 
 #: zapzap/engine/browser.py:71
 msgid "Undo"
@@ -904,21 +921,6 @@ msgstr ""
 
 #~ msgid "System style"
 #~ msgstr "Sistem teması"
-
-#~ msgid "Light style"
-#~ msgstr "Açık tema"
-
-#~ msgid "Dark style"
-#~ msgstr "Koyu tema"
-
-#~ msgid "Default"
-#~ msgstr "Varsayılan"
-
-#~ msgid "Symbolic light"
-#~ msgstr "Sembolik açık"
-
-#~ msgid "Symbolic dark"
-#~ msgstr "Sembolik koyu"
 
 #~ msgid "An unofficial WhatsApp desktop application"
 #~ msgstr "Resmi olmayan WhatsApp masaüstü uygulaması"

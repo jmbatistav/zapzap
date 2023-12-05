@@ -115,7 +115,7 @@
             <enum>Qt::RightToLeft</enum>
            </property>
            <property name="text">
-            <string>Ativo</string>
+            <string>On</string>
            </property>
           </widget>
          </item>

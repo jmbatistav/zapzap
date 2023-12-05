@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 15:56-0300\n"
+"POT-Creation-Date: 2023-12-05 16:17-0300\n"
 "PO-Revision-Date: 2022-07-22 15:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -142,7 +142,10 @@ msgid "Enter the user name"
 msgstr "أظهر اسم المرسل"
 
 #: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176
+#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
+#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
+#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
+#: zapzap/view/personalization_page.py:83
 msgid "On"
 msgstr ""
 
@@ -267,12 +270,6 @@ msgstr ""
 msgid "Notifications on the desktop"
 msgstr "الإشعارات المنبثقة"
 
-#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
-#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
-#: zapzap/view/notifications_page.py:112
-msgid "Ativado"
-msgstr ""
-
 #: zapzap/view/notifications_page.py:105
 msgid "Show the photo of the sender"
 msgstr "أظهر صورة المرسل"
@@ -297,13 +294,33 @@ msgstr ""
 msgid "Application theme"
 msgstr ""
 
-#: zapzap/view/personalization_page.py:83
-msgid "Ativo"
-msgstr ""
-
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "أيقونة صينية النظام"
+
+#: zapzap/controllers/settings_pages/personalization.py:23
+msgid "Automatic (System)"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/personalization.py:24
+msgid "Light style"
+msgstr "مظهر فاتح"
+
+#: zapzap/controllers/settings_pages/personalization.py:25
+msgid "Dark style"
+msgstr "مظهر داكن"
+
+#: zapzap/controllers/settings_pages/personalization.py:27
+msgid "Default"
+msgstr "افتراضي"
+
+#: zapzap/controllers/settings_pages/personalization.py:28
+msgid "Symbolic light"
+msgstr "أيقونة فاتحة"
+
+#: zapzap/controllers/settings_pages/personalization.py:29
+msgid "Symbolic dark"
+msgstr "أيقونة غامقة"
 
 #: zapzap/engine/browser.py:71
 msgid "Undo"
@@ -899,21 +916,6 @@ msgstr ""
 
 #~ msgid "System style"
 #~ msgstr "افتراضي حسب النظام"
-
-#~ msgid "Light style"
-#~ msgstr "مظهر فاتح"
-
-#~ msgid "Dark style"
-#~ msgstr "مظهر داكن"
-
-#~ msgid "Default"
-#~ msgstr "افتراضي"
-
-#~ msgid "Symbolic light"
-#~ msgstr "أيقونة فاتحة"
-
-#~ msgid "Symbolic dark"
-#~ msgstr "أيقونة غامقة"
 
 #, fuzzy
 #~ msgid "An unofficial WhatsApp desktop application"
