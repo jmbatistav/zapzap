@@ -40,27 +40,10 @@ class Settings(QWidget, Ui_Settings):
         self.setupUi(self)
         self.setParent(parent)
 
-        self.setSizePolicy(QtWidgets.QSizePolicy.Policy.Maximum,
-                           QtWidgets.QSizePolicy.Policy.Maximum)
-
-        # we have a parent, install an eventFilter so that when it's resized
-        # the notification will be correctly moved to the right corner
-        self.parent().installEventFilter(self)
-
-        # raise the widget and adjust its size to the minimum
-        self.raise_()
-        self.adjustSize()
-
-        self.corner = QtCore.Qt.Corner.TopLeftCorner
-        self.margin = 10
-
-        self.setGeo()
         self.setDefaultEventButtonInMenu()
         self.setPages()
 
         self.btn_close.clicked.connect(self.emitCloseSettings.emit)
-
-        self.close()
 
     def setPages(self):
         # General
@@ -101,45 +84,9 @@ class Settings(QWidget, Ui_Settings):
     def buttonClick(self):
         btn = self.sender()  # returns a pointer to the object that sent the signal
         btnName = btn.objectName()
-        print(btnName)
 
         try:
             self.settings_stacked.setCurrentIndex(self.pages_id[btnName])
         except:
             self.emitQuit.emit()
 
-    def eventFilter(self, source, event):
-        if source == self.parent() and event.type() == QtCore.QEvent.Type.Resize:
-            self.setGeo()
-        return super(Settings, self).eventFilter(source, event)
-
-    def setGeo(self):
-        parentRect = self.parent().rect()
-        geo = self.geometry()
-        geo.moveBottomLeft(
-            parentRect.bottomLeft() + QtCore.QPoint(self.margin+40, -self.margin))
-        self.setGeometry(geo)
-
-
-# Settings page
-""" self.zapSettings = Settings()
-self.zapSettings.emitDisableUser.connect(self.emitDisableUser)
-self.zapSettings.emitDeleteUser.connect(self.emitDeleteUser)
-self.zapSettings.emitEditUser.connect(self.emitEditUser)
-self.zapSettings.emitNewtUser.connect(self.emitNewUser)
-self.zapSettings.emitSetSpellChecker.connect(self.emitSetSpellChecker)
-self.zapSettings.emitDisableSpellChecker.connect(
-    self.emitDisableSpellChecker)
-self.zapSettings.emitNotifications.connect(self.emitNotifications)
-self.zapSettings.emitQuit.connect(lambda x=None: self.closeEvent(x))
-self.zapSettings.emitGoHome.connect(
-    lambda: self.main_stacked.setCurrentIndex(0))
-self.zapSettings.emitKeepBackground.connect(
-    self.actionHide_on_close.setChecked)
-self.zapSettings.emitDisableTrayIcon.connect(self.tray.setVisible)
-self.zapSettings.emitSetHideMenuBar.connect(self.setHideMenuBar)
-self.zapSettings.emitUpdateUIDecoration.connect(self.updateSCD)
-
-self.zapSettings.emitUpdateTheme.connect(self.setThemeApp)
-
-self.zapSettings.updateUsersShortcuts() """

@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import QWidget
 from PyQt6.QtCore import QSettings, pyqtSignal
 from zapzap.controllers.user_container import UserContainer
 from zapzap.controllers.settings import Settings
+from zapzap.controllers.drawer import Drawer
 from zapzap.model.user import UserDAO
 from zapzap.view.home import Ui_Home
 import zapzap
@@ -17,7 +18,6 @@ class Home(QWidget, Ui_Home):
     """
 
     list = None
-    isSettinsOpen = True
 
     # personalization
     emitUpdateTheme = pyqtSignal(str)
@@ -34,7 +34,7 @@ class Home(QWidget, Ui_Home):
         self.loadActionsMenuBar()
         self.updateShortcuts()
 
-        self.zapSettings = Settings(parent=self)
+        self.zapSettings = Settings()
         # Account
         self.zapSettings.emitDisableUser.connect(self.disableUserPage)
         self.zapSettings.emitDeleteUser.connect(self.delUserPage)
@@ -48,9 +48,21 @@ class Home(QWidget, Ui_Home):
         self.emitQuit = self.zapSettings.emitQuit
         self.zapSettings.emitCloseSettings.connect(self.openSettings)
         # Open Whatsapp Settings
-        self.zapSettings.emitOpenSettingsWhatsapp.connect(self.openWhatsappSettings)
+        self.zapSettings.emitOpenSettingsWhatsapp.connect(
+            self.openWhatsappSettings)
+
+        # Drawer for Settings window
+        self.drawer = Drawer(self)
+        self.drawer.maximum_width = self.width()
+        self.drawer.raise_()
+        self.drawer.stackedWidget.insertWidget(0, self.zapSettings)
 
     #### Accounts ####
+
+    def resizeEvent(self, event):
+        self.drawer.setFixedHeight(self.height() - self.drawer.pos().y())
+        self.drawer.maximum_width = self.width()
+        super().resizeEvent(event)
 
     def loadUsers(self):
         """Carries all users from the database"""
@@ -102,11 +114,7 @@ class Home(QWidget, Ui_Home):
     #### Settings ####
     def openSettings(self):
         """Open settings"""
-        self.isSettinsOpen = not self.isSettinsOpen
-        if self.isSettinsOpen:
-            self.zapSettings.close()
-        else:
-            self.zapSettings.show()
+        self.drawer.onToggled()
 
     #### Containers Whatsapp ####
     def setPage(self, browser):
@@ -128,8 +136,8 @@ class Home(QWidget, Ui_Home):
         btn.doReloadPage()
 
     def closeConversation(self, closeAll=False):
-        if not self.isSettinsOpen:
-            self.openSettings()
+        if not self.drawer.isOpen:
+            self.drawer.onToggled()
         elif closeAll:
             for i in range(self.menu.count()):
                 btn = self.menu.itemAt(i).widget()
@@ -143,7 +151,7 @@ class Home(QWidget, Ui_Home):
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()
         btn.openPerfil()
-    
+
     def openWhatsappSettings(self):
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()

@@ -81,7 +81,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def openSettings(self, isOpen):
         """Open settings"""
-        print('Open settings', isOpen)
+        self.zapHome.openSettings()
 
     def setFullSreen(self):
         """Full Screen Window"""
