@@ -15,6 +15,7 @@ class Ui_CardUser(object):
         CardUser.setObjectName("CardUser")
         CardUser.resize(320, 84)
         CardUser.setMinimumSize(QtCore.QSize(320, 0))
+        CardUser.setWindowTitle("")
         CardUser.setStyleSheet("")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(CardUser)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -85,7 +86,6 @@ class Ui_CardUser(object):
 
     def retranslateUi(self, CardUser):
         
-        CardUser.setWindowTitle(_("Form"))
         self.name.setPlaceholderText(_("Enter the user name"))
         self.showNotifications.setText(_("On"))
         self.label.setText(_("Show notifications"))

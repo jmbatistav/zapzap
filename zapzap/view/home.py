@@ -14,6 +14,7 @@ class Ui_Home(object):
     def setupUi(self, Home):
         Home.setObjectName("Home")
         Home.resize(986, 666)
+        Home.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Home)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -82,8 +83,7 @@ class Ui_Home(object):
         QtCore.QMetaObject.connectSlotsByName(Home)
 
     def retranslateUi(self, Home):
-        
-        Home.setWindowTitle(_("Form"))
+        pass
 
 
 if __name__ == "__main__":

@@ -17,6 +17,7 @@ class Ui_drawer(object):
         drawer.resize(899, 632)
         drawer.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
         drawer.setMouseTracking(False)
+        drawer.setWindowTitle("")
         drawer.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(drawer)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -53,8 +54,7 @@ class Ui_drawer(object):
         QtCore.QMetaObject.connectSlotsByName(drawer)
 
     def retranslateUi(self, drawer):
-        
-        drawer.setWindowTitle(_("Form"))
+        pass
 
 
 if __name__ == "__main__":

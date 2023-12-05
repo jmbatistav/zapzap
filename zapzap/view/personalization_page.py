@@ -14,6 +14,7 @@ class Ui_Personalization(object):
     def setupUi(self, Personalization):
         Personalization.setObjectName("Personalization")
         Personalization.resize(565, 525)
+        Personalization.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Personalization)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -76,7 +77,6 @@ class Ui_Personalization(object):
 
     def retranslateUi(self, Personalization):
         
-        Personalization.setWindowTitle(_("Form"))
         self.label.setText(_("Personalization"))
         self.label_2.setText(_("Theme"))
         self.label_3.setText(_("Application theme"))

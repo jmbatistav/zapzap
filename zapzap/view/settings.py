@@ -20,6 +20,7 @@ class Ui_Settings(object):
         sizePolicy.setHeightForWidth(Settings.sizePolicy().hasHeightForWidth())
         Settings.setSizePolicy(sizePolicy)
         Settings.setMinimumSize(QtCore.QSize(800, 550))
+        Settings.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Settings)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -163,7 +164,6 @@ class Ui_Settings(object):
 
     def retranslateUi(self, Settings):
         
-        Settings.setWindowTitle(_("Form"))
         self.btn_general.setText(_("General"))
         self.btn_account.setText(_("Account"))
         self.btn_notifications.setText(_("Notifications"))

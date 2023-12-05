@@ -14,6 +14,7 @@ class Ui_Notifications(object):
     def setupUi(self, Notifications):
         Notifications.setObjectName("Notifications")
         Notifications.resize(421, 459)
+        Notifications.setWindowTitle("")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(Notifications)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setSpacing(0)
@@ -98,7 +99,6 @@ class Ui_Notifications(object):
 
     def retranslateUi(self, Notifications):
         
-        Notifications.setWindowTitle(_("Form"))
         self.label.setText(_("Notifications"))
         self.label_2.setText(_("Notifications on the desktop"))
         self.notify_desktop.setText(_("Ativado"))

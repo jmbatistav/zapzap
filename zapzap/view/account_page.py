@@ -14,6 +14,7 @@ class Ui_Account(object):
     def setupUi(self, Account):
         Account.setObjectName("Account")
         Account.resize(382, 486)
+        Account.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Account)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -71,7 +72,6 @@ class Ui_Account(object):
 
     def retranslateUi(self, Account):
         
-        Account.setWindowTitle(_("Form"))
         self.label.setText(_("Account"))
         self.btnNewUser.setText(_("New account"))
         self.label_2.setText(_("Creates a new panel for access to WhatsApp."))

@@ -14,6 +14,7 @@ class Ui_Donations(object):
     def setupUi(self, Donations):
         Donations.setObjectName("Donations")
         Donations.resize(424, 406)
+        Donations.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Donations)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -66,7 +67,6 @@ class Ui_Donations(object):
 
     def retranslateUi(self, Donations):
         
-        Donations.setWindowTitle(_("Form"))
         self.label.setText(_("Donations"))
 
 

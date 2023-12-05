@@ -15,6 +15,7 @@ class Ui_General(object):
         General.setObjectName("General")
         General.resize(370, 432)
         General.setMinimumSize(QtCore.QSize(0, 0))
+        General.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(General)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -163,7 +164,6 @@ class Ui_General(object):
 
     def retranslateUi(self, General):
         
-        General.setWindowTitle(_("Form"))
         self.label.setText(_("General"))
         self.label_2.setText(_("Login"))
         self.label_3.setText(_("Start ZapZap with the system"))

@@ -14,6 +14,7 @@ class Ui_About(object):
     def setupUi(self, About):
         About.setObjectName("About")
         About.resize(439, 505)
+        About.setWindowTitle("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(About)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
@@ -121,7 +122,6 @@ class Ui_About(object):
 
     def retranslateUi(self, About):
         
-        About.setWindowTitle(_("Form"))
         self.label.setText(_("About"))
         self.name_app.setText(_("ZapZap"))
         self.desc_app.setText(_("WhatsApp Web for Linux"))

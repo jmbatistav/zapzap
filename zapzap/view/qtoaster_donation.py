@@ -14,6 +14,7 @@ class Ui_QtoasterDonation(object):
     def setupUi(self, QtoasterDonation):
         QtoasterDonation.setObjectName("QtoasterDonation")
         QtoasterDonation.resize(414, 84)
+        QtoasterDonation.setWindowTitle("")
         QtoasterDonation.setStyleSheet("#frame{\n"
 "    border: 1px solid #585A5D;\n"
 "    border-radius: 8px; \n"
@@ -119,7 +120,6 @@ class Ui_QtoasterDonation(object):
 
     def retranslateUi(self, QtoasterDonation):
         
-        QtoasterDonation.setWindowTitle(_("Form"))
         self.labelWelcomeTo.setText(_("Welcome to"))
         self.labelZapZap.setText(_("ZapZap"))
         self.donateButton.setText(_("Make a donation"))
