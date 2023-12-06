@@ -1,7 +1,8 @@
 
-from PyQt6.QtWidgets import QWidget, QApplication
-from PyQt6 import QtCore, QtWidgets, QtGui
+from PyQt6.QtWidgets import QWidget
+from PyQt6 import QtCore, QtWidgets
 from zapzap.view.qtoaster_donation import Ui_QtoasterDonation
+from zapzap.theme.builder_icon import getImageQPixmap
 from gettext import gettext as _
 import zapzap
 
@@ -11,6 +12,8 @@ class QtoasterDonation(QWidget, Ui_QtoasterDonation):
         super(QtoasterDonation, self).__init__()
         self.setupUi(self)
         self.setParent(parent)
+
+        self.logo.setPixmap(getImageQPixmap())
 
         self.setFocus()
         self.setFocusPolicy(QtCore.Qt.FocusPolicy.ClickFocus)

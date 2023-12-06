@@ -46,7 +46,6 @@ class Ui_QtoasterDonation(object):
         self.logo.setMinimumSize(QtCore.QSize(64, 64))
         self.logo.setMaximumSize(QtCore.QSize(64, 64))
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("./zapzap/view/ui/../../assets/icons/tray/default_normal.svg"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
         self.horizontalLayout_3.addWidget(self.logo)

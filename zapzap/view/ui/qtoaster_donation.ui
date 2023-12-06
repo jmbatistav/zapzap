@@ -82,9 +82,6 @@ QLabel{
         <property name="text">
          <string/>
         </property>
-        <property name="pixmap">
-         <pixmap>../../assets/icons/tray/default_normal.svg</pixmap>
-        </property>
         <property name="scaledContents">
          <bool>true</bool>
         </property>
