@@ -45,11 +45,15 @@ class Settings(QWidget, Ui_Settings):
 
         self.btn_close.clicked.connect(self.emitCloseSettings.emit)
 
+        self.btn_general.setStyleSheet(
+            self.selectMenu(self.btn_general.styleSheet()))
+
     def setPages(self):
         # General
         self.generalPage = General()
         self.generalPage.emitOpenSettingsWhatsapp = self.emitOpenSettingsWhatsapp
-        self.pages_id['btn_general'] = self.settings_stacked.addWidget(self.generalPage)
+        self.pages_id['btn_general'] = self.settings_stacked.addWidget(
+            self.generalPage)
 
         # Account
         self.accountPage = Account()
@@ -79,7 +83,8 @@ class Settings(QWidget, Ui_Settings):
         # About
         self.aboutPage = About()
         self.aboutPage.emitCloseSettings = self.emitCloseSettings
-        self.pages_id['btn_about'] = self.settings_stacked.addWidget(self.aboutPage)
+        self.pages_id['btn_about'] = self.settings_stacked.addWidget(
+            self.aboutPage)
 
     def setDefaultEventButtonInMenu(self):
         for item in self.menu.findChildren(QPushButton):
@@ -88,12 +93,40 @@ class Settings(QWidget, Ui_Settings):
     def buttonClick(self):
         btn = self.sender()  # returns a pointer to the object that sent the signal
         btnName = btn.objectName()
-
+        self.resetStyle(btnName)
         try:
             self.settings_stacked.setCurrentIndex(self.pages_id[btnName])
-        except:
-            self.emitQuit.emit()
-    
-    def openDonations(self):
-        self.settings_stacked.setCurrentIndex(self.pages_id['btn_donations'])
 
+            btn.setStyleSheet(self.selectMenu(btn.styleSheet()))
+
+        except Exception as e:
+            self.emitQuit.emit()
+
+    def openDonations(self):
+        self.resetStyle('btn_donations')
+        self.settings_stacked.setCurrentIndex(self.pages_id['btn_donations'])
+        self.btn_donations.setStyleSheet(
+            self.selectMenu(self.btn_donations.styleSheet()))
+
+    # SELECT/DESELECT MENU
+    # ///////////////////////////////////////////////////////////////
+    # SELECT
+    # MENU SELECTED STYLESHEET
+    MENU_SELECTED_STYLESHEET = """
+    border-bottom: 1px solid #00BD95;
+    """
+
+    def selectMenu(self, getStyle):
+        select = getStyle + self.MENU_SELECTED_STYLESHEET
+        return select
+
+    # DESELECT
+    def deselectMenu(self, getStyle):
+        deselect = getStyle.replace(self.MENU_SELECTED_STYLESHEET, "")
+        return deselect
+
+    # RESET SELECTION
+    def resetStyle(self, widget):
+        for w in self.menu.findChildren(QPushButton):
+            if w.objectName() != widget:
+                w.setStyleSheet(self.deselectMenu(w.styleSheet()))
