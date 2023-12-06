@@ -80,19 +80,21 @@ Buttons = """
         #btnNewUser,
         #btnReportIssue,
         #btnLeanMore  {
-            color: #F0F2F5;
-            background-color: #00A884;
-            border: 1px solid #00A884;
+            background-color: #008069;
             border-radius: 5px;
-            padding: 0px 10px 0px 10px;
+            font: 12pt;
             height: 35px;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 0px 10px 0px 10px;
         }
 
         #btnOpenSWhatsapp:hover,
         #btnNewUser:hover,
         #btnReportIssue:hover,
         #btnLeanMore:hover {
-            background-color: #585A5D;
+            background-color: #199979;
+            border-color: #199979;
         }
 
         #btn_paypal,
