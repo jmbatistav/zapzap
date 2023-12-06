@@ -116,6 +116,10 @@ class Home(QWidget, Ui_Home):
         """Open settings"""
         self.drawer.onToggled()
 
+    def openDonations(self):
+        self.openSettings()
+        self.zapSettings.openDonations()
+
     #### Containers Whatsapp ####
     def setPage(self, browser):
         """Defines the page to be shown"""

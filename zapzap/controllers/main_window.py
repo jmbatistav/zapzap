@@ -49,7 +49,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.timeout.connect(self.syncThemeSys)
         self.current_theme = -1
 
-        # QtoasterDonation.showMessage(parent=self)
+        QtoasterDonation.showMessage(parent=self)
+
+    #### Donation ####
+    def openDonations(self):
+        self.zapHome.openDonations()
 
     #### MenuBar actions ####
 

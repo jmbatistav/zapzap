@@ -50,7 +50,7 @@ class QtoasterDonation(QWidget, Ui_QtoasterDonation):
             parentRect = self.parent().rect()
             geo = self.geometry()
             geo.moveBottomLeft(
-                parentRect.bottomLeft() + QtCore.QPoint(self.margin, -self.margin))
+                parentRect.bottomLeft() + QtCore.QPoint(self.margin+45, -self.margin))
             self.setGeometry(geo)
         return super(QtoasterDonation, self).eventFilter(source, event)
 

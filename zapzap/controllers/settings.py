@@ -93,4 +93,7 @@ class Settings(QWidget, Ui_Settings):
             self.settings_stacked.setCurrentIndex(self.pages_id[btnName])
         except:
             self.emitQuit.emit()
+    
+    def openDonations(self):
+        self.settings_stacked.setCurrentIndex(self.pages_id['btn_donations'])
 
