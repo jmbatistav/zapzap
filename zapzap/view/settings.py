@@ -28,7 +28,7 @@ class Ui_Settings(object):
         self.settingMargin = QtWidgets.QFrame(parent=Settings)
         self.settingMargin.setObjectName("settingMargin")
         self.verticalLayout_99 = QtWidgets.QVBoxLayout(self.settingMargin)
-        self.verticalLayout_99.setContentsMargins(6, 6, 6, 6)
+        self.verticalLayout_99.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_99.setSpacing(0)
         self.verticalLayout_99.setObjectName("verticalLayout_99")
         self.setting_frame = QtWidgets.QFrame(parent=self.settingMargin)

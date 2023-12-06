@@ -51,12 +51,13 @@ SettingsMenu = """
 SettingsWindows = """
         #setting_frame {
             background-color: {window};
-            border: 8px solid {window};
-            border-radius: 12px; 
+            border: 5px solid {window};
+            border-radius: 10px; 
         }
 
         #settingMargin{   
-          border-image: url({path}/border.png);
+          border : 0;
+            background: rgba(0, 0, 0,0.8);
         }
     """
 
