@@ -75,7 +75,11 @@ class Settings(QWidget, Ui_Settings):
         # Donations
         self.pages_id['btn_donations'] = self.settings_stacked.addWidget(
             Donations())
-        self.pages_id['btn_about'] = self.settings_stacked.addWidget(About())
+
+        # About
+        self.aboutPage = About()
+        self.aboutPage.emitCloseSettings = self.emitCloseSettings
+        self.pages_id['btn_about'] = self.settings_stacked.addWidget(self.aboutPage)
 
     def setDefaultEventButtonInMenu(self):
         for item in self.menu.findChildren(QPushButton):
