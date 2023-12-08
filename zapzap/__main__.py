@@ -81,6 +81,9 @@ def main():
     QFontDatabase.addApplicationFont(zapzap.segoe_font['italic'])
     app.setFont(QFont("Segoe UI"))
 
+    # Incorrect sizing and bad text rendering with WebEngine using fractional scaling on Wayland
+    environ['QT_SCALE_FACTOR_ROUNDING_POLICY'] = 'RoundPreferFloor'
+
     # Callback instance
     app.messageReceived.connect(lambda result: window.xdgOpenChat(result))
 
