@@ -64,11 +64,6 @@ class Ui_CardUser(object):
         self.disableUser.setText("")
         self.disableUser.setObjectName("disableUser")
         self.gridLayout.addWidget(self.disableUser, 0, 3, 1, 1)
-        self.deleteUser = QtWidgets.QCheckBox(parent=self.frameCardUser)
-        self.deleteUser.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.deleteUser.setText("")
-        self.deleteUser.setObjectName("deleteUser")
-        self.gridLayout.addWidget(self.deleteUser, 0, 4, 1, 1)
         self.showNotifications = QtWidgets.QCheckBox(parent=self.frameCardUser)
         self.showNotifications.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.showNotifications.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
@@ -76,6 +71,11 @@ class Ui_CardUser(object):
         self.showNotifications.setChecked(True)
         self.showNotifications.setObjectName("showNotifications")
         self.gridLayout.addWidget(self.showNotifications, 0, 2, 1, 1)
+        self.deleteUser = QtWidgets.QCheckBox(parent=self.frameCardUser)
+        self.deleteUser.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.deleteUser.setText("")
+        self.deleteUser.setObjectName("deleteUser")
+        self.gridLayout.addWidget(self.deleteUser, 1, 3, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout)
         self.horizontalLayout_3.addWidget(self.frameCardUser)
 
@@ -87,8 +87,8 @@ class Ui_CardUser(object):
         self.name.setPlaceholderText(_("Enter the user name"))
         self.label.setText(_("Shortcut:"))
         self.disableUser.setToolTip(_("Disable user"))
-        self.deleteUser.setToolTip(_("Delete user"))
         self.showNotifications.setToolTip(_("Show notifications"))
+        self.deleteUser.setToolTip(_("Delete user"))
 
 
 if __name__ == "__main__":
