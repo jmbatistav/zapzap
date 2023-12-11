@@ -32,7 +32,6 @@ class Home(QWidget, Ui_Home):
         self.setupUi(self)
         self.loadUsers()
         self.loadActionsMenuBar()
-        self.updateShortcuts()
 
         self.zapSettings = Settings()
         # Account
@@ -56,6 +55,9 @@ class Home(QWidget, Ui_Home):
         self.drawer.maximum_width = self.width()
         self.drawer.raise_()
         self.drawer.stackedWidget.insertWidget(0, self.zapSettings)
+
+        # At the end, update the shortcuts
+        self.updateShortcuts()
 
     #### Accounts ####
 
@@ -83,6 +85,9 @@ class Home(QWidget, Ui_Home):
             if btn.user.enable:
                 btn.setShortcut(f'Ctrl+{cont}')
                 cont += 1
+        
+        # Updates the description of the shortcuts in Account
+        self.zapSettings.accountPage.updateUsersShortcuts()
 
     #### MenuBar ####
     def loadActionsMenuBar(self):
