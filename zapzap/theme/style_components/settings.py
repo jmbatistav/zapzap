@@ -59,7 +59,7 @@ SettingsWindows = """
           border : 0;
             background: rgba(0, 0, 0,0.8);
         }
-    """
+"""
 
 CloseButton = """
     #btn_close{
@@ -115,31 +115,44 @@ Buttons = """
             border: 3px solid {link};
             background-color: #FFFFFF;
         }
-
-        #btnDisable {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: transparent; 
-            qproperty-flat: true;
-            qproperty-iconSize: 24px; 
-        }
-
-        #btnDelete {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: transparent; 
-            qproperty-flat: true;
-            qproperty-iconSize: 24px; 
-            qproperty-icon: url({path}/trash.svg);
-        }
-
-        #btnDisable:hover,
-        #btnDisable:pressed,
-        #btnDelete:hover,
-        #btnDelete:pressed {
-            background-color: {window}; 
-        }
         
 """
 
-SETTINGS = SettingsMenu + SettingsWindows + CloseButton + Buttons
+Checkbox = """
+    #showNotifications::indicator,
+    #disableUser::indicator,
+    #deleteUser::indicator
+        {
+            width: 24px;
+            height: 24px;
+        }
+
+    #showNotifications::indicator:unchecked{
+        border-image: url({path}/bell-slash.svg);
+    }
+     #showNotifications::indicator:checked{
+        border-image: url({path}/bell-ringing.svg);
+    }
+    #disableUser::indicator:unchecked{
+        border-image: url({path}/eye-slash.svg);
+    }
+     #disableUser::indicator:checked{
+        border-image: url({path}/eye.svg);
+    }
+    #deleteUser::indicator:unchecked{
+        border-image: url({path}/trash.svg);
+    }
+     #deleteUser::indicator:checked{
+        border-image: url({path}/trash.svg);
+    }
+
+"""
+
+Frame = """
+    #frameCardUser{
+        border: 1px solid {frame_border};
+        border-radius: 5px;   
+    }
+"""
+
+SETTINGS = SettingsMenu + SettingsWindows + CloseButton + Buttons + Checkbox + Frame
