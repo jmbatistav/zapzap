@@ -302,4 +302,13 @@ QWIDGETS = """
             background: {window};
         }
 
+        QFrame[frameShape="4"] {
+            border: none;
+            border-bottom: 1px solid {frame_border};
+        }
+        QFrame[frameShape="5"] {
+             border: none;
+            border-left: 1px solid {frame_border};
+        }
+
     """
