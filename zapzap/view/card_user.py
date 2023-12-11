@@ -86,9 +86,9 @@ class Ui_CardUser(object):
         
         self.name.setPlaceholderText(_("Enter the user name"))
         self.labelShortcut.setText(_("Shortcut:"))
-        self.disableUser.setToolTip(_("Disable user"))
+        self.disableUser.setToolTip(_("Disable account"))
         self.showNotifications.setToolTip(_("Show notifications"))
-        self.deleteUser.setToolTip(_("Delete user"))
+        self.deleteUser.setToolTip(_("Delete account"))
 
 
 if __name__ == "__main__":

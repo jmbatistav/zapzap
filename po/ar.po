@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:29-0300\n"
+"POT-Creation-Date: 2023-12-11 19:40-0300\n"
 "PO-Revision-Date: 2022-07-22 15:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
-#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:124
+#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:126
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
@@ -136,23 +136,28 @@ msgstr ""
 msgid "About"
 msgstr "حول"
 
-#: zapzap/view/card_user.py:89
+#: zapzap/view/card_user.py:87
 #, fuzzy
 msgid "Enter the user name"
 msgstr "أظهر اسم المرسل"
 
-#: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
-#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
-#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
-#: zapzap/view/personalization_page.py:83
-msgid "On"
+#: zapzap/view/card_user.py:88
+msgid "Shortcut:"
 msgstr ""
 
-#: zapzap/view/card_user.py:91
+#: zapzap/view/card_user.py:89
+#, fuzzy
+msgid "Disable account"
+msgstr "تعطيل أيقونة صينية النظام"
+
+#: zapzap/view/card_user.py:90
 #, fuzzy
 msgid "Show notifications"
 msgstr "الإشعارات"
+
+#: zapzap/view/card_user.py:91
+msgid "Delete account"
+msgstr ""
 
 #: zapzap/view/downloadPopup.py:69
 msgid "What do you want to do with the file?"
@@ -187,15 +192,15 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:123
+#: zapzap/view/qtoaster_donation.py:122
 msgid "Welcome to"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:125
+#: zapzap/view/qtoaster_donation.py:124
 msgid "Make a donation"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:126
+#: zapzap/view/qtoaster_donation.py:125
 msgid "..."
 msgstr ""
 
@@ -248,6 +253,13 @@ msgstr "تشغيل ZapZap  مع بدء النظام"
 
 #: zapzap/view/general_page.py:170 zapzap/view/general_page.py:174
 msgid "Off"
+msgstr ""
+
+#: zapzap/view/general_page.py:172 zapzap/view/general_page.py:176
+#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
+#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
+#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
+msgid "On"
 msgstr ""
 
 #: zapzap/view/general_page.py:173
@@ -960,9 +972,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Ctrl+N"
 #~ msgstr "Ctrl+P"
-
-#~ msgid "Disable tray icon"
-#~ msgstr "تعطيل أيقونة صينية النظام"
 
 #, fuzzy
 #~ msgid "Open ZapZap"

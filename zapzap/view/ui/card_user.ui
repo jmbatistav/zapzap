@@ -129,7 +129,7 @@
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="toolTip">
-           <string>Disable user</string>
+           <string>Disable account</string>
           </property>
           <property name="text">
            <string/>
@@ -161,7 +161,7 @@
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="toolTip">
-           <string>Delete user</string>
+           <string>Delete account</string>
           </property>
           <property name="text">
            <string/>

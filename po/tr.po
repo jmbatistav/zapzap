@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zapzap main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:29-0300\n"
+"POT-Creation-Date: 2023-12-11 19:40-0300\n"
 "PO-Revision-Date: 2022-09-06 22:04+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:124
+#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:126
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
@@ -135,23 +135,28 @@ msgstr ""
 msgid "About"
 msgstr "Hakkında"
 
-#: zapzap/view/card_user.py:89
+#: zapzap/view/card_user.py:87
 msgid "Enter the user name"
 msgstr "Kullanıcı adı gir"
 
-#: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
-#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
-#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
-#: zapzap/view/personalization_page.py:83
-#, fuzzy
-msgid "On"
-msgstr "Aç"
+#: zapzap/view/card_user.py:88
+msgid "Shortcut:"
+msgstr ""
 
-#: zapzap/view/card_user.py:91
+#: zapzap/view/card_user.py:89
+#, fuzzy
+msgid "Disable account"
+msgstr "Devre dışı bırak"
+
+#: zapzap/view/card_user.py:90
 #, fuzzy
 msgid "Show notifications"
 msgstr "Bildirimleri göster"
+
+#: zapzap/view/card_user.py:91
+#, fuzzy
+msgid "Delete account"
+msgstr "Sil"
 
 #: zapzap/view/downloadPopup.py:69
 msgid "What do you want to do with the file?"
@@ -185,15 +190,15 @@ msgstr "(ÜLKE KODU + ALAN KODU + TELEFON NUMARASI)"
 msgid "Cancel"
 msgstr "İptal"
 
-#: zapzap/view/qtoaster_donation.py:123
+#: zapzap/view/qtoaster_donation.py:122
 msgid "Welcome to"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:125
+#: zapzap/view/qtoaster_donation.py:124
 msgid "Make a donation"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:126
+#: zapzap/view/qtoaster_donation.py:125
 msgid "..."
 msgstr ""
 
@@ -247,6 +252,14 @@ msgstr "ZapZap'i sistem açılışında başlat"
 #: zapzap/view/general_page.py:170 zapzap/view/general_page.py:174
 msgid "Off"
 msgstr ""
+
+#: zapzap/view/general_page.py:172 zapzap/view/general_page.py:176
+#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
+#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
+#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
+#, fuzzy
+msgid "On"
+msgstr "Aç"
 
 #: zapzap/view/general_page.py:173
 msgid "Wayland window system"
@@ -939,12 +952,6 @@ msgstr ""
 
 #~ msgid "Users limit reached (9 in total)"
 #~ msgstr "Kullanıcı sınırına ulaşıldı (toplamda 9)"
-
-#~ msgid "Disable"
-#~ msgstr "Devre dışı bırak"
-
-#~ msgid "Delete"
-#~ msgstr "Sil"
 
 #~ msgid "Enable"
 #~ msgstr "Etkinleştir"

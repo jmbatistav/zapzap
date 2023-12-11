@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:29-0300\n"
+"POT-Creation-Date: 2023-12-11 19:40-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:124
+#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:126
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
@@ -133,20 +133,24 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: zapzap/view/card_user.py:89
+#: zapzap/view/card_user.py:87
 msgid "Enter the user name"
 msgstr ""
 
-#: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
-#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
-#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
-#: zapzap/view/personalization_page.py:83
-msgid "On"
+#: zapzap/view/card_user.py:88
+msgid "Shortcut:"
+msgstr ""
+
+#: zapzap/view/card_user.py:89
+msgid "Disable account"
+msgstr ""
+
+#: zapzap/view/card_user.py:90
+msgid "Show notifications"
 msgstr ""
 
 #: zapzap/view/card_user.py:91
-msgid "Show notifications"
+msgid "Delete account"
 msgstr ""
 
 #: zapzap/view/downloadPopup.py:69
@@ -181,15 +185,15 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:123
+#: zapzap/view/qtoaster_donation.py:122
 msgid "Welcome to"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:125
+#: zapzap/view/qtoaster_donation.py:124
 msgid "Make a donation"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:126
+#: zapzap/view/qtoaster_donation.py:125
 msgid "..."
 msgstr ""
 
@@ -240,6 +244,13 @@ msgstr ""
 
 #: zapzap/view/general_page.py:170 zapzap/view/general_page.py:174
 msgid "Off"
+msgstr ""
+
+#: zapzap/view/general_page.py:172 zapzap/view/general_page.py:176
+#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
+#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
+#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
+msgid "On"
 msgstr ""
 
 #: zapzap/view/general_page.py:173

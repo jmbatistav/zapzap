@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:29-0300\n"
+"POT-Creation-Date: 2023-12-11 19:40-0300\n"
 "PO-Revision-Date: 2022-09-22 13:20+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:124
+#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:126
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
@@ -134,23 +134,28 @@ msgstr ""
 msgid "About"
 msgstr "Over"
 
-#: zapzap/view/card_user.py:89
+#: zapzap/view/card_user.py:87
 msgid "Enter the user name"
 msgstr "Voer een gebruikersnaam in"
 
-#: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
-#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
-#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
-#: zapzap/view/personalization_page.py:83
-#, fuzzy
-msgid "On"
-msgstr "Openen"
+#: zapzap/view/card_user.py:88
+msgid "Shortcut:"
+msgstr ""
 
-#: zapzap/view/card_user.py:91
+#: zapzap/view/card_user.py:89
+#, fuzzy
+msgid "Disable account"
+msgstr "Systeemvakpictogram verbergen"
+
+#: zapzap/view/card_user.py:90
 #, fuzzy
 msgid "Show notifications"
 msgstr "Meldingen"
+
+#: zapzap/view/card_user.py:91
+#, fuzzy
+msgid "Delete account"
+msgstr "Verwijderen"
 
 #: zapzap/view/downloadPopup.py:69
 msgid "What do you want to do with the file?"
@@ -184,15 +189,15 @@ msgstr "(LANDCODE + NETNUMMER + TELEFOONNUMMER)"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: zapzap/view/qtoaster_donation.py:123
+#: zapzap/view/qtoaster_donation.py:122
 msgid "Welcome to"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:125
+#: zapzap/view/qtoaster_donation.py:124
 msgid "Make a donation"
 msgstr ""
 
-#: zapzap/view/qtoaster_donation.py:126
+#: zapzap/view/qtoaster_donation.py:125
 msgid "..."
 msgstr ""
 
@@ -246,6 +251,14 @@ msgstr "Automatisch opstarten"
 #: zapzap/view/general_page.py:170 zapzap/view/general_page.py:174
 msgid "Off"
 msgstr ""
+
+#: zapzap/view/general_page.py:172 zapzap/view/general_page.py:176
+#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
+#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
+#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
+#, fuzzy
+msgid "On"
+msgstr "Openen"
 
 #: zapzap/view/general_page.py:173
 msgid "Wayland window system"
@@ -885,6 +898,10 @@ msgstr "Oekraïens - Oekraïne"
 msgid "Vietnamese - Vietnam"
 msgstr "Vietnamees - Vietnam"
 
+#, fuzzy
+#~ msgid "Disable user"
+#~ msgstr "Uitschakelen"
+
 #~ msgid "Form"
 #~ msgstr "Formulier"
 
@@ -939,12 +956,6 @@ msgstr "Vietnamees - Vietnam"
 #~ msgid "Users limit reached (9 in total)"
 #~ msgstr "Het max. aantal gebruikers (9) is bereikt"
 
-#~ msgid "Disable"
-#~ msgstr "Uitschakelen"
-
-#~ msgid "Delete"
-#~ msgstr "Verwijderen"
-
 #~ msgid "Enable"
 #~ msgstr "Inschakelen"
 
@@ -986,9 +997,6 @@ msgstr "Vietnamees - Vietnam"
 
 #~ msgid "Enter"
 #~ msgstr "Invoeren"
-
-#~ msgid "Disable tray icon"
-#~ msgstr "Systeemvakpictogram verbergen"
 
 #~ msgid "Open ZapZap"
 #~ msgstr "ZapZap openen"

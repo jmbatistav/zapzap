@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 16:29-0300\n"
+"POT-Creation-Date: 2023-12-11 19:40-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:124
+#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:126
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
@@ -133,21 +133,27 @@ msgstr "Personalização"
 msgid "About"
 msgstr "Sobre"
 
-#: zapzap/view/card_user.py:89
+#: zapzap/view/card_user.py:87
 msgid "Enter the user name"
 msgstr "Insira o nome do usuário"
 
-#: zapzap/view/card_user.py:90 zapzap/view/general_page.py:172
-#: zapzap/view/general_page.py:176 zapzap/view/notifications_page.py:104
-#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
-#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
-#: zapzap/view/personalization_page.py:83
-msgid "On"
-msgstr "Ativado"
+#: zapzap/view/card_user.py:88
+msgid "Shortcut:"
+msgstr ""
 
-#: zapzap/view/card_user.py:91
+#: zapzap/view/card_user.py:89
+#, fuzzy
+msgid "Disable account"
+msgstr "Nova conta"
+
+#: zapzap/view/card_user.py:90
 msgid "Show notifications"
 msgstr "Mostrar notificações do usuário"
+
+#: zapzap/view/card_user.py:91
+#, fuzzy
+msgid "Delete account"
+msgstr "Nova conta"
 
 #: zapzap/view/downloadPopup.py:69
 msgid "What do you want to do with the file?"
@@ -181,15 +187,15 @@ msgstr "(COD DO PAÍS + COD. ÁREA + NÚMERO DO TELEFONE)"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: zapzap/view/qtoaster_donation.py:123
+#: zapzap/view/qtoaster_donation.py:122
 msgid "Welcome to"
 msgstr "Bem-vindo ao"
 
-#: zapzap/view/qtoaster_donation.py:125
+#: zapzap/view/qtoaster_donation.py:124
 msgid "Make a donation"
 msgstr "Faça uma doação"
 
-#: zapzap/view/qtoaster_donation.py:126
+#: zapzap/view/qtoaster_donation.py:125
 msgid "..."
 msgstr ""
 
@@ -241,6 +247,13 @@ msgstr "Iniciar com o sistema"
 #: zapzap/view/general_page.py:170 zapzap/view/general_page.py:174
 msgid "Off"
 msgstr "Desativado"
+
+#: zapzap/view/general_page.py:172 zapzap/view/general_page.py:176
+#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
+#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
+#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
+msgid "On"
+msgstr "Ativado"
 
 #: zapzap/view/general_page.py:173
 msgid "Wayland window system"
