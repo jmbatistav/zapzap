@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-11 19:40-0300\n"
+"POT-Creation-Date: 2023-12-11 19:43-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -139,21 +139,19 @@ msgstr "Insira o nome do usuário"
 
 #: zapzap/view/card_user.py:88
 msgid "Shortcut:"
-msgstr ""
+msgstr "Atalho:"
 
 #: zapzap/view/card_user.py:89
-#, fuzzy
 msgid "Disable account"
-msgstr "Nova conta"
+msgstr "Desabilitar conta"
 
 #: zapzap/view/card_user.py:90
 msgid "Show notifications"
 msgstr "Mostrar notificações do usuário"
 
 #: zapzap/view/card_user.py:91
-#, fuzzy
 msgid "Delete account"
-msgstr "Nova conta"
+msgstr "Remover conta"
 
 #: zapzap/view/downloadPopup.py:69
 msgid "What do you want to do with the file?"
@@ -310,7 +308,7 @@ msgstr "Nova conversa"
 
 #: zapzap/view/home.py:90
 msgid "Perfil"
-msgstr ""
+msgstr "Perfil"
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"
