@@ -41,9 +41,11 @@ class CardUser(QWidget, Ui_CardUser):
     def loadCard(self):
         self.name.setText(self.user.name)
         svg = self.user.icon
+        self.labelShortcut.show()
 
         if not self.user.enable:
             svg = svg.format(IMAGE_DISABLE)
+            self.labelShortcut.hide()
         self.icon.setPixmap(getImageQPixmap(svg))
 
         self.name.setEnabled(self.user.enable)
