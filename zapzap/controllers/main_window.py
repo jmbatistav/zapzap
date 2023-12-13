@@ -177,7 +177,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.show()
             self.app.activateWindow()
 
-        # fechar a janela de settings?
+        self.zapHome.openSettings()
 
     def onTrayIconActivated(self, reason):
         """
