@@ -113,7 +113,7 @@ class Settings(QWidget, Ui_Settings):
     # SELECT
     # MENU SELECTED STYLESHEET
     MENU_SELECTED_STYLESHEET = """
-    border-bottom: 1px solid #00BD95;
+    font-weight: bold;
     """
 
     def selectMenu(self, getStyle):
