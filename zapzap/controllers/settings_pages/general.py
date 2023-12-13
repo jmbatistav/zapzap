@@ -26,6 +26,10 @@ class General(QWidget, Ui_General):
         self.setActionCheckBox()
         self.btnOpenSWhatsapp.clicked.connect(
             lambda: self.emitOpenSettingsWhatsapp.emit())
+        
+        if zapzap.isFlatpak:
+            self.wayland.setVisible(False)
+            self.labelWayland.setVisible(False)
 
     def loadSpellChecker(self):
         def action():
