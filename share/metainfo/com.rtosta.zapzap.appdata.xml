@@ -29,7 +29,6 @@
       <li>Spellchecker</li>
       <li>Drag and drop</li>
       <li>Work area notifications</li>
-      <li>Personalized window decoration</li>
       <li>Shortcuts for the main options</li>
     </ul>
     <p>What doesn't include: Video calls and On-call calls</p>
@@ -55,6 +54,15 @@
   </screenshots>
 
   <releases>
+   <release date="2023-12-14" version="5.0">
+      <description>
+        <p>New user interface</p>
+        <p>Redesigned settings panel</p>
+        <p>Better usability with multiple accounts</p>
+        <p>Useful shortcuts for WhatsApp Web</p>
+        <p>Internal improvements</p>
+      </description>
+    </release>
     <release date="2023-11-13" version="4.5.5.2">
       <description>
         <p>Small improvements...</p>
