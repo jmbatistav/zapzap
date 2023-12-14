@@ -195,7 +195,6 @@ class Home(QWidget, Ui_Home):
 
     def disableUserPage(self, user):
         """Disable user"""
-        print("""Disable user""")
         # If enabled, remove from stacked
         if user.enable:
             self.list.append(user)

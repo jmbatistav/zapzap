@@ -64,7 +64,6 @@ class General(QWidget, Ui_General):
     def checkClick(self):
         children = self.sender()
         childrenName = children.objectName()
-        print(childrenName)
 
         if childrenName == 'start_system':
             # cria ou remove o arquivo

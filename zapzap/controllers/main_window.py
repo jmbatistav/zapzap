@@ -197,7 +197,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def setThemeApp(self, theme):
         """" Apply the theme in the APP """
-        print(theme)
         if theme == "auto":
             theme = getSystemTheme()
             self.timer.start()

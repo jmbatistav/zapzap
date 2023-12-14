@@ -160,7 +160,6 @@ class Browser(QWebEngineView):
         Reload the page.
         Prevent Chrome update message from appearing
         """
-        print('[log] Reload the page.')
         # self.triggerPageAction(QWebEnginePage.WebAction.ReloadAndBypassCache)
         self.setWhatsappPage()
 
