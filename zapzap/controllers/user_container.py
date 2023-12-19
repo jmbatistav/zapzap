@@ -102,6 +102,9 @@ class UserContainer(QPushButton):
     def doReloadPage(self):
         self.browser.doReload()
 
+    def setFocusBrowser(self):
+        self.browser.setFocus()
+
     def saveSettings(self):
         self.user.zoomFactor = self.browser.zoomFactor()
         UserDAO.update(self.user)
@@ -125,15 +128,19 @@ class UserContainer(QPushButton):
 
     def closeConversation(self):
         self.browser.page().closeConversation()
+        self.setFocusBrowser()
 
     def newConversation(self):
         self.browser.page().newConversation()
+        self.setFocusBrowser()
 
     def openPerfil(self):
         self.browser.page().openPerfil()
+        self.setFocusBrowser()
 
     def openWhatsappSettings(self):
         self.browser.page().openWhatsappSettings()
+        self.setFocusBrowser()
 
     def openChat(self, number):
         self.browser.page().openChat(number)

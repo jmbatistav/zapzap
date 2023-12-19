@@ -58,7 +58,6 @@
     <addaction name="actionZoomIn"/>
     <addaction name="actionZoomOut"/>
     <addaction name="actionToggle_Full_Screen"/>
-    <addaction name="actionHome_page"/>
    </widget>
    <widget class="QMenu" name="menuChat">
     <property name="title">

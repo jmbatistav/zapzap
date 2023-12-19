@@ -120,7 +120,7 @@ class Home(QWidget, Ui_Home):
     def openSettings(self):
         """Open settings"""
         self.drawer.onToggled()
-
+     
     def openDonations(self):
         self.openSettings()
         self.zapSettings.openDonations()
@@ -137,6 +137,12 @@ class Home(QWidget, Ui_Home):
             if btn.user.id == idUser:
                 return btn, i
         return None
+    
+    def setFocusBrowser(self):
+        i = self.userStacked.currentIndex()
+        btn = self.menu.itemAt(i).widget()
+        btn.setFocusBrowser()
+
 
     def reloadPage(self):
         """Current page recharge"""

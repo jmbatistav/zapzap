@@ -138,6 +138,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.saveSettings()
         isBack = self.settings.value("system/keep_background", True, bool)
         if isBack and event:  # Hide app on close window
+            if not self.zapHome.drawer.isOpen:
+                self.zapHome.drawer.onToggled()
             self.zapHome.closeConversation(closeAll=True)
             self.hide()
             event.ignore()

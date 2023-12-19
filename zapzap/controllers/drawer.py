@@ -31,9 +31,12 @@ class Drawer(QWidget, Ui_drawer):
     def onToggled(self):
         if self.isOpen:
             self.open()
+            self.parent.zapSettings.btn_close.setShortcut('Esc')
             self.isOpen = False
         else:
             self.close()
+            self.parent.zapSettings.btn_close.setShortcut('')
+            self.parent.setFocusBrowser()
             self.isOpen = True
 
     @property
