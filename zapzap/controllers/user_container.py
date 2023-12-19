@@ -144,6 +144,7 @@ class UserContainer(QPushButton):
 
     def openChat(self, number):
         self.browser.page().openChat(number)
+        self.setFocusBrowser()
 
     ## EVENTS ##
 

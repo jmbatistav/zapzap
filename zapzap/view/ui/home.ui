@@ -106,6 +106,16 @@
        </spacer>
       </item>
       <item>
+       <widget class="QPushButton" name="btnHomeNewChatPhone">
+        <property name="toolTip">
+         <string>New chat at phone number</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btnHomeNewChat">
         <property name="toolTip">
          <string>New chat</string>
@@ -164,6 +174,7 @@
      <zorder>btnHomeNewChat</zorder>
      <zorder>line_2</zorder>
      <zorder>btnHomeNewAccount</zorder>
+     <zorder>btnHomeNewChatPhone</zorder>
     </widget>
    </item>
    <item>

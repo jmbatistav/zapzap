@@ -27,6 +27,9 @@ class Home(QWidget, Ui_Home):
     # Quit
     emitQuit = pyqtSignal()
 
+    # New chat
+    emitNewChatAtNumber = pyqtSignal()
+
     def __init__(self):
         super(Home, self).__init__()
         self.setupUi(self)
@@ -104,6 +107,10 @@ class Home(QWidget, Ui_Home):
 
         # New chat
         self.btnHomeNewChat.clicked.connect(self.newConversation)
+
+        # New chat at phone number
+        self.btnHomeNewChatPhone.clicked.connect(
+            lambda: self.emitNewChatAtNumber.emit())
 
         # New Account
         def newAccount():

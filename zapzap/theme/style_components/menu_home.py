@@ -33,7 +33,7 @@ MENU_HOME = """
         #btnHomeNewAccount{
             qproperty-icon: url({path}/user-plus.svg);
         }
-        #btn_avanced{
-            qproperty-icon: url({path}/wrench.svg);
+        #btnHomeNewChatPhone{
+            qproperty-icon: url({path}/phone-plus.svg);
         }
 """
