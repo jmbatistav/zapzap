@@ -258,6 +258,13 @@
                   </widget>
                  </item>
                  <item>
+                  <widget class="QPushButton" name="btn_avanced">
+                   <property name="text">
+                    <string>Advanced mode</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QPushButton" name="btn_donations">
                    <property name="minimumSize">
                     <size>

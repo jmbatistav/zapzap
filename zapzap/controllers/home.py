@@ -30,6 +30,8 @@ class Home(QWidget, Ui_Home):
     def __init__(self):
         super(Home, self).__init__()
         self.setupUi(self)
+        self.settings = QSettings(zapzap.__appname__, zapzap.__appname__)
+
         self.loadUsers()
         self.loadActionsMenuBar()
 
@@ -43,6 +45,8 @@ class Home(QWidget, Ui_Home):
         self.emitUpdateTheme = self.zapSettings.emitUpdateTheme
         self.emitDisableTrayIcon = self.zapSettings.emitDisableTrayIcon
         self.emitNotifications = self.zapSettings.emitNotifications
+        # Avanced
+        self.zapSettings.emitHideSettingsBar.connect(self.activeSettingsBar)
         # Quit
         self.emitQuit = self.zapSettings.emitQuit
         self.zapSettings.emitCloseSettings.connect(self.openSettings)
@@ -85,9 +89,11 @@ class Home(QWidget, Ui_Home):
             if btn.user.enable:
                 btn.setShortcut(f'Ctrl+{cont}')
                 cont += 1
-        
+
         # Updates the description of the shortcuts in Account
         self.zapSettings.accountPage.updateUsersShortcuts()
+
+        self.activeSettingsBar()
 
     #### MenuBar ####
     def loadActionsMenuBar(self):
@@ -116,11 +122,21 @@ class Home(QWidget, Ui_Home):
                 self.addNewUser(user)
         self.btnHomeNewAccount.clicked.connect(newAccount)
 
+    def activeSettingsBar(self):
+        """Activate the menu only for more than one user"""
+        if len(self.list) == 1 and self.settings.value(
+                "system/hide_bar_users", False, bool):
+
+            self.menuUsers.hide()
+        else:
+            # self.menu.itemAt(0).widget().selected()
+            self.menuUsers.show()
+
     #### Settings ####
     def openSettings(self):
         """Open settings"""
         self.drawer.onToggled()
-     
+
     def openDonations(self):
         self.openSettings()
         self.zapSettings.openDonations()
@@ -137,12 +153,11 @@ class Home(QWidget, Ui_Home):
             if btn.user.id == idUser:
                 return btn, i
         return None
-    
+
     def setFocusBrowser(self):
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()
         btn.setFocusBrowser()
-
 
     def reloadPage(self):
         """Current page recharge"""
@@ -207,8 +222,6 @@ class Home(QWidget, Ui_Home):
             button = UserContainer(self, user)
             self.menu.addWidget(button)
             self.userStacked.addWidget(button.getBrowser())
-
-            self.updateShortcuts()
         else:
             # Get UserContainer
             return_btn = self.getUserContainer(user.id)
@@ -232,7 +245,7 @@ class Home(QWidget, Ui_Home):
                 if u.id == user.id:
                     self.list.remove(u)
 
-            self.updateShortcuts()
+        self.updateShortcuts()
 
     def delUserPage(self, user):
         """Delete user"""

@@ -6,6 +6,7 @@ from zapzap.controllers.settings_pages.general import General
 from zapzap.controllers.settings_pages.account import Account
 from zapzap.controllers.settings_pages.notifications import Notifications
 from zapzap.controllers.settings_pages.personalization import Personalization
+from zapzap.controllers.settings_pages.avanced import Avanced
 from zapzap.controllers.settings_pages.donations import Donations
 from zapzap.controllers.settings_pages.about import About
 from zapzap.model.user import User
@@ -27,6 +28,9 @@ class Settings(QWidget, Ui_Settings):
     emitUpdateTheme = pyqtSignal(str)
     emitDisableTrayIcon = pyqtSignal(bool)
     emitNotifications = pyqtSignal()
+
+    # avanced
+    emitHideSettingsBar = pyqtSignal()
 
     # Quit
     emitQuit = pyqtSignal()
@@ -75,6 +79,12 @@ class Settings(QWidget, Ui_Settings):
         self.persoPage.emitNotifications = self.emitNotifications
         self.pages_id['btn_personalization'] = self.settings_stacked.addWidget(
             self.persoPage)
+
+        # Avanced mode
+        self.avanced_page = Avanced()
+        self.avanced_page.emitHideSettingsBar = self.emitHideSettingsBar
+        self.pages_id['btn_avanced'] = self.settings_stacked.addWidget(
+            self.avanced_page)
 
         # Donations
         self.pages_id['btn_donations'] = self.settings_stacked.addWidget(
