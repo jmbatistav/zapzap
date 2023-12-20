@@ -42,6 +42,9 @@ SettingsMenu = """
         #btn_about{
             qproperty-icon: url({path}/about.svg);
         }
+        #btn_quit{
+            qproperty-icon: url({path}/sign-out.svg);
+        }
 
     """
 
