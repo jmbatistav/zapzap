@@ -21,10 +21,14 @@ class Avanced(QWidget, Ui_Avanced):
     def load(self):
         self.hideBarUsers.setChecked(self.settings.value(
             "system/hide_bar_users", False, bool))
+        self.donationMessage.setChecked(self.settings.value(
+            "system/donation_message", True, bool))
 
     def save(self):
         self.settings.setValue("system/hide_bar_users",
                                self.hideBarUsers.isChecked())
+        self.settings.setValue("system/donation_message",
+                               self.donationMessage.isChecked())
 
     def setActionCheckBox(self):
         for children in self.findChildren(QCheckBox):

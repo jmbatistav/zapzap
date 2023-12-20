@@ -90,7 +90,7 @@ class Ui_Home(object):
     def retranslateUi(self, Home):
         
         self.btnHomeNewAccount.setToolTip(_("New account"))
-        self.btnHomeNewChatPhone.setToolTip(_("New chat with phone number"))
+        self.btnHomeNewChatPhone.setToolTip(_("New chat at phone number"))
         self.btnHomeNewChat.setToolTip(_("New chat"))
         self.btnHomeSetting.setToolTip(_("Settings"))
         self.btnHomePerfil.setToolTip(_("Perfil"))

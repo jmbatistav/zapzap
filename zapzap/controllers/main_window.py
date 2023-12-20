@@ -49,8 +49,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.syncThemeSys)
         self.current_theme = -1
-
-        QtoasterDonation.showMessage(parent=self)
+        if self.settings.value(
+                "system/donation_message", True, bool):
+            QtoasterDonation.showMessage(parent=self)
 
     #### Donation ####
     def openDonations(self):

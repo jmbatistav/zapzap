@@ -13,7 +13,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Avanced(object):
     def setupUi(self, Avanced):
         Avanced.setObjectName("Avanced")
-        Avanced.resize(476, 146)
+        Avanced.resize(415, 226)
         Avanced.setWindowTitle("")
         self.verticalLayout = QtWidgets.QVBoxLayout(Avanced)
         self.verticalLayout.setSpacing(20)
@@ -45,6 +45,18 @@ class Ui_Avanced(object):
         self.label_3.setObjectName("label_3")
         self.gridLayout.addWidget(self.label_3, 1, 0, 1, 2)
         self.verticalLayout.addLayout(self.gridLayout)
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setContentsMargins(-1, 0, -1, -1)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.label_4 = QtWidgets.QLabel(parent=Avanced)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout_2.addWidget(self.label_4, 0, 0, 1, 1)
+        self.donationMessage = QtWidgets.QCheckBox(parent=Avanced)
+        self.donationMessage.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
+        self.donationMessage.setChecked(True)
+        self.donationMessage.setObjectName("donationMessage")
+        self.gridLayout_2.addWidget(self.donationMessage, 0, 1, 1, 1)
+        self.verticalLayout.addLayout(self.gridLayout_2)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout.addItem(spacerItem)
 
@@ -57,6 +69,8 @@ class Ui_Avanced(object):
         self.label_2.setText(_("Hide setting bar with only one user"))
         self.hideBarUsers.setText(_("Off"))
         self.label_3.setText(_("To access the settings use the menu in the tray or the shortcut Ctrl+P"))
+        self.label_4.setText(_("Donation message"))
+        self.donationMessage.setText(_("On"))
 
 
 if __name__ == "__main__":
