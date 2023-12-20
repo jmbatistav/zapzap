@@ -5,7 +5,6 @@ QWIDGETS = """
             selection-color: {windowText};
             background-clip: border;
             border-image: none;
-            font-family: Segoe UI
         }
 
         QStackedWidget {	
