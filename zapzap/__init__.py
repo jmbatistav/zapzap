@@ -28,12 +28,14 @@ __user_agent__ = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, lik
 from PyQt6.QtCore import QFileInfo
 abs_path = QFileInfo(__file__).absolutePath()
 
+fonts_path = abs_path + '/assets/fonts'
+
 # Segoe Font
 segoe_font = {
-    "regular": abs_path + '/assets/segoe-ui/Segoe UI.ttf',
-    "bold": abs_path + '/assets/segoe-ui/Segoe UI Bold.ttf',
-    "bold-italic": abs_path + '/assets/segoe-ui/Segoe UI Bold Italic.ttf',
-    "italic": abs_path + '/assets/segoe-ui/Segoe UI Italic.ttf',
+    "regular": fonts_path + '/segoe-ui/Segoe UI.ttf',
+    "bold": fonts_path + '/segoe-ui/Segoe UI Bold.ttf',
+    "bold-italic": fonts_path + '/segoe-ui/Segoe UI Bold Italic.ttf',
+    "italic": fonts_path + '/segoe-ui/Segoe UI Italic.ttf',
 }
 
 # Path /tmp
