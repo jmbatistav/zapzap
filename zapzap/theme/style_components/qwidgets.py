@@ -12,6 +12,13 @@ QWIDGETS = """
             background-color: {window};
         }
 
+        QToolTip {
+            color: #F0F2F5;
+            background-color: #202C33;
+            padding:2px;
+            font-family: Segoe UI
+        }
+
         QLineEdit{
             color: {windowText};
             background-color: {frame_border};
