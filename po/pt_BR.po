@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-21 15:00-0300\n"
+"POT-Creation-Date: 2023-12-21 15:03-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -95,7 +95,7 @@ msgstr "Personalização"
 
 #: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
 msgid "Advanced mode"
-msgstr ""
+msgstr "Modo avançado"
 
 #: zapzap/view/settings.py:175
 msgid "Donations"
@@ -208,7 +208,7 @@ msgstr "Cria um novo painel para acesso ao WhatsApp."
 
 #: zapzap/view/advanced_page.py:70
 msgid "Hide setting bar with only one user"
-msgstr ""
+msgstr "Esconder barra de configurações com único usuário"
 
 #: zapzap/view/advanced_page.py:71 zapzap/view/general_page.py:168
 #: zapzap/view/general_page.py:173
@@ -218,11 +218,11 @@ msgstr "Desativado"
 #: zapzap/view/advanced_page.py:72
 msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
 msgstr ""
+"Para acessar as configurações, use o menu na bandeja ou o atalho Ctrl+P"
 
 #: zapzap/view/advanced_page.py:73
-#, fuzzy
 msgid "Donation message"
-msgstr "Doações"
+msgstr "Mensagem de doação"
 
 #: zapzap/view/advanced_page.py:74 zapzap/view/general_page.py:171
 #: zapzap/view/general_page.py:175 zapzap/view/notifications_page.py:104
@@ -885,24 +885,3 @@ msgstr ""
 #: zapzap/services/spellCheckLanguages.py:135
 msgid "Vietnamese - Vietnam"
 msgstr ""
-
-#~ msgid "Hide menu bar"
-#~ msgstr "Esconder barra de menu"
-
-#~ msgid "Learn More"
-#~ msgstr "Leia mais"
-
-#~ msgid "Changelog"
-#~ msgstr "Lista de mudanças"
-
-#~ msgid "Report issue..."
-#~ msgstr "Reporte um problema..."
-
-#~ msgid "About Zapzap"
-#~ msgstr "Sobre ZapZap"
-
-#~ msgid "Keep in background when closing window"
-#~ msgstr "Execução em segundo plano"
-
-#~ msgid "Home page"
-#~ msgstr "Página inicial"
