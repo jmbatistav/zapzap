@@ -54,6 +54,14 @@
   </screenshots>
 
   <releases>
+    <release date="2023-12-21" version="5.1">
+      <description>
+        <p>Optimization for the use of the ESC key</p>
+        <p>Disable the menu only for more than one user</p>
+        <p>New chat at phone number</p>
+        <p>Internal improvements</p>
+      </description>
+    </release>
    <release date="2023-12-14" version="5.0">
       <description>
         <p>New user interface</p>
