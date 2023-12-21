@@ -1,5 +1,5 @@
 from gettext import gettext as _
-# Form implementation generated from reading ui file './zapzap/view/ui/avanced_page.ui'
+# Form implementation generated from reading ui file './zapzap/view/ui/advanced_page.ui'
 #
 # Created by: PyQt6 UI code generator 6.6.1
 #
@@ -10,15 +10,15 @@ from gettext import gettext as _
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Avanced(object):
-    def setupUi(self, Avanced):
-        Avanced.setObjectName("Avanced")
-        Avanced.resize(321, 216)
-        Avanced.setWindowTitle("")
-        self.verticalLayout = QtWidgets.QVBoxLayout(Avanced)
+class Ui_Advanced(object):
+    def setupUi(self, Advanced):
+        Advanced.setObjectName("Advanced")
+        Advanced.resize(321, 216)
+        Advanced.setWindowTitle("")
+        self.verticalLayout = QtWidgets.QVBoxLayout(Advanced)
         self.verticalLayout.setSpacing(15)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.label = QtWidgets.QLabel(parent=Avanced)
+        self.label = QtWidgets.QLabel(parent=Advanced)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -28,17 +28,17 @@ class Ui_Avanced(object):
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setSpacing(6)
         self.gridLayout.setObjectName("gridLayout")
-        self.label_2 = QtWidgets.QLabel(parent=Avanced)
+        self.label_2 = QtWidgets.QLabel(parent=Advanced)
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 0, 0, 1, 1)
-        self.hideBarUsers = QtWidgets.QCheckBox(parent=Avanced)
+        self.hideBarUsers = QtWidgets.QCheckBox(parent=Advanced)
         self.hideBarUsers.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
         self.hideBarUsers.setObjectName("hideBarUsers")
         self.gridLayout.addWidget(self.hideBarUsers, 0, 1, 1, 1)
-        self.label_3 = QtWidgets.QLabel(parent=Avanced)
+        self.label_3 = QtWidgets.QLabel(parent=Advanced)
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_3.setFont(font)
@@ -49,10 +49,10 @@ class Ui_Avanced(object):
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setContentsMargins(-1, 0, -1, -1)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.label_4 = QtWidgets.QLabel(parent=Avanced)
+        self.label_4 = QtWidgets.QLabel(parent=Advanced)
         self.label_4.setObjectName("label_4")
         self.gridLayout_2.addWidget(self.label_4, 0, 0, 1, 1)
-        self.donationMessage = QtWidgets.QCheckBox(parent=Avanced)
+        self.donationMessage = QtWidgets.QCheckBox(parent=Advanced)
         self.donationMessage.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
         self.donationMessage.setChecked(True)
         self.donationMessage.setObjectName("donationMessage")
@@ -61,12 +61,12 @@ class Ui_Avanced(object):
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout.addItem(spacerItem)
 
-        self.retranslateUi(Avanced)
-        QtCore.QMetaObject.connectSlotsByName(Avanced)
+        self.retranslateUi(Advanced)
+        QtCore.QMetaObject.connectSlotsByName(Advanced)
 
-    def retranslateUi(self, Avanced):
+    def retranslateUi(self, Advanced):
         
-        self.label.setText(_("Avanced Mode"))
+        self.label.setText(_("Advanced mode"))
         self.label_2.setText(_("Hide setting bar with only one user"))
         self.hideBarUsers.setText(_("Off"))
         self.label_3.setText(_("To access the settings use the menu in the tray or the shortcut Ctrl+P"))
@@ -77,8 +77,8 @@ class Ui_Avanced(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Avanced = QtWidgets.QWidget()
-    ui = Ui_Avanced()
-    ui.setupUi(Avanced)
-    Avanced.show()
+    Advanced = QtWidgets.QWidget()
+    ui = Ui_Advanced()
+    ui.setupUi(Advanced)
+    Advanced.show()
     sys.exit(app.exec())

@@ -1,17 +1,17 @@
 from PyQt6.QtWidgets import QWidget, QCheckBox
 from PyQt6.QtCore import pyqtSignal, QSettings
-from zapzap.view.avanced_page import Ui_Avanced
+from zapzap.view.advanced_page import Ui_Advanced
 from gettext import gettext as _
 from .tools import updateTextCheckBox
 import zapzap
 
 
-class Avanced(QWidget, Ui_Avanced):
+class Advanced(QWidget, Ui_Advanced):
 
     emitHideSettingsBar = pyqtSignal()
 
     def __init__(self):
-        super(Avanced, self).__init__()
+        super(Advanced, self).__init__()
         self.setupUi(self)
 
         self.settings = QSettings(zapzap.__appname__, zapzap.__appname__)

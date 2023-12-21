@@ -6,6 +6,7 @@ zapzap/view/openChatPopup.py
 zapzap/view/qtoaster_donation.py
 zapzap/view/about_page.py
 zapzap/view/account_page.py
+zapzap/view/advanced_page.py
 zapzap/view/general_page.py
 zapzap/view/notifications_page.py
 zapzap/view/personalization_page.py

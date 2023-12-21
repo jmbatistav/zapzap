@@ -78,8 +78,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             lambda: self.zapHome.setZoomFactor(+0.1))
         self.actionZoomOut.triggered.connect(
             lambda: self.zapHome.setZoomFactor(-0.1))
-        self.actionHome_page.triggered.connect(
-            self.zapHome.closeConversation)
+        
 
         # Chat
         self.actionOpen_new_chat.triggered.connect(

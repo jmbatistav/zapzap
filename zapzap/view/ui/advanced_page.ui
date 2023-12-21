@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Avanced</class>
- <widget class="QWidget" name="Avanced">
+ <class>Advanced</class>
+ <widget class="QWidget" name="Advanced">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -26,7 +26,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Avanced Mode</string>
+      <string>Advanced mode</string>
      </property>
     </widget>
    </item>

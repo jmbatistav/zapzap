@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-11 19:43-0300\n"
+"POT-Creation-Date: 2023-12-21 15:00-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -17,119 +17,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: zapzap/view/main_window.py:106 zapzap/view/qtoaster_donation.py:123
-#: zapzap/view/about_page.py:126
+#: zapzap/view/main_window.py:78 zapzap/view/qtoaster_donation.py:123
+#: zapzap/view/about_page.py:135
 #: zapzap/controllers/main_window_components/tray_icon.py:19
 msgid "ZapZap"
 msgstr "ZapZap"
 
-#: zapzap/view/main_window.py:107
+#: zapzap/view/main_window.py:79
 msgid "File"
 msgstr "Arquivo"
 
-#: zapzap/view/main_window.py:108
+#: zapzap/view/main_window.py:80
 msgid "View"
 msgstr "Visualizar"
 
-#: zapzap/view/main_window.py:109
+#: zapzap/view/main_window.py:81
 msgid "Chat"
 msgstr "Conversa"
 
-#: zapzap/view/main_window.py:110 zapzap/view/home.py:89
+#: zapzap/view/main_window.py:82 zapzap/view/home.py:95
 #: zapzap/controllers/main_window_components/tray_icon.py:22
 msgid "Settings"
 msgstr "Configurações"
 
-#: zapzap/view/main_window.py:111 zapzap/view/settings.py:173
+#: zapzap/view/main_window.py:83 zapzap/view/settings.py:177
 #: zapzap/controllers/main_window_components/tray_icon.py:25
 msgid "Quit"
 msgstr "Sair"
 
-#: zapzap/view/main_window.py:112
+#: zapzap/view/main_window.py:84
 msgid "Reload"
 msgstr "Recarregar página"
 
-#: zapzap/view/main_window.py:113
+#: zapzap/view/main_window.py:85
 msgid "Default size page"
 msgstr "Tamanho real"
 
-#: zapzap/view/main_window.py:114
+#: zapzap/view/main_window.py:86
 msgid "Full Screen"
 msgstr "Tela cheia"
 
-#: zapzap/view/main_window.py:115
-msgid "Hide menu bar"
-msgstr "Esconder barra de menu"
-
-#: zapzap/view/main_window.py:116
-msgid "Learn More"
-msgstr "Leia mais"
-
-#: zapzap/view/main_window.py:117
-msgid "Changelog"
-msgstr "Lista de mudanças"
-
-#: zapzap/view/main_window.py:118
-msgid "Report issue..."
-msgstr "Reporte um problema..."
-
-#: zapzap/view/main_window.py:119
-msgid "About Zapzap"
-msgstr "Sobre ZapZap"
-
-#: zapzap/view/main_window.py:120 zapzap/view/general_page.py:171
-msgid "Hide on close"
-msgstr "Esconder ao fechar"
-
-#: zapzap/view/main_window.py:121
-msgid "Keep in background when closing window"
-msgstr "Execução em segundo plano"
-
-#: zapzap/view/main_window.py:122
+#: zapzap/view/main_window.py:87
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: zapzap/view/main_window.py:123
+#: zapzap/view/main_window.py:88
 msgid "Zoom out"
 msgstr "Reduzir"
 
-#: zapzap/view/main_window.py:124 zapzap/view/settings.py:171
-msgid "Donations"
-msgstr "Doações"
-
-#: zapzap/view/main_window.py:125
-msgid "Home page"
-msgstr "Página inicial"
-
-#: zapzap/view/main_window.py:126
+#: zapzap/view/main_window.py:89
 msgid "Open new chat"
 msgstr "Abrir nova conversa"
 
-#: zapzap/view/main_window.py:127
+#: zapzap/view/main_window.py:90
 msgid "Hide"
 msgstr "Esconder"
 
-#: zapzap/view/main_window.py:128
+#: zapzap/view/main_window.py:91
 msgid "Ctrl+W"
 msgstr ""
 
-#: zapzap/view/settings.py:167 zapzap/view/general_page.py:167
+#: zapzap/view/settings.py:170 zapzap/view/general_page.py:166
 msgid "General"
 msgstr "Geral"
 
-#: zapzap/view/settings.py:168 zapzap/view/account_page.py:75
+#: zapzap/view/settings.py:171 zapzap/view/account_page.py:75
 msgid "Account"
 msgstr "Conta"
 
-#: zapzap/view/settings.py:169 zapzap/view/notifications_page.py:102
+#: zapzap/view/settings.py:172 zapzap/view/notifications_page.py:102
 msgid "Notifications"
 msgstr "Notificações"
 
-#: zapzap/view/settings.py:170 zapzap/view/personalization_page.py:80
+#: zapzap/view/settings.py:173 zapzap/view/personalization_page.py:80
 msgid "Personalization"
 msgstr "Personalização"
 
-#: zapzap/view/settings.py:172 zapzap/view/about_page.py:125
+#: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
+msgid "Advanced mode"
+msgstr ""
+
+#: zapzap/view/settings.py:175
+msgid "Donations"
+msgstr "Doações"
+
+#: zapzap/view/settings.py:176 zapzap/view/about_page.py:134
 msgid "About"
 msgstr "Sobre"
 
@@ -197,36 +169,36 @@ msgstr "Faça uma doação"
 msgid "..."
 msgstr ""
 
-#: zapzap/view/about_page.py:127
+#: zapzap/view/about_page.py:136
 msgid "WhatsApp Web for Linux"
 msgstr "WhatsApp Web para Linux"
 
-#: zapzap/view/about_page.py:128
+#: zapzap/view/about_page.py:137
 #, python-brace-format
 msgid "Version {id} (Official compilation)"
 msgstr "Versão {id} (Compilação oficial)"
 
-#: zapzap/view/about_page.py:129 zapzap/view/about_page.py:131
+#: zapzap/view/about_page.py:138 zapzap/view/about_page.py:140
 msgid "Lean more"
 msgstr "Leia mais"
 
-#: zapzap/view/about_page.py:130
+#: zapzap/view/about_page.py:139
 msgid "See more about Zapzap on our website."
 msgstr "Veja mais sobre o Zapzap em nosso site."
 
-#: zapzap/view/about_page.py:132 zapzap/view/about_page.py:134
+#: zapzap/view/about_page.py:141 zapzap/view/about_page.py:143
 msgid "Report issue"
 msgstr "Reporte um problema"
 
-#: zapzap/view/about_page.py:133
+#: zapzap/view/about_page.py:142
 msgid "Report a problem or make your suggestion."
 msgstr "Relate um problema ou faça sua sugestão."
 
-#: zapzap/view/about_page.py:135
+#: zapzap/view/about_page.py:144
 msgid "GNU General Public License v3.0"
 msgstr "Licença Pública Geral GNU v3.0"
 
-#: zapzap/view/account_page.py:76 zapzap/view/home.py:87
+#: zapzap/view/account_page.py:76 zapzap/view/home.py:92
 msgid "New account"
 msgstr "Nova conta"
 
@@ -234,38 +206,57 @@ msgstr "Nova conta"
 msgid "Creates a new panel for access to WhatsApp."
 msgstr "Cria um novo painel para acesso ao WhatsApp."
 
-#: zapzap/view/general_page.py:168
-msgid "Login"
-msgstr "Conecte-se"
+#: zapzap/view/advanced_page.py:70
+msgid "Hide setting bar with only one user"
+msgstr ""
 
-#: zapzap/view/general_page.py:169
-msgid "Start ZapZap with the system"
-msgstr "Iniciar com o sistema"
-
-#: zapzap/view/general_page.py:170 zapzap/view/general_page.py:174
+#: zapzap/view/advanced_page.py:71 zapzap/view/general_page.py:168
+#: zapzap/view/general_page.py:173
 msgid "Off"
 msgstr "Desativado"
 
-#: zapzap/view/general_page.py:172 zapzap/view/general_page.py:176
-#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
-#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
-#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
+#: zapzap/view/advanced_page.py:72
+msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
+msgstr ""
+
+#: zapzap/view/advanced_page.py:73
+#, fuzzy
+msgid "Donation message"
+msgstr "Doações"
+
+#: zapzap/view/advanced_page.py:74 zapzap/view/general_page.py:171
+#: zapzap/view/general_page.py:175 zapzap/view/notifications_page.py:104
+#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
+#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
+#: zapzap/view/personalization_page.py:83
 msgid "On"
 msgstr "Ativado"
 
-#: zapzap/view/general_page.py:173
+#: zapzap/view/general_page.py:167
+msgid "Start ZapZap with the system"
+msgstr "Iniciar com o sistema"
+
+#: zapzap/view/general_page.py:169
+msgid "Login"
+msgstr "Conecte-se"
+
+#: zapzap/view/general_page.py:170
+msgid "Hide on close"
+msgstr "Esconder ao fechar"
+
+#: zapzap/view/general_page.py:172
 msgid "Wayland window system"
 msgstr "Sistema de janelas Wayland"
 
-#: zapzap/view/general_page.py:175
+#: zapzap/view/general_page.py:174
 msgid "SpellChecker"
 msgstr "Corretor ortográfico"
 
-#: zapzap/view/general_page.py:177
+#: zapzap/view/general_page.py:176
 msgid "Whatsapp Web Settings"
 msgstr "Configurações do Whatsapp Web"
 
-#: zapzap/view/general_page.py:178
+#: zapzap/view/general_page.py:177
 msgid "Open the WhatsApp Web Settings panel on the selected account."
 msgstr ""
 "Abra o painel de configurações da web do WhatsApp na conta selecionada."
@@ -302,11 +293,16 @@ msgstr "Tema do aplicativo"
 msgid "Tray icon"
 msgstr "Ícone de bandeja"
 
-#: zapzap/view/home.py:88
+#: zapzap/view/home.py:93
+#, fuzzy
+msgid "New chat at phone number"
+msgstr "Abrir conversa pelo número do telefone"
+
+#: zapzap/view/home.py:94
 msgid "New chat"
 msgstr "Nova conversa"
 
-#: zapzap/view/home.py:90
+#: zapzap/view/home.py:96
 msgid "Perfil"
 msgstr "Perfil"
 
@@ -889,3 +885,24 @@ msgstr ""
 #: zapzap/services/spellCheckLanguages.py:135
 msgid "Vietnamese - Vietnam"
 msgstr ""
+
+#~ msgid "Hide menu bar"
+#~ msgstr "Esconder barra de menu"
+
+#~ msgid "Learn More"
+#~ msgstr "Leia mais"
+
+#~ msgid "Changelog"
+#~ msgstr "Lista de mudanças"
+
+#~ msgid "Report issue..."
+#~ msgstr "Reporte um problema..."
+
+#~ msgid "About Zapzap"
+#~ msgstr "Sobre ZapZap"
+
+#~ msgid "Keep in background when closing window"
+#~ msgstr "Execução em segundo plano"
+
+#~ msgid "Home page"
+#~ msgstr "Página inicial"

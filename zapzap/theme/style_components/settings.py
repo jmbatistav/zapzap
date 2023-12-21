@@ -33,7 +33,7 @@ SettingsMenu = """
         #btn_notifications{
             qproperty-icon: url({path}/notifications.svg);
         }
-        #btn_avanced{
+        #btn_advanced{
             qproperty-icon: url({path}/wrench.svg);
         }
         #btn_donations{
