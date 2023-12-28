@@ -39,6 +39,9 @@ def runLocal():
         environ['QT_QPA_PLATFORM'] = ZAP_SESSION_TYPE
     elif XDG_SESSION_TYPE is None:
         environ['QT_QPA_PLATFORM'] = ZAP_SESSION_TYPE
+    
+    # Incorrect sizing and bad text rendering with WebEngine using fractional scaling on Wayland
+    environ['QT_SCALE_FACTOR_ROUNDING_POLICY'] = 'RoundPreferFloor'
 
 
 def main():
@@ -80,9 +83,6 @@ def main():
     QFontDatabase.addApplicationFont(zapzap.segoe_font['bold-italic'])
     QFontDatabase.addApplicationFont(zapzap.segoe_font['italic'])
     app.setFont(QFont("Segoe UI"))
-
-    # Incorrect sizing and bad text rendering with WebEngine using fractional scaling on Wayland
-    environ['QT_SCALE_FACTOR_ROUNDING_POLICY'] = 'RoundPreferFloor'
 
     # Callback instance
     app.messageReceived.connect(lambda result: window.xdgOpenChat(result))
