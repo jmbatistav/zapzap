@@ -1,8 +1,8 @@
 import os
 from PyQt6.QtCore import QStandardPaths
-__version__ = '5.0'
+__version__ = '5.1'
 __appname__ = 'ZapZap'
-__comment__ = 'Whatsapp Desktop for linux'
+__comment__ = 'WhatsApp Messenger for linux'
 __domain__ = 'com.rtosta'
 __desktopid__ = 'com.rtosta.zapzap'
 __appid__ = 'zapzap-application'

@@ -4,7 +4,7 @@
   <launchable type="desktop-id">com.rtosta.zapzap.desktop</launchable>
 
   <name>ZapZap</name>
-  <summary>Whatsapp Desktop for Linux</summary>
+  <summary>WhatsApp Messenger</summary>
 
   <update_contact>rafa.ecomp@gmail.com</update_contact>
   <developer_name>Rafael Tosta</developer_name>
@@ -14,24 +14,15 @@
   <content_rating type="oars-1.0" />
 
   <description>
-    <p>
-      Much faster, more beautiful and more powerful.
-    </p>
-    <p>Features include:</p>
-    <ul>
-      <li>Features come with Whatsapp web</li>
-      <li>Multiple users</li>
-      <li>Icon in systray with different icon if there is new messages</li>
-      <li>Customizable Systray icons</li>
-      <li>System style (light and dark)</li>
-      <li>Fullscreen mode</li>
-      <li>Background running</li>
-      <li>Spellchecker</li>
-      <li>Drag and drop</li>
-      <li>Work area notifications</li>
-      <li>Shortcuts for the main options</li>
-    </ul>
-    <p>What doesn't include: Video calls and On-call calls</p>
+    <p><strong>What's:</strong></p>
+    <p>Zapzap is a container for execution of the web web, that is, a kind of Webapp.Thus, all features of the Whatpp Web are available and several others that integrates it with the system.</p>
+    <p>Its differential is the support to multiple accounts, in the background running, spellchecker and customizations based on the theme of the system.</p>
+
+    <p><strong>Data security:</strong></p>
+    <p>No modification and manipulation is performed on the execution of the Whatpp Web. In addition, all source code is available in Github and can be auditable.</p>
+
+    <p><strong>About:</strong></p>
+    <p>ZapZap was initially developed for personal use.I decided to share it so that other people, like me, could have a WhatsApp customer more integrated into the system.</p>
   </description>
 
   <categories>
@@ -54,6 +45,11 @@
   </screenshots>
 
   <releases>
+    <release date="2023-12-29" version="5.1.1">
+        <description>
+          <p>Optimization: Wayland with Fractional Scaling</p>
+        </description>
+      </release>
     <release date="2023-12-21" version="5.1">
       <description>
         <p>Optimization for the use of the ESC key</p>
