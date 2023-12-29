@@ -1,7 +1,7 @@
 # Arquivo .spec para Fedora
 
 %global srcname zapzap
-%global srcversion  5.1
+%global srcversion  5.1.1
 
 %global __python /usr/bin/python3
 %global _rpmfilename %%{NAME}-%%{VERSION}-%%{RELEASE}.rpm
@@ -9,7 +9,7 @@
 Name:           %{srcname}
 Version:        %{srcversion}
 Release:        1%{?dist}
-Summary:        Zapzap - Whatsapp Desktop for Linux
+Summary:        Zapzap - WhatsApp Messenger for Linux
 
 License:        GNU General Public License v3.0
 URL:            https://github.com/zapzap-linux/%{srcname}
@@ -29,7 +29,7 @@ Requires:   python3-pyqt6-webengine
 Requires:   python3-dbus
 
 %description
-Zapzap - Whatsapp Desktop for Linux
+Zapzap - WhatsApp Messenger for Linux
 
 %prep
 %autosetup -n %{srcname}-%{version}
