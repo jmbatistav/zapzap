@@ -18,7 +18,7 @@ Because Meta does not provide the public with an API to construct third-party ap
 </p>
 
 # Features
-Features come with Whatsapp web:
+Besides all the features that come with the WhatsApp web application, ZapZap provides:
 - Icon in systray changes if there are new messages
 - Customizable Systray icons
 - System style (light and dark)
