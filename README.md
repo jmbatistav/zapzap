@@ -23,7 +23,7 @@ Features come with Whatsapp web:
 - Customizable Systray icons
 - System style (light and dark)
 - Fullscreen mode
-- Background running
+- Runs in the background
 - Spellchecker
 - Drag and drop
 - Work area notifications
