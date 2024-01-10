@@ -4,7 +4,7 @@
 # About
 This app aims to bring the WhatsApp experience on Linux closer to a native application.
 
-Because Meta does not provide the public with an API to construct third-party applications around ZapZap is a [Progressive Web Application](https://en.wikipedia.org/wiki/Progressive_web_app)
+Because Meta does not provide the public with an API to construct third-party applications around, so ZapZap is a [Progressive Web Application](https://en.wikipedia.org/wiki/Progressive_web_app).
 
 # Download
 <p align="center">
