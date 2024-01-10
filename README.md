@@ -1,4 +1,4 @@
-# ZapZap - Whatsapp Desktop for Linux 
+# [ZapZap](https://zapzap-linux.github.io/) - Whatsapp Desktop for Linux 
 ![Zapzap for whatsapp](share/screenshot/default.png)
 
 # About
@@ -18,7 +18,7 @@ Because Meta does not provide the public with an API to construct third-party ap
 </p>
 
 # Features
-Features come with Whatsapp web
+Features come with Whatsapp web:
 - Icon in systray changes if there are new messages
 - Customizable Systray icons
 - System style (light and dark)
@@ -30,8 +30,6 @@ Features come with Whatsapp web
 - Personalized window decoration
 - Shortcuts for the main options
 
-# Website
-- [zapzap-linux.github.io](https://zapzap-linux.github.io/)
 
 # Development
 WhatsApp desktop application written in Pyqt6 + PyQt6-WebEngine.
@@ -46,7 +44,6 @@ WhatsApp desktop application written in Pyqt6 + PyQt6-WebEngine.
 The translations are supported.
 
 Make sure the file for your language is in the [po](/po) folder. If it is just send a pull request with the updated file, otherwise open a [issue](https://github.com/zapzap-linux/zapzap/issues) requesting inclusion.
-
 
 # Donations
 <p align="center">
