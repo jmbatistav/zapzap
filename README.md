@@ -19,17 +19,19 @@ Because Meta does not provide the public with an API to construct third-party ap
 
 # Features
 Besides all the features that come with the WhatsApp web application, ZapZap provides:
-- Icon in systray changes if there are new messages
-- Customizable Systray icons
-- System style (light and dark)
-- Fullscreen mode
-- Runs in the background
-- Spellchecker
-- Drag and drop
-- Work area notifications
-- Personalized window decoration
-- Shortcuts for the main options
-
+1. **Looks**
+   - Adaptive light and dark mode
+   - Fullscreen mode
+   - Personalized window decoration
+2. **Usability**
+   - Shortcuts for the main options
+   - Adaptive Systray icon (it changes when there are new messages)
+   - A background process
+   - Drag and drop support
+   - Work area notifications  <!-- what is this?? -->
+3. **Additional features**
+   - Spellchecker
+   - Customizable Systray icons
 
 # Development
 WhatsApp desktop application written in Pyqt6 + PyQt6-WebEngine.
