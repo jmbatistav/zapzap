@@ -1,9 +1,10 @@
 # ZapZap - Whatsapp Desktop for Linux 
-
 ![Zapzap for whatsapp](share/screenshot/default.png)
 
 # About
-Zapzap is an application that addresses WhatsApp Web. It is your goal to use the WhatsApp web closer to a native application as there is no API for the construction of third party applications.
+This app aims to bring the WhatsApp experience on Linux closer to a native application.
+
+Because Meta does not provide the public with an API to construct third-party applications around ZapZap is a [Progressive Web Application](https://en.wikipedia.org/wiki/Progressive_web_app)
 
 # Download
 <p align="center">
@@ -32,7 +33,7 @@ Zapzap is an application that addresses WhatsApp Web. It is your goal to use the
 </p>
 
 # Features
-- Features come with Whatsapp web
+Features come with Whatsapp web
 - Icon in systray changes if there are new messages
 - Customizable Systray icons
 - System style (light and dark)
@@ -57,7 +58,8 @@ WhatsApp desktop application written in Pyqt6 + PyQt6-WebEngine.
 - [Flatpak](/_packaging/flatpak/README.md)
 
 ## Translation
-The translations are supported. </br>
+The translations are supported.
+
 Make sure the file for your language is in the [po](/po) folder. If it is just send a pull request with the updated file, otherwise open a [issue](https://github.com/zapzap-linux/zapzap/issues) requesting inclusion.
 
 # Contact
