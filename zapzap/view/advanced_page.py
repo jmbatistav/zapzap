@@ -66,7 +66,7 @@ class Ui_Advanced(object):
 
     def retranslateUi(self, Advanced):
         
-        self.label.setText(_("Advanced mode"))
+        self.label.setText(_("Advanced"))
         self.label_2.setText(_("Hide setting bar with only one user"))
         self.hideBarUsers.setText(_("Off"))
         self.label_3.setText(_("To access the settings use the menu in the tray or the shortcut Ctrl+P"))
