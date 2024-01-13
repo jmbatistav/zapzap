@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-07 10:19-0300\n"
+"POT-Creation-Date: 2024-01-13 18:01-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -94,8 +94,8 @@ msgid "Personalization"
 msgstr "Personalização"
 
 #: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
-msgid "Advanced mode"
-msgstr "Modo avançado"
+msgid "Advanced"
+msgstr "Avançado"
 
 #: zapzap/view/settings.py:175
 msgid "Donations"

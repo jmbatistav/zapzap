@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-07 10:19-0300\n"
+"POT-Creation-Date: 2024-01-13 18:01-0300\n"
 "PO-Revision-Date: 2023-12-30 18:18+0100\n"
 "Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -96,8 +96,8 @@ msgid "Personalization"
 msgstr "Personnalisation"
 
 #: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
-msgid "Advanced mode"
-msgstr "Mode avancé"
+msgid "Advanced"
+msgstr "Avancé"
 
 #: zapzap/view/settings.py:175
 msgid "Donations"

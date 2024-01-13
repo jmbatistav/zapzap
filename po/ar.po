@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-07 10:19-0300\n"
+"POT-Creation-Date: 2024-01-13 18:02-0300\n"
 "PO-Revision-Date: 2022-07-22 15:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -97,7 +97,7 @@ msgid "Personalization"
 msgstr ""
 
 #: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
-msgid "Advanced mode"
+msgid "Advanced"
 msgstr ""
 
 #: zapzap/view/settings.py:175
