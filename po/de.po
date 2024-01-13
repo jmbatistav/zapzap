@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 18:36-0300\n"
+"POT-Creation-Date: 2024-01-13 18:50-0300\n"
 "PO-Revision-Date: 2024-01-13 22:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -217,7 +217,9 @@ msgstr "Aus"
 
 #: zapzap/view/advanced_page.py:72
 msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
-msgstr "Um auf die Einstellungen zuzugreifen, das Menü in der Taskleiste oder die Tastenkombination Strg+P verwenden"
+msgstr ""
+"Um auf die Einstellungen zuzugreifen, das Menü in der Taskleiste oder die "
+"Tastenkombination Strg+P verwenden"
 
 #: zapzap/view/advanced_page.py:73
 msgid "Donation message"
