@@ -171,7 +171,7 @@ class Ui_Settings(object):
         self.btn_account.setText(_("Account"))
         self.btn_notifications.setText(_("Notifications"))
         self.btn_personalization.setText(_("Personalization"))
-        self.btn_advanced.setText(_("Advanced mode"))
+        self.btn_advanced.setText(_("Advanced"))
         self.btn_donations.setText(_("Donations"))
         self.btn_about.setText(_("About"))
         self.btn_quit.setText(_("Quit"))
