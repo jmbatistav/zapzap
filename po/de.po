@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 18:36-0300\n"
-"PO-Revision-Date: 2024-01-13 22:33+0100\n"
+"POT-Creation-Date: 2024-01-13 18:50-0300\n"
+"PO-Revision-Date: 2024-01-13 22:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -71,19 +71,19 @@ msgstr "Öffne neuen Chat"
 
 #: zapzap/view/main_window.py:90
 msgid "Hide"
-msgstr ""
+msgstr "Verstecken"
 
 #: zapzap/view/main_window.py:91
 msgid "Ctrl+W"
-msgstr ""
+msgstr "Strg+W"
 
 #: zapzap/view/settings.py:170 zapzap/view/general_page.py:166
 msgid "General"
-msgstr ""
+msgstr "Allgemein"
 
 #: zapzap/view/settings.py:171 zapzap/view/account_page.py:75
 msgid "Account"
-msgstr ""
+msgstr "Account"
 
 #: zapzap/view/settings.py:172 zapzap/view/notifications_page.py:102
 msgid "Notifications"
@@ -91,11 +91,11 @@ msgstr "Benachrichtigungen"
 
 #: zapzap/view/settings.py:173 zapzap/view/personalization_page.py:80
 msgid "Personalization"
-msgstr ""
+msgstr "Personalisierung"
 
 #: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
 msgid "Advanced"
-msgstr ""
+msgstr "Fortgeschritten"
 
 #: zapzap/view/settings.py:175
 msgid "Donations"
@@ -111,22 +111,19 @@ msgstr "Nutzernamen eingeben"
 
 #: zapzap/view/card_user.py:88
 msgid "Shortcut:"
-msgstr ""
+msgstr "Abkürzung:"
 
 #: zapzap/view/card_user.py:89
-#, fuzzy
 msgid "Disable account"
-msgstr "Deaktivieren"
+msgstr "Account deaktivieren"
 
 #: zapzap/view/card_user.py:90
-#, fuzzy
 msgid "Show notifications"
-msgstr "Benachrichtigungen"
+msgstr "Benachrichtigungen anzeigen"
 
 #: zapzap/view/card_user.py:91
-#, fuzzy
 msgid "Delete account"
-msgstr "Löschen"
+msgstr "Account löschen"
 
 #: zapzap/view/downloadPopup.py:69
 msgid "What do you want to do with the file?"
@@ -162,19 +159,19 @@ msgstr "Abbrechen"
 
 #: zapzap/view/qtoaster_donation.py:122
 msgid "Welcome to"
-msgstr ""
+msgstr "Willkommen zu"
 
 #: zapzap/view/qtoaster_donation.py:124
 msgid "Make a donation"
-msgstr ""
+msgstr "Spende etwas"
 
 #: zapzap/view/qtoaster_donation.py:125
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: zapzap/view/about_page.py:136
 msgid "WhatsApp Web for Linux"
-msgstr ""
+msgstr "WhatsApp Web für Linux"
 
 #: zapzap/view/about_page.py:137
 #, python-brace-format
@@ -182,22 +179,20 @@ msgid "Version {id} (Official compilation)"
 msgstr "Version {id} (Offizielle Kompilierung)"
 
 #: zapzap/view/about_page.py:138 zapzap/view/about_page.py:140
-#, fuzzy
 msgid "Lean more"
 msgstr "Weitere Infos"
 
 #: zapzap/view/about_page.py:139
 msgid "See more about Zapzap on our website."
-msgstr ""
+msgstr "Mehr über Zapzap auf unserer Website erfahren."
 
 #: zapzap/view/about_page.py:141 zapzap/view/about_page.py:143
-#, fuzzy
 msgid "Report issue"
-msgstr "Fehler melden..."
+msgstr "Fehler melden"
 
 #: zapzap/view/about_page.py:142
 msgid "Report a problem or make your suggestion."
-msgstr ""
+msgstr "Ein Problem melden oder einen Vorschlag machen."
 
 #: zapzap/view/about_page.py:144
 msgid "GNU General Public License v3.0"
@@ -205,38 +200,38 @@ msgstr ""
 
 #: zapzap/view/account_page.py:76 zapzap/view/home.py:92
 msgid "New account"
-msgstr ""
+msgstr "Neuer Account"
 
 #: zapzap/view/account_page.py:77
 msgid "Creates a new panel for access to WhatsApp."
-msgstr ""
+msgstr "Erzeugt ein neues Panel für den Zugriff auf WhatsApp."
 
 #: zapzap/view/advanced_page.py:70
 msgid "Hide setting bar with only one user"
-msgstr ""
+msgstr "Einstellungsleiste bei nur einem Benutzer ausblenden"
 
 #: zapzap/view/advanced_page.py:71 zapzap/view/general_page.py:168
 #: zapzap/view/general_page.py:173
 msgid "Off"
-msgstr ""
+msgstr "Aus"
 
 #: zapzap/view/advanced_page.py:72
 msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
 msgstr ""
+"Um auf die Einstellungen zuzugreifen, das Menü in der Taskleiste oder die "
+"Tastenkombination Strg+P verwenden"
 
 #: zapzap/view/advanced_page.py:73
-#, fuzzy
 msgid "Donation message"
-msgstr "Spenden"
+msgstr "Nachricht über die Spende"
 
 #: zapzap/view/advanced_page.py:74 zapzap/view/general_page.py:171
 #: zapzap/view/general_page.py:175 zapzap/view/notifications_page.py:104
 #: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
 #: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
 #: zapzap/view/personalization_page.py:83
-#, fuzzy
 msgid "On"
-msgstr "Öffnen"
+msgstr "An"
 
 #: zapzap/view/general_page.py:167
 msgid "Start ZapZap with the system"
@@ -244,7 +239,7 @@ msgstr "Starte ZapZap mit dem System"
 
 #: zapzap/view/general_page.py:169
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: zapzap/view/general_page.py:170
 msgid "Hide on close"
@@ -252,7 +247,7 @@ msgstr "Verstecke beim Schließen"
 
 #: zapzap/view/general_page.py:172
 msgid "Wayland window system"
-msgstr ""
+msgstr "Wayland-Fenstersystem"
 
 #: zapzap/view/general_page.py:174
 msgid "SpellChecker"
@@ -260,11 +255,11 @@ msgstr "Rechtschreibprüfung"
 
 #: zapzap/view/general_page.py:176
 msgid "Whatsapp Web Settings"
-msgstr ""
+msgstr "Whatsapp Web-Einstellungen"
 
 #: zapzap/view/general_page.py:177
 msgid "Open the WhatsApp Web Settings panel on the selected account."
-msgstr ""
+msgstr "Öffnen von WhatsApp Web-Einstellungen für das ausgewählte Konto."
 
 #: zapzap/view/notifications_page.py:103
 msgid "Notifications on the desktop"
@@ -284,29 +279,27 @@ msgstr "Zeige Nachrichtenvorschau"
 
 #: zapzap/view/notifications_page.py:108
 msgid "Reproduce sounds when receiving messages"
-msgstr ""
+msgstr "Töne beim Empfang von Nachrichten wiedergeben"
 
 #: zapzap/view/personalization_page.py:81
 msgid "Theme"
-msgstr ""
+msgstr "Thema"
 
 #: zapzap/view/personalization_page.py:82
 msgid "Application theme"
-msgstr ""
+msgstr "Thema der Anwendung"
 
 #: zapzap/view/personalization_page.py:84
 msgid "Tray icon"
 msgstr "Traysymbole"
 
 #: zapzap/view/home.py:93
-#, fuzzy
 msgid "New chat at phone number"
-msgstr "Öffne Chat mit Telefonnummer"
+msgstr "Neuer Chat mit Telefonnummer"
 
 #: zapzap/view/home.py:94
-#, fuzzy
 msgid "New chat"
-msgstr "Öffne neuen Chat"
+msgstr "Neuer Chat"
 
 #: zapzap/view/home.py:96
 msgid "Perfil"
@@ -314,7 +307,7 @@ msgstr ""
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"
-msgstr ""
+msgstr "Automatisch (System)"
 
 #: zapzap/controllers/settings_pages/personalization.py:24
 msgid "Light style"
@@ -370,7 +363,7 @@ msgstr "Bild kopieren"
 
 #: zapzap/engine/browser.py:79
 msgid "Copy link address"
-msgstr ""
+msgstr "Link-Adresse kopieren"
 
 #: zapzap/services/spellCheckLanguages.py:6
 msgid "Afrikaans - Namibia"
