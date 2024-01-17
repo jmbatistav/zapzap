@@ -4,9 +4,11 @@ from zapzap.controllers.SingleApplication import SingleApplication
 from zapzap.controllers.main_window import MainWindow
 from PyQt6.QtGui import QFont, QFontDatabase
 from PyQt6.QtCore import QSettings
+from PyQt6 import QtNetwork
 import gettext
 from zapzap.model.db import createDB
 from os import environ, getenv
+import argparse
 
 
 def excBackgroundNotification():
@@ -39,19 +41,30 @@ def runLocal():
         environ['QT_QPA_PLATFORM'] = ZAP_SESSION_TYPE
     elif XDG_SESSION_TYPE is None:
         environ['QT_QPA_PLATFORM'] = ZAP_SESSION_TYPE
-    
+
     # Incorrect sizing and bad text rendering with WebEngine using fractional scaling on Wayland
     environ['QT_SCALE_FACTOR_ROUNDING_POLICY'] = 'RoundPreferFloor'
 
 
 def main():
 
+    # add argvs
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t", "--setType", required=False,
+                        choices=['Socks5Proxy', 'DefaultProxy', 'HttpProxy'])
+    parser.add_argument("-hn", "--setHostName", required=False)
+    parser.add_argument("-p", "--setPort",type=int, required=False)
+    parser.add_argument("-u", "--setUser", required=False)
+    parser.add_argument("-pw", "--setPassword", required=False)
+    
+    args = parser.parse_args()
+
     # When running outside Flatpak
     if not zapzap.isFlatpak:
         runLocal()
 
     # Local Debug (python -m zapzap --zapDebug)
-    if '--zapDebug' in sys.argv:
+    if 'zapDebug' in sys.argv:
         # Settings for Debug
         import os
         os.environ['XCURSOR_SIZE'] = '24'
@@ -83,6 +96,21 @@ def main():
     QFontDatabase.addApplicationFont(zapzap.segoe_font['bold-italic'])
     QFontDatabase.addApplicationFont(zapzap.segoe_font['italic'])
     app.setFont(QFont("Segoe UI"))
+
+    # Set Up Proxy
+    proxy = QtNetwork.QNetworkProxy()
+    if args.setType == 'DefaultProxy':
+        proxy.setType(QtNetwork.QNetworkProxy.ProxyType.DefaultProxy)
+    elif args.setType == 'Socks5Proxy':
+        proxy.setType(QtNetwork.QNetworkProxy.ProxyType.Socks5Proxy)
+    elif args.setType == 'HttpProxy':
+        proxy.setType(QtNetwork.QNetworkProxy.ProxyType.HttpProxy)
+
+    proxy.setHostName(args.setHostName) if args.setHostName != None else ''
+    proxy.setPort(args.setPort) if args.setPort != None else ''
+    proxy.setUser(args.setUser) if args.setUser != None else ''
+    proxy.setPassword(args.setPassword) if args.setPassword != None else ''
+    QtNetwork.QNetworkProxy.setApplicationProxy(proxy)
 
     # Callback instance
     app.messageReceived.connect(lambda result: window.xdgOpenChat(result))
