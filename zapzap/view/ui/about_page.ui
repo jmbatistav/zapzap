@@ -142,7 +142,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Lean more</string>
+            <string>Learn more</string>
            </property>
           </widget>
          </item>
@@ -167,7 +167,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Lean more</string>
+            <string>Learn more</string>
            </property>
           </widget>
          </item>
