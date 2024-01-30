@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 18:36-0300\n"
+"POT-Creation-Date: 2024-01-26 08:52-0700\n"
 "PO-Revision-Date: 2022-09-22 13:20+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
@@ -184,7 +184,7 @@ msgstr "Versie {id} (officiële versie)"
 
 #: zapzap/view/about_page.py:138 zapzap/view/about_page.py:140
 #, fuzzy
-msgid "Lean more"
+msgid "Learn more"
 msgstr "Meer informatie"
 
 #: zapzap/view/about_page.py:139
