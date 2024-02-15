@@ -56,6 +56,9 @@ class Home(QWidget, Ui_Home):
         # Open Whatsapp Settings
         self.zapSettings.emitOpenSettingsWhatsapp.connect(
             self.openWhatsappSettings)
+        # Update Pages
+        self.zapSettings.emitUpdateProxyPage.connect(
+            self.reloadAllPages)
 
         # Drawer for Settings window
         self.drawer = Drawer(self)
@@ -171,6 +174,12 @@ class Home(QWidget, Ui_Home):
         i = self.userStacked.currentIndex()
         btn = self.menu.itemAt(i).widget()
         btn.doReloadPage()
+    
+    def reloadAllPages(self):
+        for i in range(self.menu.count()):
+            btn = self.menu.itemAt(i).widget()
+            btn = self.menu.itemAt(i).widget()
+            btn.doReloadPage()
 
     def closeConversation(self, closeAll=False):
         if not self.drawer.isOpen:

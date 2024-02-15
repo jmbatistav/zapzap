@@ -7,6 +7,15 @@ QWIDGETS = """
             border-image: none;
             font-family: Segoe UI
         }
+        QWidget:disabled
+        {   
+            border: 1px solid; 
+            border-radius: 5px;
+            padding: 5px;
+            border-color: {frame_border};
+            color: {frame_border};
+            background-color: {frame_border};
+        }
 
         QStackedWidget {	
             background-color: {window};
@@ -21,20 +30,17 @@ QWIDGETS = """
 
         QLineEdit{
             color: {windowText};
-            background-color: {frame_border};
+            background: {frame_background};
             border: 1px solid; 
             border-color: {frame_border};
             border-radius: 5px;
             padding: 5px;
-            
         }
-        QLineEdit:disabled {
-            background-color:{frame_border};
-        }
-
+        
         QComboBox {
             combobox-popup: 0;
-            background: {window};
+            background: {frame_background};
+            background-color: {frame_background};
             height: 27px;
             border: 1px solid; 
             border-color: {frame_border};
@@ -315,7 +321,7 @@ QWIDGETS = """
             border-bottom: 1px solid {frame_border};
         }
         QFrame[frameShape="5"] {
-             border: none;
+            border: none;
             border-left: 1px solid {frame_border};
         }
 

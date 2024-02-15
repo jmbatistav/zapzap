@@ -7,6 +7,7 @@ from PyQt6.QtCore import QSettings
 import gettext
 from zapzap.model.db import createDB
 from os import environ, getenv
+import argparse
 
 
 def excBackgroundNotification():
@@ -39,19 +40,30 @@ def runLocal():
         environ['QT_QPA_PLATFORM'] = ZAP_SESSION_TYPE
     elif XDG_SESSION_TYPE is None:
         environ['QT_QPA_PLATFORM'] = ZAP_SESSION_TYPE
-    
+
     # Incorrect sizing and bad text rendering with WebEngine using fractional scaling on Wayland
     environ['QT_SCALE_FACTOR_ROUNDING_POLICY'] = 'RoundPreferFloor'
 
 
 def main():
 
+    # add argvs
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t", "--setType", required=False,
+                        choices=['Socks5Proxy', 'DefaultProxy', 'HttpProxy'])
+    parser.add_argument("-hn", "--setHostName", required=False)
+    parser.add_argument("-p", "--setPort",type=int, required=False)
+    parser.add_argument("-u", "--setUser", required=False)
+    parser.add_argument("-pw", "--setPassword", required=False)
+    
+    args = parser.parse_args()
+
     # When running outside Flatpak
     if not zapzap.isFlatpak:
         runLocal()
 
     # Local Debug (python -m zapzap --zapDebug)
-    if '--zapDebug' in sys.argv:
+    if 'zapDebug' in sys.argv:
         # Settings for Debug
         import os
         os.environ['XCURSOR_SIZE'] = '24'

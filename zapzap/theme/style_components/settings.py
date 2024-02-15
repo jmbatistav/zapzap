@@ -45,6 +45,9 @@ SettingsMenu = """
         #btn_quit{
             qproperty-icon: url({path}/sign-out.svg);
         }
+        #btn_network{
+            qproperty-icon: url({path}/network.svg);
+        }
 
     """
 
@@ -80,7 +83,8 @@ Buttons = """
         #btnOpenSWhatsapp,
         #btnNewUser,
         #btnReportIssue,
-        #btnLeanMore  {
+        #btnLeanMore,
+        #btn_ok  {
             background-color: #008069;
             border-radius: 5px;
             font: 12pt;
@@ -93,9 +97,17 @@ Buttons = """
         #btnOpenSWhatsapp:hover,
         #btnNewUser:hover,
         #btnReportIssue:hover,
-        #btnLeanMore:hover {
+        #btnLeanMore:hover,
+        #btn_ok:hover {
             background-color: #199979;
             border-color: #199979;
+        }
+
+        #btn_ok:disabled,
+        #btn_restore:disabled {
+            background-color: {frame_border};
+            border-color: {frame_border};
+            color: {frame_border};
         }
 
         #btn_paypal,
@@ -114,6 +126,16 @@ Buttons = """
             color: {link};
             border: 3px solid {link};
             background-color: #FFFFFF;
+        }
+
+        #btn_restore{
+            background-color: red;
+            border-radius: 5px;
+            font: 12pt;
+            height: 35px;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 0px 10px 0px 10px;
         }
         
 """
