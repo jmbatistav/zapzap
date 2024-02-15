@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-26 08:52-0700\n"
+"POT-Creation-Date: 2024-02-15 14:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 #: zapzap/view/main_window.py:78 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:135
 #: zapzap/controllers/main_window_components/tray_icon.py:19
+#: zapzap/__main__.py:20
 msgid "ZapZap"
 msgstr ""
 
@@ -40,7 +41,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: zapzap/view/main_window.py:83 zapzap/view/settings.py:177
+#: zapzap/view/main_window.py:83 zapzap/view/settings.py:181
 #: zapzap/controllers/main_window_components/tray_icon.py:25
 msgid "Quit"
 msgstr ""
@@ -77,31 +78,35 @@ msgstr ""
 msgid "Ctrl+W"
 msgstr ""
 
-#: zapzap/view/settings.py:170 zapzap/view/general_page.py:166
+#: zapzap/view/settings.py:173 zapzap/view/general_page.py:166
 msgid "General"
 msgstr ""
 
-#: zapzap/view/settings.py:171 zapzap/view/account_page.py:75
+#: zapzap/view/settings.py:174 zapzap/view/account_page.py:75
 msgid "Account"
 msgstr ""
 
-#: zapzap/view/settings.py:172 zapzap/view/notifications_page.py:102
+#: zapzap/view/settings.py:175 zapzap/view/notifications_page.py:102
 msgid "Notifications"
 msgstr ""
 
-#: zapzap/view/settings.py:173 zapzap/view/personalization_page.py:80
+#: zapzap/view/settings.py:176 zapzap/view/network_page.py:136
+msgid "Network"
+msgstr ""
+
+#: zapzap/view/settings.py:177 zapzap/view/personalization_page.py:80
 msgid "Personalization"
 msgstr ""
 
-#: zapzap/view/settings.py:174 zapzap/view/advanced_page.py:69
+#: zapzap/view/settings.py:178 zapzap/view/advanced_page.py:76
 msgid "Advanced"
 msgstr ""
 
-#: zapzap/view/settings.py:175
+#: zapzap/view/settings.py:179
 msgid "Donations"
 msgstr ""
 
-#: zapzap/view/settings.py:176 zapzap/view/about_page.py:134
+#: zapzap/view/settings.py:180 zapzap/view/about_page.py:134
 msgid "About"
 msgstr ""
 
@@ -206,29 +211,33 @@ msgstr ""
 msgid "Creates a new panel for access to WhatsApp."
 msgstr ""
 
-#: zapzap/view/advanced_page.py:70
+#: zapzap/view/advanced_page.py:77
 msgid "Hide setting bar with only one user"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:71 zapzap/view/general_page.py:168
-#: zapzap/view/general_page.py:173
+#: zapzap/view/advanced_page.py:78 zapzap/view/general_page.py:168
+#: zapzap/view/general_page.py:173 zapzap/view/network_page.py:138
 msgid "Off"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:72
+#: zapzap/view/advanced_page.py:79
 msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:73
+#: zapzap/view/advanced_page.py:80
 msgid "Donation message"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:74 zapzap/view/general_page.py:171
-#: zapzap/view/general_page.py:175 zapzap/view/notifications_page.py:104
-#: zapzap/view/notifications_page.py:109 zapzap/view/notifications_page.py:110
-#: zapzap/view/notifications_page.py:111 zapzap/view/notifications_page.py:112
-#: zapzap/view/personalization_page.py:83
+#: zapzap/view/advanced_page.py:81 zapzap/view/advanced_page.py:83
+#: zapzap/view/general_page.py:171 zapzap/view/general_page.py:175
+#: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
+#: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
+#: zapzap/view/notifications_page.py:112 zapzap/view/personalization_page.py:83
 msgid "On"
+msgstr ""
+
+#: zapzap/view/advanced_page.py:82
+msgid "Message Started in the background"
 msgstr ""
 
 #: zapzap/view/general_page.py:167
@@ -303,6 +312,48 @@ msgstr ""
 msgid "Perfil"
 msgstr ""
 
+#: zapzap/view/network_page.py:137
+msgid "Network proxy"
+msgstr ""
+
+#: zapzap/view/network_page.py:139
+msgid ""
+"Learn exactly what you are doing, because I am not responsible for any "
+"connectivity failures."
+msgstr ""
+
+#: zapzap/view/network_page.py:140
+msgid "Port"
+msgstr ""
+
+#: zapzap/view/network_page.py:141
+msgid "User"
+msgstr ""
+
+#: zapzap/view/network_page.py:142
+msgid "Password"
+msgstr ""
+
+#: zapzap/view/network_page.py:143
+msgid "Hostname"
+msgstr ""
+
+#: zapzap/view/network_page.py:144
+msgid "ProxyType"
+msgstr ""
+
+#: zapzap/view/network_page.py:145
+msgid "Description"
+msgstr ""
+
+#: zapzap/view/network_page.py:146
+msgid "Apply"
+msgstr ""
+
+#: zapzap/view/network_page.py:147
+msgid "Restore"
+msgstr ""
+
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"
 msgstr ""
@@ -325,6 +376,32 @@ msgstr ""
 
 #: zapzap/controllers/settings_pages/personalization.py:29
 msgid "Symbolic dark"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/network.py:13
+msgid "No proxying is used"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/network.py:14
+msgid ""
+"Proxy is determined based on the application proxy set using "
+"setApplicationProxy()"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/network.py:15
+msgid "Socks5 proxying is used"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/network.py:16
+msgid "HTTP transparent proxying is used"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/network.py:17
+msgid "Proxying for HTTP requests only"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/network.py:18
+msgid "Proxying for FTP requests only"
 msgstr ""
 
 #: zapzap/engine/browser.py:71
@@ -881,4 +958,8 @@ msgstr ""
 
 #: zapzap/services/spellCheckLanguages.py:135
 msgid "Vietnamese - Vietnam"
+msgstr ""
+
+#: zapzap/__main__.py:21
+msgid "Started in the background"
 msgstr ""

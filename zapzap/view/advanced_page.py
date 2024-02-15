@@ -79,7 +79,7 @@ class Ui_Advanced(object):
         self.label_3.setText(_("To access the settings use the menu in the tray or the shortcut Ctrl+P"))
         self.label_4.setText(_("Donation message"))
         self.donationMessage.setText(_("On"))
-        self.label_5.setText(_("Running message in the background"))
+        self.label_5.setText(_("Message Started in the background"))
         self.backgroundMessage.setText(_("On"))
 
 

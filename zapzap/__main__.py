@@ -18,7 +18,7 @@ def excBackgroundNotification():
     from zapzap.theme.builder_icon import getIconDefaultURLNotification
     from gettext import gettext as _
     n = dbus.Notification(_("ZapZap"),
-                          _("Keep in background when closing window"),
+                          _("Started in the background"),
                           timeout=3000)
     n.setUrgency(dbus.Urgency.NORMAL)
     n.setCategory("im.received")
