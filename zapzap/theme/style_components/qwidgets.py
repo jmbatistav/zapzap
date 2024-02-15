@@ -324,5 +324,11 @@ QWIDGETS = """
             border: none;
             border-left: 1px solid {frame_border};
         }
+        
+        QMenu {
+            color: {windowText};
+            margin: 0.09em;
+            background-color: {window};
+        }
 
     """
