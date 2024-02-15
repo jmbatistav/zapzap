@@ -110,7 +110,9 @@ def main():
         "system/start_system", False, bool)
     if isStart_system or '--hideStart' in sys.argv:
         window.hide()
-        excBackgroundNotification()
+        if window.settings.value(
+        "system/background_message", True, bool):
+            excBackgroundNotification()
     else:
         window.show()
 

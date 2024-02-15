@@ -13,7 +13,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Advanced(object):
     def setupUi(self, Advanced):
         Advanced.setObjectName("Advanced")
-        Advanced.resize(321, 216)
+        Advanced.resize(321, 246)
         Advanced.setWindowTitle("")
         self.verticalLayout = QtWidgets.QVBoxLayout(Advanced)
         self.verticalLayout.setSpacing(15)
@@ -57,6 +57,13 @@ class Ui_Advanced(object):
         self.donationMessage.setChecked(True)
         self.donationMessage.setObjectName("donationMessage")
         self.gridLayout_2.addWidget(self.donationMessage, 0, 1, 1, 1)
+        self.label_5 = QtWidgets.QLabel(parent=Advanced)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
+        self.backgroundMessage = QtWidgets.QCheckBox(parent=Advanced)
+        self.backgroundMessage.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
+        self.backgroundMessage.setObjectName("backgroundMessage")
+        self.gridLayout_2.addWidget(self.backgroundMessage, 1, 1, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_2)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout.addItem(spacerItem)
@@ -72,6 +79,8 @@ class Ui_Advanced(object):
         self.label_3.setText(_("To access the settings use the menu in the tray or the shortcut Ctrl+P"))
         self.label_4.setText(_("Donation message"))
         self.donationMessage.setText(_("On"))
+        self.label_5.setText(_("Running message in the background"))
+        self.backgroundMessage.setText(_("On"))
 
 
 if __name__ == "__main__":
