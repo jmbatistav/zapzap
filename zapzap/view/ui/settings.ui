@@ -263,6 +263,13 @@
                   </widget>
                  </item>
                  <item>
+                  <widget class="QPushButton" name="btn_network">
+                   <property name="text">
+                    <string>Network</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QPushButton" name="btn_personalization">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">

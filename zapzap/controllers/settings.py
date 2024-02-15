@@ -9,6 +9,7 @@ from zapzap.controllers.settings_pages.personalization import Personalization
 from zapzap.controllers.settings_pages.advanced import Advanced
 from zapzap.controllers.settings_pages.donations import Donations
 from zapzap.controllers.settings_pages.about import About
+from zapzap.controllers.settings_pages.network import Network
 from zapzap.model.user import User
 from gettext import gettext as _
 import zapzap
@@ -38,6 +39,9 @@ class Settings(QWidget, Ui_Settings):
 
     # Whatsapp Settings
     emitOpenSettingsWhatsapp = pyqtSignal()
+
+    # Set Proxy
+    emitUpdateProxyPage = pyqtSignal()
 
     def __init__(self, parent=None):
         super(Settings, self).__init__()
@@ -95,6 +99,12 @@ class Settings(QWidget, Ui_Settings):
         self.aboutPage.emitCloseSettings = self.emitCloseSettings
         self.pages_id['btn_about'] = self.settings_stacked.addWidget(
             self.aboutPage)
+
+        # Network
+        self.networkPage = Network()
+        self.networkPage.emitUpdateProxyPage = self.emitUpdateProxyPage
+        self.pages_id['btn_network'] = self.settings_stacked.addWidget(
+            self.networkPage)
 
     def setDefaultEventButtonInMenu(self):
         for item in self.menu.findChildren(QPushButton):

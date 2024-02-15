@@ -4,7 +4,6 @@ from zapzap.controllers.SingleApplication import SingleApplication
 from zapzap.controllers.main_window import MainWindow
 from PyQt6.QtGui import QFont, QFontDatabase
 from PyQt6.QtCore import QSettings
-from PyQt6 import QtNetwork
 import gettext
 from zapzap.model.db import createDB
 from os import environ, getenv
@@ -96,21 +95,6 @@ def main():
     QFontDatabase.addApplicationFont(zapzap.segoe_font['bold-italic'])
     QFontDatabase.addApplicationFont(zapzap.segoe_font['italic'])
     app.setFont(QFont("Segoe UI"))
-
-    # Set Up Proxy
-    proxy = QtNetwork.QNetworkProxy()
-    if args.setType == 'DefaultProxy':
-        proxy.setType(QtNetwork.QNetworkProxy.ProxyType.DefaultProxy)
-    elif args.setType == 'Socks5Proxy':
-        proxy.setType(QtNetwork.QNetworkProxy.ProxyType.Socks5Proxy)
-    elif args.setType == 'HttpProxy':
-        proxy.setType(QtNetwork.QNetworkProxy.ProxyType.HttpProxy)
-
-    proxy.setHostName(args.setHostName) if args.setHostName != None else ''
-    proxy.setPort(args.setPort) if args.setPort != None else ''
-    proxy.setUser(args.setUser) if args.setUser != None else ''
-    proxy.setPassword(args.setPassword) if args.setPassword != None else ''
-    QtNetwork.QNetworkProxy.setApplicationProxy(proxy)
 
     # Callback instance
     app.messageReceived.connect(lambda result: window.xdgOpenChat(result))
