@@ -27,7 +27,6 @@
 
   <categories>
     <category>Chat</category>
-    <category>Communication</category>
     <category>InstantMessaging</category>
     <category>Utility</category>
     <category>Office</category>
@@ -45,7 +44,7 @@
   </screenshots>
 
   <releases>
-    <release date="2024-02-15" version="5.2">
+    <release date="2024-02-16" version="5.2">
         <description>
           <p>Add Proxy support</p>
           <p>Some improvements</p>
