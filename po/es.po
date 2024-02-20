@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 14:45-0300\n"
+"POT-Creation-Date: 2024-02-19 12:25-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Joma <batista87@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -92,7 +92,7 @@ msgstr "Notificaciones"
 
 #: zapzap/view/settings.py:176 zapzap/view/network_page.py:136
 msgid "Network"
-msgstr ""
+msgstr "Red"
 
 #: zapzap/view/settings.py:177 zapzap/view/personalization_page.py:80
 msgid "Personalization"
@@ -246,7 +246,7 @@ msgstr "Activado"
 
 #: zapzap/view/advanced_page.py:82
 msgid "Message Started in the background"
-msgstr ""
+msgstr "Mensaje iniciado en segundo plano"
 
 #: zapzap/view/general_page.py:167
 msgid "Start ZapZap with the system"
@@ -325,38 +325,40 @@ msgstr ""
 
 #: zapzap/view/network_page.py:137
 msgid "Network proxy"
-msgstr ""
+msgstr "Proxy de red"
 
 #: zapzap/view/network_page.py:139
 msgid ""
 "Learn exactly what you are doing, because I am not responsible for any "
 "connectivity failures."
 msgstr ""
+"Es importante que comprenda completamente lo que está haciendo, ya que no me "
+"hago responsable de posibles problemas de conectividad."
 
 #: zapzap/view/network_page.py:140
 msgid "Port"
-msgstr ""
+msgstr "Puerto"
 
 #: zapzap/view/network_page.py:141
 #, fuzzy
 msgid "User"
-msgstr "Nuevo usuario"
+msgstr "Usuario"
 
 #: zapzap/view/network_page.py:142
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: zapzap/view/network_page.py:143
 msgid "Hostname"
-msgstr ""
+msgstr "Nombre de host"
 
 #: zapzap/view/network_page.py:144
 msgid "ProxyType"
-msgstr ""
+msgstr "Tipo de Proxy"
 
 #: zapzap/view/network_page.py:145
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: zapzap/view/network_page.py:146
 msgid "Apply"
@@ -364,7 +366,7 @@ msgstr "Aplicar"
 
 #: zapzap/view/network_page.py:147
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
 #: zapzap/controllers/settings_pages/personalization.py:23
 msgid "Automatic (System)"
@@ -392,29 +394,31 @@ msgstr "Oscuro simbólico"
 
 #: zapzap/controllers/settings_pages/network.py:13
 msgid "No proxying is used"
-msgstr ""
+msgstr "No se está usando un servidor proxy"
 
 #: zapzap/controllers/settings_pages/network.py:14
 msgid ""
 "Proxy is determined based on the application proxy set using "
 "setApplicationProxy()"
 msgstr ""
+"El proxy se determina en función del proxy de la aplicación establecido "
+"usando setApplicationProxy()"
 
 #: zapzap/controllers/settings_pages/network.py:15
 msgid "Socks5 proxying is used"
-msgstr ""
+msgstr "Se utiliza el proxy Socks5"
 
 #: zapzap/controllers/settings_pages/network.py:16
 msgid "HTTP transparent proxying is used"
-msgstr ""
+msgstr "Se utiliza el proxy HTTP transparente"
 
 #: zapzap/controllers/settings_pages/network.py:17
 msgid "Proxying for HTTP requests only"
-msgstr ""
+msgstr "Proxy solo para solicitudes HTTP"
 
 #: zapzap/controllers/settings_pages/network.py:18
 msgid "Proxying for FTP requests only"
-msgstr ""
+msgstr "Proxy solo para solicitudes FTP"
 
 #: zapzap/engine/browser.py:71
 msgid "Undo"
@@ -974,7 +978,7 @@ msgstr "Vietnamita - Vietnam"
 
 #: zapzap/__main__.py:21
 msgid "Started in the background"
-msgstr ""
+msgstr "Se ha iniciado en segundo plano"
 
 #, fuzzy
 #~ msgid "Started with the system"
