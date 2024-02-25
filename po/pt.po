@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 14:45-0300\n"
+"POT-Creation-Date: 2024-02-25 16:58-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: zapzap/view/main_window.py:78 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:135
 #: zapzap/controllers/main_window_components/tray_icon.py:19
-#: zapzap/__main__.py:20
+#: zapzap/__main__.py:19
 msgid "ZapZap"
 msgstr "ZapZap"
 
@@ -969,7 +969,7 @@ msgstr ""
 msgid "Vietnamese - Vietnam"
 msgstr ""
 
-#: zapzap/__main__.py:21
+#: zapzap/__main__.py:20
 msgid "Started in the background"
 msgstr ""
 

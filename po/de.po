@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 14:45-0300\n"
+"POT-Creation-Date: 2024-02-25 16:58-0300\n"
 "PO-Revision-Date: 2024-01-13 22:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 #: zapzap/view/main_window.py:78 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:135
 #: zapzap/controllers/main_window_components/tray_icon.py:19
-#: zapzap/__main__.py:20
+#: zapzap/__main__.py:19
 msgid "ZapZap"
 msgstr "ZapZap"
 
@@ -964,7 +964,7 @@ msgstr "Ukrainisch - Ukraine"
 msgid "Vietnamese - Vietnam"
 msgstr "Vietnamesisch - Vietnam"
 
-#: zapzap/__main__.py:21
+#: zapzap/__main__.py:20
 msgid "Started in the background"
 msgstr ""
 

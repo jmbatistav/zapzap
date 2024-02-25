@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 14:45-0300\n"
+"POT-Creation-Date: 2024-02-25 16:58-0300\n"
 "PO-Revision-Date: 2023-12-30 18:18+0100\n"
 "Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: zapzap/view/main_window.py:78 zapzap/view/qtoaster_donation.py:123
 #: zapzap/view/about_page.py:135
 #: zapzap/controllers/main_window_components/tray_icon.py:19
-#: zapzap/__main__.py:20
+#: zapzap/__main__.py:19
 msgid "ZapZap"
 msgstr "ZapZap"
 
@@ -965,7 +965,7 @@ msgstr "Ukrainien - Ukraine"
 msgid "Vietnamese - Vietnam"
 msgstr "Vietnamien - Vietnam"
 
-#: zapzap/__main__.py:21
+#: zapzap/__main__.py:20
 msgid "Started in the background"
 msgstr ""
 
