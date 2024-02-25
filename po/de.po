@@ -313,7 +313,7 @@ msgstr "Neuer Chat"
 
 #: zapzap/view/home.py:96
 msgid "Perfil"
-msgstr ""
+msgstr "Profil"
 
 #: zapzap/view/network_page.py:137
 msgid "Network proxy"
@@ -336,7 +336,7 @@ msgstr "Neuer Benutzer"
 
 #: zapzap/view/network_page.py:142
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: zapzap/view/network_page.py:143
 msgid "Hostname"
@@ -348,7 +348,7 @@ msgstr ""
 
 #: zapzap/view/network_page.py:145
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: zapzap/view/network_page.py:146
 msgid "Apply"
