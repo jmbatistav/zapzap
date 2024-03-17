@@ -155,7 +155,7 @@ msgid "See here the code of your country"
 msgstr ""
 
 #: zapzap/view/openChatPopup.py:84
-msgid "(COUNTY CODE + AREA CODE + PHONE NUMER)"
+msgid "(COUNTRY CODE + AREA CODE + PHONE NUMBER)"
 msgstr ""
 
 #: zapzap/view/openChatPopup.py:85
