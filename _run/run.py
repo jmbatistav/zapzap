@@ -7,7 +7,8 @@ os.system('./_scripts/build-windows.sh')
 os.system('./_scripts/build-translations.sh')
 
 # Activate Custom Debug Settings
-debug = False
+debug = True
 
 # Run the app
-#os.system('python -m zapzap ' + ('--zapDebug' if debug == rue else ''))
+os.system('python -m zapzap ' + ('--zapDebug' if debug ==
+          True else ''))
