@@ -25,6 +25,8 @@ class Advanced(QWidget, Ui_Advanced):
             "system/donation_message", True, bool))
         self.backgroundMessage.setChecked(self.settings.value(
             "system/background_message", True, bool))
+        self.folderDownloads.setChecked(self.settings.value(
+            "system/folderDownloads", False, bool))
 
     def save(self):
         self.settings.setValue("system/hide_bar_users",
@@ -33,6 +35,8 @@ class Advanced(QWidget, Ui_Advanced):
                                self.donationMessage.isChecked())
         self.settings.setValue("system/background_message",
                                self.backgroundMessage.isChecked())
+        self.settings.setValue("system/folderDownloads",
+                               self.folderDownloads.isChecked())
 
     def setActionCheckBox(self):
         for children in self.findChildren(QCheckBox):

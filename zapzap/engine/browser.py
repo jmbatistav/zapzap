@@ -119,11 +119,16 @@ class Browser(QWebEngineView):
 
     def downloadOpenFile(self, download):
         fileName = download.downloadFileName()
-        directory = os.path.join(QStandardPaths.writableLocation(
-            QStandardPaths.StandardLocation.DownloadLocation), 'ZapZap Downloads')
+        directory = QStandardPaths.writableLocation(
+            QStandardPaths.StandardLocation.DownloadLocation)
 
-        if not os.path.exists(directory):
-            os.makedirs(directory)
+        if not self.qset.value("system/folderDownloads", False, bool):
+            directory = os.path.join(QStandardPaths.writableLocation(
+                QStandardPaths.StandardLocation.DownloadLocation), 'ZapZap Downloads')
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+
+        print(directory)
 
         download.setDownloadDirectory(directory)
         download.setDownloadFileName(os.path.basename(fileName))
@@ -185,7 +190,7 @@ class Browser(QWebEngineView):
         """
 
         if self.qset.value('notification/app', True, bool) and self.qset.value(f'{str(self.storageName)}/notification', True, bool):
-            try:                
+            try:
                 title = notification.title() if self.qset.value(
                     'notification/show_name', True, bool) else __appname__
                 message = notification.message() if self.qset.value(
