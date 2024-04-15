@@ -18,6 +18,7 @@ zapzap/controllers/card_user.py
 zapzap/controllers/settings.py
 zapzap/controllers/settings_pages/personalization.py
 zapzap/controllers/settings_pages/network.py
+zapzap/controllers/settings_pages/advanced.py
 zapzap/engine/browser.py
 zapzap/services/spellCheckLanguages.py
 zapzap/__main__.py

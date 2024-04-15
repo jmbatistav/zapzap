@@ -13,7 +13,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Advanced(object):
     def setupUi(self, Advanced):
         Advanced.setObjectName("Advanced")
-        Advanced.resize(321, 246)
+        Advanced.resize(405, 276)
         Advanced.setWindowTitle("")
         self.verticalLayout = QtWidgets.QVBoxLayout(Advanced)
         self.verticalLayout.setSpacing(15)
@@ -64,10 +64,11 @@ class Ui_Advanced(object):
         self.label_5 = QtWidgets.QLabel(parent=Advanced)
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
-        self.label_6 = QtWidgets.QLabel(parent=Advanced)
-        self.label_6.setStatusTip("")
-        self.label_6.setObjectName("label_6")
-        self.gridLayout_2.addWidget(self.label_6, 2, 0, 1, 1)
+        self.labelFolderDownloads = QtWidgets.QLabel(parent=Advanced)
+        self.labelFolderDownloads.setToolTip("")
+        self.labelFolderDownloads.setStatusTip("")
+        self.labelFolderDownloads.setObjectName("labelFolderDownloads")
+        self.gridLayout_2.addWidget(self.labelFolderDownloads, 2, 0, 1, 1)
         self.folderDownloads = QtWidgets.QCheckBox(parent=Advanced)
         self.folderDownloads.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
         self.folderDownloads.setObjectName("folderDownloads")
@@ -89,8 +90,7 @@ class Ui_Advanced(object):
         self.donationMessage.setText(_("On"))
         self.backgroundMessage.setText(_("On"))
         self.label_5.setText(_("Message Started in the background"))
-        self.label_6.setToolTip(_("All content downloaded automatically will go to ~/Downloads/ZapZap Download. Click to change."))
-        self.label_6.setText(_("Standard folder ~/Downloads"))
+        self.labelFolderDownloads.setText(_("Standard folder ~/Downloads/ZapZap Downloads"))
         self.folderDownloads.setText(_("Off"))
 
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-17 11:13-0300\n"
+"POT-Creation-Date: 2024-04-15 08:42-0300\n"
 "PO-Revision-Date: 2022-07-22 15:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Personalization"
 msgstr ""
 
-#: zapzap/view/settings.py:178 zapzap/view/advanced_page.py:76
+#: zapzap/view/settings.py:178 zapzap/view/advanced_page.py:85
 msgid "Advanced"
 msgstr ""
 
@@ -220,25 +220,26 @@ msgstr ""
 msgid "Creates a new panel for access to WhatsApp."
 msgstr ""
 
-#: zapzap/view/advanced_page.py:77
+#: zapzap/view/advanced_page.py:86
 msgid "Hide setting bar with only one user"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:78 zapzap/view/general_page.py:168
-#: zapzap/view/general_page.py:173 zapzap/view/network_page.py:138
+#: zapzap/view/advanced_page.py:87 zapzap/view/advanced_page.py:94
+#: zapzap/view/general_page.py:168 zapzap/view/general_page.py:173
+#: zapzap/view/network_page.py:138
 msgid "Off"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:79
+#: zapzap/view/advanced_page.py:88
 msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:80
+#: zapzap/view/advanced_page.py:89
 #, fuzzy
 msgid "Donation message"
 msgstr "تبرع"
 
-#: zapzap/view/advanced_page.py:81 zapzap/view/advanced_page.py:83
+#: zapzap/view/advanced_page.py:90 zapzap/view/advanced_page.py:91
 #: zapzap/view/general_page.py:171 zapzap/view/general_page.py:175
 #: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
 #: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
@@ -246,8 +247,13 @@ msgstr "تبرع"
 msgid "On"
 msgstr ""
 
-#: zapzap/view/advanced_page.py:82
+#: zapzap/view/advanced_page.py:92
 msgid "Message Started in the background"
+msgstr ""
+
+#: zapzap/view/advanced_page.py:93
+#: zapzap/controllers/settings_pages/advanced.py:37
+msgid "Standard folder ~/Downloads/ZapZap Downloads"
 msgstr ""
 
 #: zapzap/view/general_page.py:167
@@ -413,6 +419,10 @@ msgstr ""
 
 #: zapzap/controllers/settings_pages/network.py:18
 msgid "Proxying for FTP requests only"
+msgstr ""
+
+#: zapzap/controllers/settings_pages/advanced.py:34
+msgid "Standard folder ~/Downloads"
 msgstr ""
 
 #: zapzap/engine/browser.py:71

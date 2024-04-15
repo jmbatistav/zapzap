@@ -28,6 +28,14 @@ class Advanced(QWidget, Ui_Advanced):
         self.folderDownloads.setChecked(self.settings.value(
             "system/folderDownloads", False, bool))
 
+    def setLabelFolderDownloads(self):
+        if (self.settings.value(
+                "system/folderDownloads", False, bool)):
+            self.labelFolderDownloads.setText(_("Standard folder ~/Downloads"))
+        else:
+            self.labelFolderDownloads.setText(
+                _("Standard folder ~/Downloads/ZapZap Downloads"))
+
     def save(self):
         self.settings.setValue("system/hide_bar_users",
                                self.hideBarUsers.isChecked())
@@ -37,6 +45,8 @@ class Advanced(QWidget, Ui_Advanced):
                                self.backgroundMessage.isChecked())
         self.settings.setValue("system/folderDownloads",
                                self.folderDownloads.isChecked())
+        
+        self.setLabelFolderDownloads()
 
     def setActionCheckBox(self):
         for children in self.findChildren(QCheckBox):

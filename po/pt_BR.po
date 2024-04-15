@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-17 11:13-0300\n"
+"POT-Creation-Date: 2024-04-15 08:42-0300\n"
 "PO-Revision-Date: 2022-07-22 10:44-0300\n"
 "Last-Translator: Rafael Tosta <rafa.ecomp@gmail.com>\n"
 "Language-Team: Português Brasileiro\n"
@@ -98,7 +98,7 @@ msgstr "Rede"
 msgid "Personalization"
 msgstr "Personalização"
 
-#: zapzap/view/settings.py:178 zapzap/view/advanced_page.py:76
+#: zapzap/view/settings.py:178 zapzap/view/advanced_page.py:85
 msgid "Advanced"
 msgstr "Avançado"
 
@@ -184,7 +184,6 @@ msgid "Version {id} (Official compilation)"
 msgstr "Versão {id} (Compilação oficial)"
 
 #: zapzap/view/about_page.py:138 zapzap/view/about_page.py:140
-#, fuzzy
 msgid "Learn more"
 msgstr "Leia mais"
 
@@ -212,25 +211,26 @@ msgstr "Nova conta"
 msgid "Creates a new panel for access to WhatsApp."
 msgstr "Cria um novo painel para acesso ao WhatsApp."
 
-#: zapzap/view/advanced_page.py:77
+#: zapzap/view/advanced_page.py:86
 msgid "Hide setting bar with only one user"
 msgstr "Esconder barra de configurações com único usuário"
 
-#: zapzap/view/advanced_page.py:78 zapzap/view/general_page.py:168
-#: zapzap/view/general_page.py:173 zapzap/view/network_page.py:138
+#: zapzap/view/advanced_page.py:87 zapzap/view/advanced_page.py:94
+#: zapzap/view/general_page.py:168 zapzap/view/general_page.py:173
+#: zapzap/view/network_page.py:138
 msgid "Off"
 msgstr "Desativado"
 
-#: zapzap/view/advanced_page.py:79
+#: zapzap/view/advanced_page.py:88
 msgid "To access the settings use the menu in the tray or the shortcut Ctrl+P"
 msgstr ""
 "Para acessar as configurações, use o menu na bandeja ou o atalho Ctrl+P"
 
-#: zapzap/view/advanced_page.py:80
+#: zapzap/view/advanced_page.py:89
 msgid "Donation message"
 msgstr "Mensagem de doação"
 
-#: zapzap/view/advanced_page.py:81 zapzap/view/advanced_page.py:83
+#: zapzap/view/advanced_page.py:90 zapzap/view/advanced_page.py:91
 #: zapzap/view/general_page.py:171 zapzap/view/general_page.py:175
 #: zapzap/view/notifications_page.py:104 zapzap/view/notifications_page.py:109
 #: zapzap/view/notifications_page.py:110 zapzap/view/notifications_page.py:111
@@ -238,9 +238,14 @@ msgstr "Mensagem de doação"
 msgid "On"
 msgstr "Ativado"
 
-#: zapzap/view/advanced_page.py:82
+#: zapzap/view/advanced_page.py:92
 msgid "Message Started in the background"
 msgstr "Mensagem de início em segundo plano"
+
+#: zapzap/view/advanced_page.py:93
+#: zapzap/controllers/settings_pages/advanced.py:37
+msgid "Standard folder ~/Downloads/ZapZap Downloads"
+msgstr "Pasta padrão ~/Downloads/ZapZap Downloads"
 
 #: zapzap/view/general_page.py:167
 msgid "Start ZapZap with the system"
@@ -408,6 +413,10 @@ msgstr ""
 #: zapzap/controllers/settings_pages/network.py:18
 msgid "Proxying for FTP requests only"
 msgstr ""
+
+#: zapzap/controllers/settings_pages/advanced.py:34
+msgid "Standard folder ~/Downloads"
+msgstr "Pasta padrão ~/Downloads"
 
 #: zapzap/engine/browser.py:71
 msgid "Undo"
@@ -968,6 +977,13 @@ msgstr ""
 #: zapzap/__main__.py:20
 msgid "Started in the background"
 msgstr "Iniciado em segundo plano"
+
+#~ msgid ""
+#~ "All content downloaded automatically will go to ~/Downloads/ZapZap "
+#~ "Download. Click to change."
+#~ msgstr ""
+#~ "Todo o conteúdo baixado automaticamente irá para ~/Downloads/Zapzap "
+#~ "Download. Click para alterar."
 
 #~ msgid "Running message in the background"
 #~ msgstr "Mensagem de execução em segundo plano"
