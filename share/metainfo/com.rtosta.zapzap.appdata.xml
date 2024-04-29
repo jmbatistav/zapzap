@@ -44,10 +44,15 @@
   </screenshots>
 
   <releases>
+    <release date="2024-04-29" version="5.3.1">
+        <description>
+          <p>Improvements when saving files.</p>
+        </description>
+    </release>
     <release date="2024-04-16" version="5.3">
         <description>
-          <p>New: Default folder option for ~/Downloads</p>
-          <p>Routine adjustments</p>
+          <p>New: Default folder option for Downloads;</p>
+          <p>Routine adjustments.</p>
         </description>
     </release>
     <release date="2024-02-16" version="5.2">
