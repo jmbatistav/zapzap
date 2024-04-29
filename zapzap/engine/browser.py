@@ -1,7 +1,7 @@
 import os
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtWebEngineCore import QWebEnginePage, QWebEngineDownloadRequest, QWebEngineProfile, QWebEngineSettings, QWebEngineNotification
-from PyQt6.QtCore import Qt, QUrl, QStandardPaths, QSettings, QLocale, QSize, QUrl
+from PyQt6.QtCore import Qt, QUrl, QStandardPaths, QSettings, QLocale, QUrl, QFileInfo
 from PyQt6.QtGui import QPainter, QPainter, QImage, QBrush, QPen, QDesktopServices
 from PyQt6.QtWidgets import QFileDialog, QApplication
 import zapzap
@@ -41,7 +41,8 @@ class Browser(QWebEngineView):
         self.profile.setSpellCheckLanguages([lang])
 
         # Rotina para download de arquivos
-        self.profile.downloadRequested.connect(self.download)
+        #self.profile.downloadRequested.connect(self.download)
+        self.profile.downloadRequested.connect(self.on_downloadRequested)
 
         # Cria a WebPage personalizada
         self.whats = WhatsApp(self.profile, self)
@@ -116,7 +117,7 @@ class Browser(QWebEngineView):
                 self.downloadOpenFile(download)
             elif r == 2:
                 self.downloadFileChooser(download)
-
+    
     def downloadOpenFile(self, download):
         fileName = download.downloadFileName()
         directory = QStandardPaths.writableLocation(
@@ -158,6 +159,23 @@ class Browser(QWebEngineView):
             # Atualiza o nome do arquivo
             download.setDownloadFileName(os.path.basename(name_file))
             download.url().setPath(name_file)
+            download.accept()
+
+
+    def on_downloadRequested(self, download:QWebEngineDownloadRequest):
+        print(f"""
+diretory: {download.downloadDirectory()}\n
+file_name: {download.downloadFileName()}\n
+        """)
+        file_name = download.downloadFileName()  # download.path()
+        suffix = QFileInfo(file_name).suffix()
+        path, _ = QFileDialog.getSaveFileName(
+            self, "Save File", file_name, "*." + suffix
+        )
+        if path:   
+            print('dirname:',os.path.dirname(path))
+            download.setDownloadDirectory(os.path.dirname(path))
+            print('>>',download.downloadDirectory())
             download.accept()
 
     def doReload(self):
