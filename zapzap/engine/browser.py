@@ -41,7 +41,6 @@ class Browser(QWebEngineView):
         self.profile.setSpellCheckLanguages([lang])
 
         # Rotina para download de arquivos
-        #self.profile.downloadRequested.connect(self.download)
         self.profile.downloadRequested.connect(self.on_downloadRequested)
 
         # Cria a WebPage personalizada
@@ -106,79 +105,52 @@ class Browser(QWebEngineView):
                                    mode=cb.Mode.Clipboard)
                     a.triggered.connect(setClipboard)
 
-        menu.exec(event.globalPos())
+        menu.exec(event.globalPos()) 
 
-    def download(self, download):
-        """ Download de arquivos """
+    def on_downloadRequested(self, download:QWebEngineDownloadRequest):
+        """ File Download """
         if (download.state() == QWebEngineDownloadRequest.DownloadState.DownloadRequested):
+            
+            """Defines default directory for download"""
+            directory=QStandardPaths.writableLocation(
+                QStandardPaths.StandardLocation.DownloadLocation)
+            
+            """ Opens Popup of choice """
             dialog = DownloadPopup()
             r = dialog.exec_()
             if r == 1:
-                self.downloadOpenFile(download)
+                """ Open File """
+
+                """ If ZapZap Download is default"""
+                if not self.qset.value("system/folderDownloads", False, bool):
+                    directory = os.path.join(QStandardPaths.writableLocation(
+                        QStandardPaths.StandardLocation.DownloadLocation), 'ZapZap Downloads')
+                    if not os.path.exists(directory):
+                        os.makedirs(directory)
+
+                download.setDownloadDirectory(directory)
+                download.accept()
+
+                def openFile(state):
+                    """Opens file when the download is over"""
+                    if state == QWebEngineDownloadRequest.DownloadState.DownloadCompleted:
+                        file = os.path.join(directory, download.downloadFileName())
+                        QDesktopServices.openUrl(QUrl.fromLocalFile(file))
+
+                # This signal is emitted whenever the download's state changes.
+                download.stateChanged.connect(openFile)
+
             elif r == 2:
-                self.downloadFileChooser(download)
-    
-    def downloadOpenFile(self, download):
-        fileName = download.downloadFileName()
-        directory = QStandardPaths.writableLocation(
-            QStandardPaths.StandardLocation.DownloadLocation)
-
-        if not self.qset.value("system/folderDownloads", False, bool):
-            directory = os.path.join(QStandardPaths.writableLocation(
-                QStandardPaths.StandardLocation.DownloadLocation), 'ZapZap Downloads')
-            if not os.path.exists(directory):
-                os.makedirs(directory)
-
-        print(directory)
-
-        download.setDownloadDirectory(directory)
-        download.setDownloadFileName(os.path.basename(fileName))
-        download.url().setPath(fileName)
-        download.accept()
-
-        def openFile(state):
-            """Opens file when the download is over"""
-            if state == QWebEngineDownloadRequest.DownloadState.DownloadCompleted:
-                file = os.path.join(directory, fileName)
-                QDesktopServices.openUrl(QUrl.fromLocalFile(file))
-
-        # This signal is emitted whenever the download's state changes.
-        download.stateChanged.connect(openFile)
-
-    def downloadFileChooser(self, download):
-        file, ext = os.path.splitext(download.downloadFileName())
-        path, _ = QFileDialog.getSaveFileName(
-            self, self.tr("Save file"), directory=QStandardPaths.writableLocation(
-                QStandardPaths.StandardLocation.DownloadLocation), filter='*'+ext)
-        if path:
-            # define a pasta para download. Por padrão é /user/downloads
-            download.setDownloadDirectory(os.path.dirname(path))
-            # Dentro do Flatpak não mostra o nome do arquivo no FileDialog, sendo necessário o usuário digitar o nome do arquivo e,
-            # caso não digite a extensão, será definida a partir do arquivo original.
-            name_file = (path) if ext in path else (path+ext)
-            # Atualiza o nome do arquivo
-            download.setDownloadFileName(os.path.basename(name_file))
-            download.url().setPath(name_file)
-            download.accept()
-
-
-    def on_downloadRequested(self, download:QWebEngineDownloadRequest):
-        print(f"""
-diretory: {download.downloadDirectory()}\n
-file_name: {download.downloadFileName()}\n
-        """)
-        directory=QStandardPaths.writableLocation(
-                QStandardPaths.StandardLocation.DownloadLocation)
-        file_name = download.downloadFileName()  # download.path()
-        suffix = QFileInfo(file_name).suffix()
-        path, _ = QFileDialog.getSaveFileName(
-            self, "Save File", os.path.join(directory,file_name), "*." + suffix
-        )
-        if path:   
-            print('dirname:',os.path.dirname(path))
-            download.setDownloadDirectory(os.path.dirname(path))
-            print('>>',download.downloadDirectory())
-            download.accept()
+                """ Save File"""
+                
+                file_name = download.downloadFileName()  # download.path()
+                suffix = QFileInfo(file_name).suffix()
+                path, _ = QFileDialog.getSaveFileName(
+                    self, "Save File", os.path.join(directory,file_name), "*." + suffix
+                )
+                if path:   
+                    download.setDownloadDirectory(os.path.dirname(path))
+                    download.accept()
 
     def doReload(self):
         """
