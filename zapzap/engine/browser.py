@@ -142,13 +142,14 @@ class Browser(QWebEngineView):
 
             elif r == 2:
                 """ Save File"""
-                
+
                 file_name = download.downloadFileName()  # download.path()
                 suffix = QFileInfo(file_name).suffix()
                 path, _ = QFileDialog.getSaveFileName(
                     self, "Save File", os.path.join(directory,file_name), "*." + suffix
                 )
                 if path:   
+                    download.setDownloadFileName(os.path.basename(path))
                     download.setDownloadDirectory(os.path.dirname(path))
                     download.accept()
 
