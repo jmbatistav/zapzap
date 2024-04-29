@@ -167,10 +167,12 @@ class Browser(QWebEngineView):
 diretory: {download.downloadDirectory()}\n
 file_name: {download.downloadFileName()}\n
         """)
+        directory=QStandardPaths.writableLocation(
+                QStandardPaths.StandardLocation.DownloadLocation)
         file_name = download.downloadFileName()  # download.path()
         suffix = QFileInfo(file_name).suffix()
         path, _ = QFileDialog.getSaveFileName(
-            self, "Save File", file_name, "*." + suffix
+            self, "Save File", os.path.join(directory,file_name), "*." + suffix
         )
         if path:   
             print('dirname:',os.path.dirname(path))
