@@ -67,6 +67,7 @@ class WhatsApp(QWebEnginePage):
         """Defines the page theme:
             - light
             - dark """
+        print("Set theme:", theme)
         if theme == 'light':  # light
             self.runJavaScript(self.light_theme)
         else:  # dark
